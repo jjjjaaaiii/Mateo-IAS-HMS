@@ -93,6 +93,7 @@ Partial Class registrationForm
         '
         'txtregistrationrole
         '
+        Me.txtregistrationrole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.txtregistrationrole.FormattingEnabled = True
         Me.txtregistrationrole.Items.AddRange(New Object() {"Admin", "Doctor", "Patient"})
         Me.txtregistrationrole.Location = New System.Drawing.Point(230, 202)

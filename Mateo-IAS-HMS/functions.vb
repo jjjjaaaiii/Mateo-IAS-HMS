@@ -220,9 +220,9 @@ Module functions
 
     Public Sub registerUserDoctor(userid As Integer)
 
-        Dim query As String = "INSERT INTO tbl_doctor(user_id) VALUES (@user_id)"
+        Dim query As String = "INSERT INTO tbl_doctor('user_id') VALUES (@userid)"
         Dim cmd As New MySqlCommand(query, connection)
-        cmd.Parameters.AddWithValue("@user_id", userid)
+        cmd.Parameters.AddWithValue("@userid", userid)
 
 
         Try
