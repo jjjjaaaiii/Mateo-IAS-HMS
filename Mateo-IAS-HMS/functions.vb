@@ -319,5 +319,24 @@ Module functions
         End Try
     End Function
 
+    'crude to patient
+    'delete
+    Public Sub DeletePatient(tableName As String, PrimaryKeyColumnName As String, PrimaryKeyValue As Integer)
+        Try
+            Dim query As String = $"DELETE FROM {tableName} WHERE {PrimaryKeyColumnName} = @primaryKeyValue"
+            Dim command As New MySqlCommand(query, connection)
+            command.Parameters.AddWithValue("@primaryKeyValue", PrimaryKeyValue)
+
+            command.ExecuteNonQuery()
+        Catch ex As Exception
+            MessageBox.Show("Failed to delete data: " & ex.Message)
+
+        End Try
+    End Sub
+
+    'update
+    Public Sub UpdatePatient(primaryKeyValue As Integer, firstname As Str)
+
+    End Sub
 
 End Module

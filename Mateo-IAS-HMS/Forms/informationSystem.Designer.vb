@@ -28,7 +28,6 @@ Partial Class informationSystem
         Me.LogInToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageUsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManagePatientsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransactionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DoctorAppointmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -46,6 +45,7 @@ Partial Class informationSystem
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.testTimer = New System.Windows.Forms.Label()
+        Me.ManageUsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -81,21 +81,15 @@ Partial Class informationSystem
         '
         'RecordToolStripMenuItem
         '
-        Me.RecordToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageUsersToolStripMenuItem, Me.ManagePatientsToolStripMenuItem})
+        Me.RecordToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManagePatientsToolStripMenuItem, Me.ManageUsersToolStripMenuItem})
         Me.RecordToolStripMenuItem.Name = "RecordToolStripMenuItem"
         Me.RecordToolStripMenuItem.Size = New System.Drawing.Size(70, 24)
         Me.RecordToolStripMenuItem.Text = "Record"
         '
-        'ManageUsersToolStripMenuItem
-        '
-        Me.ManageUsersToolStripMenuItem.Name = "ManageUsersToolStripMenuItem"
-        Me.ManageUsersToolStripMenuItem.Size = New System.Drawing.Size(201, 26)
-        Me.ManageUsersToolStripMenuItem.Text = "Manage Users"
-        '
         'ManagePatientsToolStripMenuItem
         '
         Me.ManagePatientsToolStripMenuItem.Name = "ManagePatientsToolStripMenuItem"
-        Me.ManagePatientsToolStripMenuItem.Size = New System.Drawing.Size(201, 26)
+        Me.ManagePatientsToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ManagePatientsToolStripMenuItem.Text = "Manage Patients"
         '
         'TransactionToolStripMenuItem
@@ -200,6 +194,12 @@ Partial Class informationSystem
         Me.testTimer.TabIndex = 2
         Me.testTimer.Text = "-"
         '
+        'ManageUsersToolStripMenuItem
+        '
+        Me.ManageUsersToolStripMenuItem.Name = "ManageUsersToolStripMenuItem"
+        Me.ManageUsersToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ManageUsersToolStripMenuItem.Text = "Manage Users"
+        '
         'informationSystem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -227,7 +227,6 @@ Partial Class informationSystem
     Friend WithEvents LogInToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RecordToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ManageUsersToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ManagePatientsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TransactionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DoctorAppointmentToolStripMenuItem As ToolStripMenuItem
@@ -244,4 +243,5 @@ Partial Class informationSystem
     Friend WithEvents testTimer As Label
     Friend WithEvents AuditToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ActivateUserToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManageUsersToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -156,6 +156,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\manageUsers.Designer.vb">
+      <DependentUpon>manageUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\manageUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="functions.vb" />
     <Compile Include="Forms\informationSystem.Designer.vb">
       <DependentUpon>informationSystem.vb</DependentUpon>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\managePatients.resx">
       <DependentUpon>managePatients.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\manageUsers.resx">
+      <DependentUpon>manageUsers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

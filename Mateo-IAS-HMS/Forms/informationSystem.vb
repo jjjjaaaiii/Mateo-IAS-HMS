@@ -8,12 +8,22 @@ Public Class informationSystem
     Private SensitivityThreshold As Integer = 500
     Private Sub informationSystem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
-        Dim Uaccount As String
-
-        If Uaccount Then
-
-        End If
-
+        'Dim userrole As String
+        'If userrole.Contains("Admin") Then
+        '    auditLog.Visible = True
+        '    activateUser.Visible = True
+        '    MessageBox.Show("Welcome Admin")
+        'ElseIf userrole.Contains("Patient") Then
+        '    auditLog.Visible = False
+        '    activateUser.Visible = False
+        '    MessageBox.Show("Welcome Patient, Please register")
+        'ElseIf userrole.Contains("Doctor") Then
+        '    auditLog.Visible = False
+        '    activateUser.Visible = False
+        '    MessageBox.Show("Hello Quack")
+        'Else
+        '    MessageBox.Show("Userrole is not available")
+        'End If
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -24,12 +34,6 @@ Public Class informationSystem
             Me.Close()
         End If
         testTimer.Text = timerValue
-    End Sub
-
-    Private Sub ManageUsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManageUsersToolStripMenuItem.Click
-        Dim frm As New manageUsers
-        frm.Show()
-        Me.Close()
     End Sub
 
     Private Sub ManagePatientsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManagePatientsToolStripMenuItem.Click
@@ -72,4 +76,9 @@ Public Class informationSystem
         Me.Close()
     End Sub
 
+    Private Sub ManageUsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManageUsersToolStripMenuItem.Click
+        Dim frm As New managePatients
+        frm.Show()
+        Me.Close()
+    End Sub
 End Class
