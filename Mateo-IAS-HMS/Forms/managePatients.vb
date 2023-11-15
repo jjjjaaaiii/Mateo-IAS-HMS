@@ -20,34 +20,6 @@ Public Class managePatients
         End If
     End Sub
 
-
-
-    Private Sub disableTxtBoxes()
-        txtpatient_id.Text = False
-        txtfirstname_patient.Text = False
-        Txtlastname_patient.Text = False
-        txtmi_patient.Text = False
-        txtbarangay_patient.Text = False
-        txtmunicipality_patient.Text = False
-        txtprovince_patient.Text = False
-        txtcontactnumber_patient.Text = False
-        txtage_patient.Text = False
-        dtpbirthday_patient.Text = False
-    End Sub
-
-    Private Sub clearTxtBoxes()
-        txtpatient_id.Text = False
-        txtfirstname_patient.Text = False
-        Txtlastname_patient.Text = False
-        txtmi_patient.Text = False
-        txtbarangay_patient.Text = False
-        txtmunicipality_patient.Text = False
-        txtprovince_patient.Text = False
-        txtcontactnumber_patient.Text = False
-        txtage_patient.Text = False
-        dtpbirthday_patient.Text = False
-    End Sub
-
     Private Sub managePatients_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
     End Sub
@@ -66,5 +38,30 @@ Public Class managePatients
         Dim frm As New informationSystem
         frm.Show()
         Me.Close()
+    End Sub
+    Private Sub disableTxtBoxes()
+        txtpatient_id.Text = False
+        Txtlastname_patient.Text = False
+        txtfirstname_patient.Text = False
+        txtmi_patient.Text = False
+        txtbarangay_patient.Text = False
+        txtmunicipality_patient.Text = False
+        txtprovince_patient.Text = False
+        txtcontactnumber_patient.Text = False
+        txtage_patient.Text = False
+        dtpbirthday_patient.Text = False
+    End Sub
+
+    Private Sub clearTxtBoxes()
+        txtpatient_id.Text = False
+        Txtlastname_patient.Text = False
+        txtfirstname_patient.Text = False
+        txtmi_patient.Text = False
+        txtbarangay_patient.Text = False
+        txtmunicipality_patient.Text = False
+        txtprovince_patient.Text = False
+        txtcontactnumber_patient.Text = False
+        txtage_patient.Text = False
+        dtpbirthday_patient.Text = False
     End Sub
 End Class

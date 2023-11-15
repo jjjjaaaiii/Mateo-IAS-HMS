@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Data.SqlClient
+Imports System.Runtime.ConstrainedExecution
 Imports System.Security.Cryptography
 Imports System.Text
 
@@ -335,8 +336,90 @@ Module functions
     End Sub
 
     'update
-    Public Sub UpdatePatient(primaryKeyValue As Integer, firstname As Str)
+    Public Sub UpdatePatient(primaryKeyValue As Integer, lastname As String, firstname As String, mi As String, barangay As String, municipality As String, province As String, contact As String, age As String, birthday As String)
+        Dim query As String = "UPDATE tbl_patient SET firstname = @firstname, lastname = @lastname, mi = @mi, barangay = @barangay, municipality = @municipality, province = @province, contactnumber = @contact, @age = age, birthday = @birthday WHERE patient_id  = @PrimaryKeyValue"
+        Dim command As New MySqlCommand(query, connection)
 
+        command.Parameters.AddWithValue("@lastname", lastname)
+        command.Parameters.AddWithValue("@firstname", firstname)
+        command.Parameters.AddWithValue("@mi", mi)
+        command.Parameters.AddWithValue("@barangay", barangay)
+        command.Parameters.AddWithValue("@municipality", municipality)
+        command.Parameters.AddWithValue("@province", province)
+        command.Parameters.AddWithValue("@contact", contact)
+        command.Parameters.AddWithValue("@age", age)
+        command.Parameters.AddWithValue("@birthday", birthday)
+        Dim rowAffected As Integer = command.ExecuteNonQuery()
+
+        If rowAffected > 0 Then
+            Console.WriteLine("Data Updated succesfully!")
+        Else
+            Console.WriteLine("No data found for the given primary key.")
+        End If
     End Sub
 
+    'search
+    Public Function SearchPatient(primaryKeyValue As Integer)
+        Dim id As Integer
+        Dim lastname As String
+        Dim firstname As String
+        Dim mi As String
+        Dim barangay As String
+        Dim municipality As String
+        Dim province As String
+        Dim contact As String
+        Dim age As String
+        Dim birthday As String
+
+        Dim query As String = $"SELECT * FROM tbl_patient WHERE patient_id = @primaryKeyValue"
+        Dim command As New MySqlCommand(query, connection)
+        command.Parameters.AddWithValue("@primaryKeyValue", primaryKeyValue)
+
+        Dim reader As MySqlDataReader = command.ExecuteReader()
+
+        If reader.Read() Then
+            id = reader("patient_id")
+            lastname = reader("lastname").ToString
+            firstname = reader("firstname").ToString
+            mi = reader("mi").ToString
+            barangay = reader("barangay").ToString
+            municipality = reader("municipality").ToString
+            province = reader("province").ToString
+            contact = reader("contactnumber").ToString
+            age = reader("age").ToString
+            birthday = reader("birthday").ToString
+        Else
+            MessageBox.Show("No data fround for the given primary key")
+        End If
+
+        reader.Close()
+
+        Return Tuple.Create(id, firstname, lastname, mi, barangay)
+        Return Tuple.Create(municipality, province, contact, age, birthday)
+    End Function
+
+    'add
+
+    Public Sub AddPatient(id As Integer, lastname As String, firstname As String, mi As String, barangay As String, municipality As String, province As String, contact As String, age As String, birthday As String)
+        Try
+            Dim query As String = "INSERT INTO tbl_patient (patient_id, lastname, firstname, mi, barangay, municipality, province, contactnumber, age, birthday) VALUES (@id, @lastname, @firstname, @mi, @barangay, @municipality, @province, @contact, @age, @birthday)"
+            Dim command As New MySqlCommand(query, connection)
+
+            command.Parameters.AddWithValue("@id", id)
+            command.Parameters.AddWithValue("@lastname", lastname)
+            command.Parameters.AddWithValue("@firstname", firstname)
+            command.Parameters.AddWithValue("@mi", mi)
+            command.Parameters.AddWithValue("@barangay", barangay)
+            command.Parameters.AddWithValue("@municipality", municipality)
+            command.Parameters.AddWithValue("@province", province)
+            command.Parameters.AddWithValue("@contact", contact)
+            command.Parameters.AddWithValue("@age", age)
+            command.Parameters.AddWithValue("@birthday", birthday)
+
+            command.ExecuteNonQuery()
+        Catch ex As Exception
+
+            MessageBox.Show("Failed to insert data: " & ex.Message)
+        End Try
+    End Sub
 End Module
