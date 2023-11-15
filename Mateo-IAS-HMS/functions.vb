@@ -4,7 +4,7 @@ Imports System.Security.Cryptography
 Imports System.Text
 
 Module functions
-    Dim connectionConfig As String = "server=localhost; user=root; password=root; database=db_hospital;"
+    Dim connectionConfig As String = "server=localhost; user=root; password=root; database=db_hospitalproject;"
     Dim connection As New MySqlConnection(connectionConfig)
 
     Public Sub connectDB()
@@ -180,10 +180,10 @@ Module functions
         End Try
     End Function
 
-    Public Function GetUserRole(user_id As Integer) As String
-        Dim query As String = "SELECT userrole FROM tbl_user WHERE user_id = @user_id"
+    Public Function GetUserRole(id As Integer) As String
+        Dim query As String = "SELECT userrole FROM tbl_user WHERE id = @id"
         Dim cmd As New MySqlCommand(query, connection)
-        cmd.Parameters.AddWithValue("@user_id", user_id)
+        cmd.Parameters.AddWithValue("@id", id)
 
         Try
             connection.Open()
@@ -220,7 +220,7 @@ Module functions
 
     Public Sub registerUserDoctor(userid As Integer)
 
-        Dim query As String = "INSERT INTO tbl_doctor('user_id') VALUES (@userid)"
+        Dim query As String = "INSERT INTO tbl_doctor(user_id) VALUES (@userid)"
         Dim cmd As New MySqlCommand(query, connection)
         cmd.Parameters.AddWithValue("@userid", userid)
 
