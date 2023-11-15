@@ -8,7 +8,6 @@ Public Class Form1
     Public passwordHide As Boolean = True
     Private attempts As Integer = 0
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        registerUserAdmin(12)
         passwordEye.Image = ImageList1.Images(0)
         capslockindicator()
     End Sub
