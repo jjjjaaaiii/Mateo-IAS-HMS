@@ -70,13 +70,13 @@ Partial Class informationSystem
         'LogInToolStripMenuItem
         '
         Me.LogInToolStripMenuItem.Name = "LogInToolStripMenuItem"
-        Me.LogInToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.LogInToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
         Me.LogInToolStripMenuItem.Text = "Logout"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'RecordToolStripMenuItem
@@ -210,6 +210,7 @@ Partial Class informationSystem
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "informationSystem"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "informationSystem"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

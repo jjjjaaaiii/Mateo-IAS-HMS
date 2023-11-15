@@ -173,6 +173,7 @@ Partial Class activateUser
         Me.Controls.Add(Me.btn_clear)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "activateUser"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "activateUser"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

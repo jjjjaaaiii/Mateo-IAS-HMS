@@ -169,12 +169,6 @@
     <Compile Include="Forms\managePatients.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\manageUsers.Designer.vb">
-      <DependentUpon>manageUsers.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\manageUsers.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -219,9 +213,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\managePatients.resx">
       <DependentUpon>managePatients.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\manageUsers.resx">
-      <DependentUpon>manageUsers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

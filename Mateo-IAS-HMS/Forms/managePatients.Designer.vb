@@ -371,6 +371,7 @@ Partial Class managePatients
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "managePatients"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "managePatients"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

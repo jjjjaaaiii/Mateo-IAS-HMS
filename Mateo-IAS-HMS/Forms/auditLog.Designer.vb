@@ -54,6 +54,7 @@ Partial Class auditLog
         Me.Controls.Add(Me.btnback)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "auditLog"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "auditLog"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

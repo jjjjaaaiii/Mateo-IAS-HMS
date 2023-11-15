@@ -149,6 +149,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.KeyPreview = True
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         CType(Me.passwordEye, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

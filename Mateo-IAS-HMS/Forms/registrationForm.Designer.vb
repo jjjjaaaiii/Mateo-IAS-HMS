@@ -172,6 +172,7 @@ Partial Class registrationForm
         Me.Controls.Add(Me.Label1)
         Me.KeyPreview = True
         Me.Name = "registrationForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "registrationForm"
         CType(Me.passwordEye, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

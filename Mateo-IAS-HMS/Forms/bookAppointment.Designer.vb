@@ -125,6 +125,7 @@ Partial Class bookAppointment
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "bookAppointment"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "bookAppointment"
         Me.ResumeLayout(False)
         Me.PerformLayout()
