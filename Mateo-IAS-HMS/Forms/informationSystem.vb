@@ -1,11 +1,17 @@
 ﻿Imports Org.BouncyCastle.Pqc.Crypto.Frodo
 
 Public Class informationSystem
-    Public isactiveuser As Boolean
+    Public userName As String
+    Public userRoleText As String
+    Private userID As Integer
     Private timerValue As Integer = 0
     Private PreviousMousePosition As Point
     Private SensitivityThreshold As Integer = 500
     Private Sub informationSystem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        userID = GetUserId(userName)
+        userRoleText = GetUserRole(userID)
+        currentUser.Text = userName
+        userRole.Text = userRoleText
         Timer1.Start()
     End Sub
 
@@ -17,6 +23,7 @@ Public Class informationSystem
             Me.Close()
         End If
         testTimer.Text = timerValue
+        dateAndTime.Text = DateTime.Now.ToString()
     End Sub
 
 

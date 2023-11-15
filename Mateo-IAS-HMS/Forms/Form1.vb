@@ -25,9 +25,12 @@ Public Class Form1
             Dim userId As Integer = GetUserId(Uaccount)
             InsertAuditRecord(userId, "Logged In")
             Dim frm As New informationSystem
-            frm.isactiveuser = IsActiveUser(Uaccount)
+            frm.userName = Uaccount
             frm.Show()
             Me.Close()
+        Else
+            Dim attemptMessage = String.Format("Wrong password! You have {0} attempt/s left.", (3 - attempts))
+            MessageBox.Show(attemptMessage)
         End If
     End Sub
 
