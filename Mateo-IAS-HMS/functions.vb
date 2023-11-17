@@ -3,6 +3,7 @@ Imports System.Data.SqlClient
 Imports System.Runtime.ConstrainedExecution
 Imports System.Security.Cryptography
 Imports System.Text
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Module functions
     Dim connectionConfig As String = "server=localhost; user=root; password=root; database=db_hospitalproject;"
@@ -399,27 +400,36 @@ Module functions
     End Function
 
     'add
+    Public Sub AddPatient(user_id As Integer, lastname As String, firstname As String, mi As String, barangay As String, municipality As String, province As String, contact As String, age As String, birthday As String)
 
-    Public Sub AddPatient(id As Integer, lastname As String, firstname As String, mi As String, barangay As String, municipality As String, province As String, contact As String, age As String, birthday As String)
+        Dim query As String = "INSERT INTO tbl_patient (user_id, lastname, firstname, mi, barangay, municipality, province, contactnumber, age, birthday) VALUES (@id, @lastname, @firstname, @mi, @barangay, @municipality, @province, @contact, @age, @birthday)"
+        Dim command As New MySqlCommand(query, connection)
+
+        command.Parameters.AddWithValue("@id", user_id)
+        command.Parameters.AddWithValue("@lastname", lastname)
+        command.Parameters.AddWithValue("@firstname", firstname)
+        command.Parameters.AddWithValue("@mi", mi)
+        command.Parameters.AddWithValue("@barangay", barangay)
+        command.Parameters.AddWithValue("@municipality", municipality)
+        command.Parameters.AddWithValue("@province", province)
+        command.Parameters.AddWithValue("@contact", contact)
+        command.Parameters.AddWithValue("@age", age)
+        command.Parameters.AddWithValue("@birthday", birthday)
+
+
         Try
-            Dim query As String = "INSERT INTO tbl_patient (patient_id, lastname, firstname, mi, barangay, municipality, province, contactnumber, age, birthday) VALUES (@id, @lastname, @firstname, @mi, @barangay, @municipality, @province, @contact, @age, @birthday)"
-            Dim command As New MySqlCommand(query, connection)
-
-            command.Parameters.AddWithValue("@id", id)
-            command.Parameters.AddWithValue("@lastname", lastname)
-            command.Parameters.AddWithValue("@firstname", firstname)
-            command.Parameters.AddWithValue("@mi", mi)
-            command.Parameters.AddWithValue("@barangay", barangay)
-            command.Parameters.AddWithValue("@municipality", municipality)
-            command.Parameters.AddWithValue("@province", province)
-            command.Parameters.AddWithValue("@contact", contact)
-            command.Parameters.AddWithValue("@age", age)
-            command.Parameters.AddWithValue("@birthday", birthday)
-
+            connection.Open()
             command.ExecuteNonQuery()
+            MessageBox.Show("Patient Registered!")
+
+            'catch ex error catches error
+
         Catch ex As Exception
 
-            MessageBox.Show("Failed to insert data: " & ex.Message)
+            MessageBox.Show("An error occurred: " & ex.Message)
+        Finally
+            connection.Close()
         End Try
+
     End Sub
 End Module

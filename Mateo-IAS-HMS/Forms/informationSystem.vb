@@ -1,29 +1,21 @@
 ﻿Imports System.Security.Principal
+Imports Microsoft.VisualBasic.ApplicationServices
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports Org.BouncyCastle.Pqc.Crypto.Frodo
 
 Public Class informationSystem
-    Public isactiveuser As Boolean
+    Public userName As String
+    Public userRoleText As String
+    Private userID As Integer
     Private timerValue As Integer = 0
     Private PreviousMousePosition As Point
     Private SensitivityThreshold As Integer = 500
     Private Sub informationSystem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
-        'Dim userrole As String
-        'If userrole.Contains("Admin") Then
-        '    auditLog.Visible = True
-        '    activateUser.Visible = True
-        '    MessageBox.Show("Welcome Admin")
-        'ElseIf userrole.Contains("Patient") Then
-        '    auditLog.Visible = False
-        '    activateUser.Visible = False
-        '    MessageBox.Show("Welcome Patient, Please register")
-        'ElseIf userrole.Contains("Doctor") Then
-        '    auditLog.Visible = False
-        '    activateUser.Visible = False
-        '    MessageBox.Show("Hello Quack")
-        'Else
-        '    MessageBox.Show("Userrole is not available")
-        'End If
+        userID = GetUserId(userName)
+        userRoleText = GetUserRole(userID)
+        currentUser.Text = userName
+        userRole.Text = userRoleText
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -34,6 +26,7 @@ Public Class informationSystem
             Me.Close()
         End If
         testTimer.Text = timerValue
+        dateAndTime.Text = DateTime.Now.ToString()
     End Sub
 
     Private Sub ManagePatientsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManagePatientsToolStripMenuItem.Click
