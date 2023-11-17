@@ -29,6 +29,7 @@ Partial Class informationSystem
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManagePatientsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManageUsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransactionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DoctorAppointmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BookAppointmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -45,7 +46,6 @@ Partial Class informationSystem
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.testTimer = New System.Windows.Forms.Label()
-        Me.ManageUsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -70,18 +70,18 @@ Partial Class informationSystem
         'LogInToolStripMenuItem
         '
         Me.LogInToolStripMenuItem.Name = "LogInToolStripMenuItem"
-        Me.LogInToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
+        Me.LogInToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.LogInToolStripMenuItem.Text = "Logout"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'RecordToolStripMenuItem
         '
-        Me.RecordToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManagePatientsToolStripMenuItem, Me.ManageUsersToolStripMenuItem})
+        Me.RecordToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageUsersToolStripMenuItem, Me.ManagePatientsToolStripMenuItem})
         Me.RecordToolStripMenuItem.Name = "RecordToolStripMenuItem"
         Me.RecordToolStripMenuItem.Size = New System.Drawing.Size(70, 24)
         Me.RecordToolStripMenuItem.Text = "Record"
@@ -91,6 +91,12 @@ Partial Class informationSystem
         Me.ManagePatientsToolStripMenuItem.Name = "ManagePatientsToolStripMenuItem"
         Me.ManagePatientsToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ManagePatientsToolStripMenuItem.Text = "Manage Patients"
+        '
+        'ManageUsersToolStripMenuItem
+        '
+        Me.ManageUsersToolStripMenuItem.Name = "ManageUsersToolStripMenuItem"
+        Me.ManageUsersToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ManageUsersToolStripMenuItem.Text = "Manage Users"
         '
         'TransactionToolStripMenuItem
         '
@@ -193,12 +199,6 @@ Partial Class informationSystem
         Me.testTimer.Size = New System.Drawing.Size(11, 16)
         Me.testTimer.TabIndex = 2
         Me.testTimer.Text = "-"
-        '
-        'ManageUsersToolStripMenuItem
-        '
-        Me.ManageUsersToolStripMenuItem.Name = "ManageUsersToolStripMenuItem"
-        Me.ManageUsersToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.ManageUsersToolStripMenuItem.Text = "Manage Users"
         '
         'informationSystem
         '

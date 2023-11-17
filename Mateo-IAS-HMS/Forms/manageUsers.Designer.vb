@@ -22,6 +22,7 @@ Partial Class manageUsers
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -41,6 +42,8 @@ Partial Class manageUsers
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.testTimer = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -215,11 +218,25 @@ Partial Class manageUsers
         Me.Button5.Text = "Home"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'testTimer
+        '
+        Me.testTimer.AutoSize = True
+        Me.testTimer.Location = New System.Drawing.Point(777, 9)
+        Me.testTimer.Name = "testTimer"
+        Me.testTimer.Size = New System.Drawing.Size(11, 16)
+        Me.testTimer.TabIndex = 7
+        Me.testTimer.Text = "-"
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
         'manageUsers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.testTimer)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -230,6 +247,7 @@ Partial Class manageUsers
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "manageUsers"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "manageUsers"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -258,4 +276,6 @@ Partial Class manageUsers
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents testTimer As Label
+    Friend WithEvents Timer1 As Timer
 End Class

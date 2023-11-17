@@ -35,7 +35,7 @@ Public Class informationSystem
 
 
 
-    Private Sub ManageUsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManageUsersToolStripMenuItem.Click
+    Private Sub ManageUsersToolStripMenuItem_Clickk(sender As Object, e As EventArgs) Handles ManageUsersToolStripMenuItem.Click
         Dim frm As New manageUsers
         frm.Show()
         Me.Close()
@@ -85,5 +85,13 @@ Public Class informationSystem
         Dim frm As New managePatients
         frm.Show()
         Me.Close()
+    End Sub
+
+    Private Sub informationSystem_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
+        timerValue = 0
+    End Sub
+
+    Private Sub informationSystem_MouseHover(sender As Object, e As EventArgs) Handles MyBase.MouseHover
+        timerValue = 0
     End Sub
 End Class

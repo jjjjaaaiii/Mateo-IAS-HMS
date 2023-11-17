@@ -18,6 +18,8 @@ Public Class managePatients
             clearTxtBoxes()
             DataGridView1.DataSource = GetAllDataFromTable("tbl_patient")
         End If
+
+        timerValue = 0
     End Sub
 
     Private Sub btnUpdate_patient_Click(sender As Object, e As EventArgs) Handles btnUpdate_patient.Click
@@ -53,6 +55,8 @@ Public Class managePatients
         disableTxtBoxes()
         clearTxtBoxes()
         DataGridView1.DataSource = GetAllDataFromTable("tbl_patient")
+
+        timerValue = 0
     End Sub
 
     Private Sub btnAdd_patient_Click(sender As Object, e As EventArgs) Handles btnAdd_patient.Click
@@ -88,6 +92,9 @@ Public Class managePatients
         disableTxtBoxes()
         clearTxtBoxes()
         DataGridView1.DataSource = GetAllDataFromTable("tbl_patient")
+
+
+        timerValue = 0
     End Sub
 
 
@@ -181,5 +188,14 @@ Public Class managePatients
         txtcontactnumber_patient.Text = String.Empty
         txtage_patient.Text = String.Empty
         dtpbirthday_patient.Text = String.Empty
+    End Sub
+
+    Private Sub btnNew_patient_Click(sender As Object, e As EventArgs) Handles btnNew_patient.Click
+        enableTxtBoxes()
+        clearTxtBoxes()
+    End Sub
+
+    Private Sub managePatients_MouseHover(sender As Object, e As EventArgs) Handles MyBase.MouseHover
+        timerValue = 0
     End Sub
 End Class
