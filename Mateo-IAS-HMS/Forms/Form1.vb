@@ -29,7 +29,7 @@ Public Class Form1
             frm.Show()
             Me.Close()
         Else
-            Dim attemptMessage = String.Format("Wrong password! Ypu have {0} attempt/s left. ", (3 - attempts))
+            Dim attemptMessage = String.Format("Wrong password! You have {0} attempt/s left.", (3 - attempts))
             MessageBox.Show(attemptMessage)
         End If
     End Sub
