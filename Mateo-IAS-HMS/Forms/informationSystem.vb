@@ -81,12 +81,6 @@ Public Class informationSystem
         Me.Close()
     End Sub
 
-    Private Sub ManageUsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManageUsersToolStripMenuItem.Click
-        Dim frm As New managePatients
-        frm.Show()
-        Me.Close()
-    End Sub
-
     Private Sub informationSystem_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
         timerValue = 0
     End Sub
