@@ -337,15 +337,15 @@ Module functions
     End Sub
 
     'update
-    Public Sub UpdatePatient(primaryKeyValue As Integer, lastname As String, firstname As String, mi As String, barangay As String, municipality As String, province As String, contact As String, age As String, birthday As String)
-        Dim query As String = "UPDATE tbl_patient SET firstname = @firstname, lastname = @lastname, mi = @mi, barangay = @barangay, municipality = @municipality, province = @province, contactnumber = @contact, @age = age, birthday = @birthday WHERE patient_id  = @PrimaryKeyValue"
+    Public Sub UpdatePatient(primaryKeyValue As Integer, lastname As String, firstname As String, mi As String, barangay As String, municipal As String, province As String, contact As String, age As String, birthday As String)
+        Dim query As String = "UPDATE tbl_patient SET firstname = @firstname, lastname = @lastname, mi = @mi, barangay = @barangay, municipal = @municipal, province = @province, contactnumber = @contact, @age = age, birthday = @birthday WHERE patient_id  = @PrimaryKeyValue"
         Dim command As New MySqlCommand(query, connection)
 
         command.Parameters.AddWithValue("@lastname", lastname)
         command.Parameters.AddWithValue("@firstname", firstname)
         command.Parameters.AddWithValue("@mi", mi)
         command.Parameters.AddWithValue("@barangay", barangay)
-        command.Parameters.AddWithValue("@municipality", municipality)
+        command.Parameters.AddWithValue("@municipal", municipal)
         command.Parameters.AddWithValue("@province", province)
         command.Parameters.AddWithValue("@contact", contact)
         command.Parameters.AddWithValue("@age", age)
@@ -366,7 +366,7 @@ Module functions
         Dim firstname As String
         Dim mi As String
         Dim barangay As String
-        Dim municipality As String
+        Dim municipal As String
         Dim province As String
         Dim contact As String
         Dim age As String
@@ -384,7 +384,7 @@ Module functions
             firstname = reader("firstname").ToString
             mi = reader("mi").ToString
             barangay = reader("barangay").ToString
-            municipality = reader("municipality").ToString
+            municipal = reader("municipal").ToString
             province = reader("province").ToString
             contact = reader("contactnumber").ToString
             age = reader("age").ToString
@@ -396,13 +396,13 @@ Module functions
         reader.Close()
 
         Return Tuple.Create(id, firstname, lastname, mi, barangay)
-        Return Tuple.Create(municipality, province, contact, age, birthday)
+        Return Tuple.Create(municipal, province, contact, age, birthday)
     End Function
 
     'add
-    Public Sub AddPatient(user_id As Integer, lastname As String, firstname As String, mi As String, barangay As String, municipality As String, province As String, contact As String, age As String, birthday As String)
+    Public Sub AddPatient(user_id As Integer, lastname As String, firstname As String, mi As String, barangay As String, municipal As String, province As String, contact As String, age As String, birthday As String)
 
-        Dim query As String = "INSERT INTO tbl_patient (user_id, lastname, firstname, mi, barangay, municipality, province, contactnumber, age, birthday) VALUES (@id, @lastname, @firstname, @mi, @barangay, @municipality, @province, @contact, @age, @birthday)"
+        Dim query As String = "INSERT INTO tbl_patient (user_id, lastname, firstname, mi, barangay, municipal, province, contactnumber, age, birthday) VALUES (@id, @lastname, @firstname, @mi, @barangay, @municipal, @province, @contact, @age, @birthday)"
         Dim command As New MySqlCommand(query, connection)
 
         command.Parameters.AddWithValue("@id", user_id)
@@ -410,7 +410,7 @@ Module functions
         command.Parameters.AddWithValue("@firstname", firstname)
         command.Parameters.AddWithValue("@mi", mi)
         command.Parameters.AddWithValue("@barangay", barangay)
-        command.Parameters.AddWithValue("@municipality", municipality)
+        command.Parameters.AddWithValue("@municipal", municipal)
         command.Parameters.AddWithValue("@province", province)
         command.Parameters.AddWithValue("@contact", contact)
         command.Parameters.AddWithValue("@age", age)
@@ -432,4 +432,24 @@ Module functions
         End Try
 
     End Sub
+
+    'get data for registration patient
+    Public Function GetPatientRegistration() As DataTable
+        Dim query As String = "SELECT user_id, lastname, firstname, mi, barangay, municipal, province, contactnumber, age, birthday FROM tbl_patient"
+        Dim cmd As New MySqlCommand(query, connection)
+        Dim dt As New DataTable()
+
+        Try
+            connection.Open()
+            Dim da As New MySqlDataAdapter(cmd)
+            da.Fill(dt)
+            Return dt
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+            Return Nothing ' Return Nothing to indicate an error.
+        Finally
+            connection.Close()
+        End Try
+    End Function
+
 End Module

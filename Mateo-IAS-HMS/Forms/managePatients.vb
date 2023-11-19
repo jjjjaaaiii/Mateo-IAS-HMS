@@ -101,6 +101,7 @@ Public Class managePatients
 
     Private Sub managePatients_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
+        DataGridView1.DataSource = GetPatientRegistration()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -196,6 +197,10 @@ Public Class managePatients
     End Sub
 
     Private Sub managePatients_MouseHover(sender As Object, e As EventArgs) Handles MyBase.MouseHover
+        timerValue = 0
+    End Sub
+
+    Private Sub managePatients_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
         timerValue = 0
     End Sub
 End Class

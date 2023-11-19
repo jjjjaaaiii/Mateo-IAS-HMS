@@ -64,5 +64,11 @@
         testTimer.Text = timerValue
     End Sub
 
+    Private Sub activateUser_MouseHover(sender As Object, e As EventArgs) Handles MyBase.MouseHover
+        timerValue = 0
+    End Sub
 
+    Private Sub activateUser_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
+        timerValue = 0
+    End Sub
 End Class

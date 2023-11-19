@@ -94,4 +94,10 @@ Public Class informationSystem
     Private Sub informationSystem_MouseHover(sender As Object, e As EventArgs) Handles MyBase.MouseHover
         timerValue = 0
     End Sub
+
+    Private Sub ManageDoctorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManageDoctorToolStripMenuItem.Click
+        Dim frm As New manageDoctors
+        frm.Show()
+        Me.Close()
+    End Sub
 End Class
