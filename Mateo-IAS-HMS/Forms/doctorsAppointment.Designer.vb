@@ -80,9 +80,9 @@ Partial Class doctorsAppointment
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(61, 199)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(98, 16)
+        Me.Label5.Size = New System.Drawing.Size(97, 16)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Doctor's NAme"
+        Me.Label5.Text = "Doctor's Name"
         '
         'DataGridView1
         '

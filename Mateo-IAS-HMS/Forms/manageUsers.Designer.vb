@@ -29,11 +29,9 @@ Partial Class manageUsers
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -55,11 +53,9 @@ Partial Class manageUsers
         Me.GroupBox1.Controls.Add(Me.TextBox5)
         Me.GroupBox1.Controls.Add(Me.TextBox4)
         Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(45, 49)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(701, 161)
@@ -70,7 +66,7 @@ Partial Class manageUsers
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(411, 125)
+        Me.Label6.Location = New System.Drawing.Point(51, 127)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(76, 16)
         Me.Label6.TabIndex = 11
@@ -78,43 +74,36 @@ Partial Class manageUsers
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(493, 116)
+        Me.TextBox6.Location = New System.Drawing.Point(133, 118)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox6.Size = New System.Drawing.Size(181, 22)
         Me.TextBox6.TabIndex = 10
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(160, 119)
+        Me.TextBox5.Location = New System.Drawing.Point(133, 46)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(210, 22)
+        Me.TextBox5.Size = New System.Drawing.Size(119, 22)
         Me.TextBox5.TabIndex = 9
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(493, 83)
+        Me.TextBox4.Location = New System.Drawing.Point(448, 49)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox4.Size = New System.Drawing.Size(214, 22)
         Me.TextBox4.TabIndex = 8
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(493, 46)
+        Me.TextBox3.Location = New System.Drawing.Point(133, 83)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox3.Size = New System.Drawing.Size(181, 22)
         Me.TextBox3.TabIndex = 7
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(160, 83)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(210, 22)
-        Me.TextBox2.TabIndex = 6
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(44, 119)
+        Me.Label5.Location = New System.Drawing.Point(46, 49)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(71, 16)
         Me.Label5.TabIndex = 5
@@ -123,7 +112,7 @@ Partial Class manageUsers
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(408, 83)
+        Me.Label4.Location = New System.Drawing.Point(363, 49)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(70, 16)
         Me.Label4.TabIndex = 4
@@ -132,20 +121,11 @@ Partial Class manageUsers
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(408, 49)
+        Me.Label3.Location = New System.Drawing.Point(48, 86)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(79, 16)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "User Name:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(44, 89)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(90, 16)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "User Account:"
         '
         'Label1
         '
@@ -263,11 +243,9 @@ Partial Class manageUsers
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents DataGridView1 As DataGridView

@@ -22,10 +22,11 @@ Partial Class manageDoctors
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btn_home = New System.Windows.Forms.Button()
         Me.testTimer = New System.Windows.Forms.Label()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.dtpbirthday_patient = New System.Windows.Forms.DateTimePicker()
@@ -54,6 +55,7 @@ Partial Class manageDoctors
         Me.txtpatient_id = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox7.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
@@ -91,14 +93,14 @@ Partial Class manageDoctors
         Me.Button3.Text = "Delete"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btn_home
         '
-        Me.Button4.Location = New System.Drawing.Point(774, 565)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(100, 23)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Home"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btn_home.Location = New System.Drawing.Point(774, 565)
+        Me.btn_home.Name = "btn_home"
+        Me.btn_home.Size = New System.Drawing.Size(100, 23)
+        Me.btn_home.TabIndex = 3
+        Me.btn_home.Text = "Home"
+        Me.btn_home.UseVisualStyleBackColor = True
         '
         'testTimer
         '
@@ -351,6 +353,9 @@ Partial Class manageDoctors
         Me.DataGridView1.Size = New System.Drawing.Size(883, 183)
         Me.DataGridView1.TabIndex = 27
         '
+        'Timer1
+        '
+        '
         'manageDoctors
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -366,7 +371,7 @@ Partial Class manageDoctors
         Me.Controls.Add(Me.gb_name_patient)
         Me.Controls.Add(Me.gb_patient_number)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.btn_home)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -393,7 +398,7 @@ Partial Class manageDoctors
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btn_home As Button
     Friend WithEvents testTimer As Label
     Friend WithEvents GroupBox7 As GroupBox
     Friend WithEvents dtpbirthday_patient As DateTimePicker
@@ -422,4 +427,5 @@ Partial Class manageDoctors
     Friend WithEvents txtpatient_id As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Timer1 As Timer
 End Class

@@ -433,7 +433,7 @@ Module functions
 
     End Sub
 
-    'get data for registration patient
+    'retrieve
     Public Function GetPatientRegistration() As DataTable
         Dim query As String = "SELECT user_id, lastname, firstname, mi, barangay, municipal, province, contactnumber, age, birthday FROM tbl_patient"
         Dim cmd As New MySqlCommand(query, connection)
