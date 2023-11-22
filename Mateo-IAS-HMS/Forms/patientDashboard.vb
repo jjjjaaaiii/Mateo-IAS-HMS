@@ -13,6 +13,11 @@ Public Class patientDashboard
         Timer1.Start()
     End Sub
 
+    Public Sub SwitchToForm(frm As Form)
+        frm.Show()
+        Me.Close()
+    End Sub
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         timerValue += 1
         If timerValue = 60 Then
@@ -31,5 +36,29 @@ Public Class patientDashboard
 
     Private Sub informationSystem_MouseHover(sender As Object, e As EventArgs) Handles MyBase.MouseHover
         timerValue = 0
+    End Sub
+
+    Private Sub btn_book_Click(sender As Object, e As EventArgs) Handles btn_book.Click
+        SwitchToForm(bookAppointment)
+    End Sub
+
+    Private Sub btn_pay_Click(sender As Object, e As EventArgs) Handles btn_pay.Click
+        SwitchToForm(pay)
+    End Sub
+
+    Private Sub btn_viewappoint_Click(sender As Object, e As EventArgs) Handles btn_viewappoint.Click
+        SwitchToForm(manageAppointments)
+    End Sub
+
+    Private Sub btn_change_Click(sender As Object, e As EventArgs) Handles btn_change.Click
+        SwitchToForm(manageUsers)
+    End Sub
+
+    Private Sub btn_logout_Click(sender As Object, e As EventArgs) Handles btn_logout.Click
+        SwitchToForm(Login)
+    End Sub
+
+    Private Sub btn_viewdoctor_Click(sender As Object, e As EventArgs) Handles btn_viewdoctor.Click
+        SwitchToForm(manageDoctors)
     End Sub
 End Class
