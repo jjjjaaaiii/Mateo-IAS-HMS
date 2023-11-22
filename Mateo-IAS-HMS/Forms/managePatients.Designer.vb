@@ -38,6 +38,8 @@ Partial Class managePatients
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtaddress_patient = New System.Windows.Forms.TextBox()
         Me.txtname_patient = New System.Windows.Forms.TextBox()
+        Me.randomasslabel = New System.Windows.Forms.Label()
+        Me.txtuserid = New System.Windows.Forms.TextBox()
         Me.gb_patient_number.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -122,7 +124,7 @@ Partial Class managePatients
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(43, 168)
+        Me.Label3.Location = New System.Drawing.Point(308, 169)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(52, 16)
         Me.Label3.TabIndex = 34
@@ -130,7 +132,7 @@ Partial Class managePatients
         '
         'txtcontact_patient
         '
-        Me.txtcontact_patient.Location = New System.Drawing.Point(46, 187)
+        Me.txtcontact_patient.Location = New System.Drawing.Point(311, 188)
         Me.txtcontact_patient.Name = "txtcontact_patient"
         Me.txtcontact_patient.Size = New System.Drawing.Size(247, 22)
         Me.txtcontact_patient.TabIndex = 29
@@ -138,7 +140,7 @@ Partial Class managePatients
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(311, 92)
+        Me.Label7.Location = New System.Drawing.Point(43, 169)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(58, 16)
         Me.Label7.TabIndex = 32
@@ -147,7 +149,7 @@ Partial Class managePatients
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(43, 92)
+        Me.Label2.Location = New System.Drawing.Point(308, 96)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 16)
         Me.Label2.TabIndex = 33
@@ -155,23 +157,41 @@ Partial Class managePatients
         '
         'txtaddress_patient
         '
-        Me.txtaddress_patient.Location = New System.Drawing.Point(311, 113)
+        Me.txtaddress_patient.Location = New System.Drawing.Point(43, 190)
         Me.txtaddress_patient.Name = "txtaddress_patient"
         Me.txtaddress_patient.Size = New System.Drawing.Size(250, 22)
         Me.txtaddress_patient.TabIndex = 30
         '
         'txtname_patient
         '
-        Me.txtname_patient.Location = New System.Drawing.Point(46, 112)
+        Me.txtname_patient.Location = New System.Drawing.Point(311, 116)
         Me.txtname_patient.Name = "txtname_patient"
         Me.txtname_patient.Size = New System.Drawing.Size(250, 22)
         Me.txtname_patient.TabIndex = 31
+        '
+        'randomasslabel
+        '
+        Me.randomasslabel.AutoSize = True
+        Me.randomasslabel.Location = New System.Drawing.Point(43, 96)
+        Me.randomasslabel.Name = "randomasslabel"
+        Me.randomasslabel.Size = New System.Drawing.Size(52, 16)
+        Me.randomasslabel.TabIndex = 36
+        Me.randomasslabel.Text = "User ID"
+        '
+        'txtuserid
+        '
+        Me.txtuserid.Location = New System.Drawing.Point(46, 116)
+        Me.txtuserid.Name = "txtuserid"
+        Me.txtuserid.Size = New System.Drawing.Size(250, 22)
+        Me.txtuserid.TabIndex = 35
         '
         'managePatients
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(970, 459)
+        Me.Controls.Add(Me.randomasslabel)
+        Me.Controls.Add(Me.txtuserid)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtcontact_patient)
         Me.Controls.Add(Me.Label7)
@@ -210,4 +230,6 @@ Partial Class managePatients
     Friend WithEvents Label2 As Label
     Friend WithEvents txtaddress_patient As TextBox
     Friend WithEvents txtname_patient As TextBox
+    Friend WithEvents randomasslabel As Label
+    Friend WithEvents txtuserid As TextBox
 End Class

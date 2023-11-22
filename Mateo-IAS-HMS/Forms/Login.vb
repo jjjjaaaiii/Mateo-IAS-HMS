@@ -22,11 +22,27 @@ Public Class Login
             MessageBox.Show("Request approval to admin!")
         ElseIf ValidateUser(Uaccount, md5Hash) Then
             MessageBox.Show("You are now logged in!")
+
             Dim userId As Integer = GetUserId(Uaccount)
+            Dim role As String = GetUserRole(userId)
+
+            userData.id = userId
+            userData.username = Uaccount
+            userData.role = role
+
             InsertAuditRecord(userId, "Logged In")
-            Dim frm As New patientDashboard
-            frm.userName = Uaccount
-            frm.Show()
+
+            If (role = "Admin") Then
+                Dim frm As New adminDashboard
+                frm.Show()
+            ElseIf (role = "Doctor") Then
+                Dim frm As New doctorDashboard
+                frm.Show()
+            Else
+                Dim frm As New patientDashboard
+                frm.Show()
+            End If
+
             Me.Close()
         Else
             Dim attemptMessage = String.Format("Wrong password! You have {0} attempt/s left.", (3 - attempts))
