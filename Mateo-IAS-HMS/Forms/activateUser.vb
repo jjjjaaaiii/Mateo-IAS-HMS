@@ -49,7 +49,7 @@
     End Sub
 
     Private Sub btnback_Click(sender As Object, e As EventArgs) Handles btnback.Click
-        Dim frm As New informationSystem
+        Dim frm As New patientDashboard
         frm.Show()
         Me.Close()
     End Sub
@@ -57,7 +57,7 @@
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         timerValue += 1
         If timerValue = 60 Then
-            Dim frm As New Form1()
+            Dim frm As New Login()
             frm.Show()
             Me.Close()
         End If

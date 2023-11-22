@@ -53,7 +53,7 @@ Public Class registrationForm
     End Sub
 
     Private Sub lblsignIN_Click(sender As Object, e As EventArgs) Handles lblsignIN.Click
-        Dim frm As New Form1
+        Dim frm As New Login
         frm.Show()
         Me.Close()
     End Sub

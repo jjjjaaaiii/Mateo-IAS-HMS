@@ -10,7 +10,7 @@
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         timerValue += 1
         If timerValue = 60 Then
-            Dim frm As New Form1()
+            Dim frm As New Login()
             frm.Show()
             Me.Close()
         End If
@@ -19,6 +19,8 @@
 
     Private Sub manageUsers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
+        DataGridView1.DataSource = GetAllDataFromTable("tbl_user")
+
     End Sub
 
 End Class

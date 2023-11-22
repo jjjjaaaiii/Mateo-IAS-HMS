@@ -25,18 +25,20 @@ Partial Class bookAppointment
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.txtpatientid = New System.Windows.Forms.TextBox()
+        Me.txtdoctorid = New System.Windows.Forms.TextBox()
+        Me.txtreason = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(67, 78)
+        Me.Label1.Location = New System.Drawing.Point(40, 29)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(105, 16)
         Me.Label1.TabIndex = 0
@@ -45,56 +47,24 @@ Partial Class bookAppointment
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(178, 174)
+        Me.Label2.Location = New System.Drawing.Point(40, 93)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 16)
+        Me.Label2.Size = New System.Drawing.Size(64, 16)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Patient Name"
+        Me.Label2.Text = "Patient ID"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(179, 226)
+        Me.Label3.Location = New System.Drawing.Point(352, 87)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(87, 16)
+        Me.Label3.Size = New System.Drawing.Size(63, 16)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Doctor Name"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(178, 297)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(36, 16)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Date"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(272, 166)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(163, 24)
-        Me.ComboBox1.TabIndex = 7
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(273, 226)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(163, 24)
-        Me.ComboBox2.TabIndex = 8
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(237, 291)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(243, 22)
-        Me.DateTimePicker1.TabIndex = 9
+        Me.Label3.Text = "Doctor ID"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(432, 351)
+        Me.Button1.Location = New System.Drawing.Point(474, 363)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(78, 24)
         Me.Button1.TabIndex = 10
@@ -103,30 +73,72 @@ Partial Class bookAppointment
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(516, 351)
+        Me.Button2.Location = New System.Drawing.Point(558, 363)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(78, 24)
         Me.Button2.TabIndex = 11
         Me.Button2.Text = "Home"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'txtpatientid
+        '
+        Me.txtpatientid.Location = New System.Drawing.Point(135, 86)
+        Me.txtpatientid.Name = "txtpatientid"
+        Me.txtpatientid.Size = New System.Drawing.Size(163, 22)
+        Me.txtpatientid.TabIndex = 12
+        '
+        'txtdoctorid
+        '
+        Me.txtdoctorid.Location = New System.Drawing.Point(446, 87)
+        Me.txtdoctorid.Name = "txtdoctorid"
+        Me.txtdoctorid.Size = New System.Drawing.Size(163, 22)
+        Me.txtdoctorid.TabIndex = 13
+        '
+        'txtreason
+        '
+        Me.txtreason.Location = New System.Drawing.Point(135, 130)
+        Me.txtreason.Name = "txtreason"
+        Me.txtreason.Size = New System.Drawing.Size(163, 22)
+        Me.txtreason.TabIndex = 15
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(41, 130)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(55, 16)
+        Me.Label5.TabIndex = 14
+        Me.Label5.Text = "Reason"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 196)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(624, 161)
+        Me.DataGridView1.TabIndex = 16
+        '
         'bookAppointment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(648, 392)
+        Me.ClientSize = New System.Drawing.Size(648, 416)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.txtreason)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.txtdoctorid)
+        Me.Controls.Add(Me.txtpatientid)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "bookAppointment"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "bookAppointment"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -135,10 +147,11 @@ Partial Class bookAppointment
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents txtpatientid As TextBox
+    Friend WithEvents txtdoctorid As TextBox
+    Friend WithEvents txtreason As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

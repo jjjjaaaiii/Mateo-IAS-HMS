@@ -131,6 +131,12 @@
     <Compile Include="Forms\activateUser.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\adminDashboard.Designer.vb">
+      <DependentUpon>adminDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\adminDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\auditLog.Designer.vb">
       <DependentUpon>auditLog.vb</DependentUpon>
     </Compile>
@@ -143,17 +149,23 @@
     <Compile Include="Forms\bookAppointment.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\doctorsAppointment.Designer.vb">
-      <DependentUpon>doctorsAppointment.vb</DependentUpon>
+    <Compile Include="Forms\doctorDashboard.Designer.vb">
+      <DependentUpon>doctorDashboard.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\doctorsAppointment.vb">
+    <Compile Include="Forms\doctorDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.vb">
+    <Compile Include="Forms\manageAppointments.Designer.vb">
+      <DependentUpon>manageAppointments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\manageAppointments.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Forms\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\manageDoctors.Designer.vb">
@@ -168,11 +180,17 @@
     <Compile Include="Forms\manageUsers.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="functions.vb" />
-    <Compile Include="Forms\informationSystem.Designer.vb">
-      <DependentUpon>informationSystem.vb</DependentUpon>
+    <Compile Include="Forms\pay.Designer.vb">
+      <DependentUpon>pay.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\informationSystem.vb">
+    <Compile Include="Forms\pay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="functions.vb" />
+    <Compile Include="Forms\patientDashboard.Designer.vb">
+      <DependentUpon>patientDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\patientDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\managePatients.Designer.vb">
@@ -208,20 +226,26 @@
     <EmbeddedResource Include="Forms\activateUser.resx">
       <DependentUpon>activateUser.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\adminDashboard.resx">
+      <DependentUpon>adminDashboard.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\auditLog.resx">
       <DependentUpon>auditLog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\bookAppointment.resx">
       <DependentUpon>bookAppointment.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\doctorsAppointment.resx">
-      <DependentUpon>doctorsAppointment.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\doctorDashboard.resx">
+      <DependentUpon>doctorDashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\manageAppointments.resx">
+      <DependentUpon>manageAppointments.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\informationSystem.resx">
-      <DependentUpon>informationSystem.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\patientDashboard.resx">
+      <DependentUpon>patientDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\manageDoctors.resx">
       <DependentUpon>manageDoctors.vb</DependentUpon>
@@ -231,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\manageUsers.resx">
       <DependentUpon>manageUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\pay.resx">
+      <DependentUpon>pay.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

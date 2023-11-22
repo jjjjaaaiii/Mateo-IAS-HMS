@@ -24,21 +24,18 @@ Partial Class manageUsers
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txt_role = New System.Windows.Forms.TextBox()
+        Me.txt_password = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txt_id = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_new = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btn_update = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.testTimer = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
@@ -48,10 +45,8 @@ Partial Class manageUsers
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
+        Me.GroupBox1.Controls.Add(Me.txt_role)
+        Me.GroupBox1.Controls.Add(Me.txt_password)
         Me.GroupBox1.Controls.Add(Me.TextBox3)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -63,39 +58,23 @@ Partial Class manageUsers
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "manageUsers"
         '
-        'Label6
+        'txt_role
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(51, 127)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(76, 16)
-        Me.Label6.TabIndex = 11
-        Me.Label6.Text = "User Active"
+        Me.txt_role.Location = New System.Drawing.Point(141, 81)
+        Me.txt_role.Name = "txt_role"
+        Me.txt_role.Size = New System.Drawing.Size(181, 22)
+        Me.txt_role.TabIndex = 9
         '
-        'TextBox6
+        'txt_password
         '
-        Me.TextBox6.Location = New System.Drawing.Point(133, 118)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(181, 22)
-        Me.TextBox6.TabIndex = 10
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(133, 46)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(119, 22)
-        Me.TextBox5.TabIndex = 9
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(448, 49)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(214, 22)
-        Me.TextBox4.TabIndex = 8
+        Me.txt_password.Location = New System.Drawing.Point(448, 40)
+        Me.txt_password.Name = "txt_password"
+        Me.txt_password.Size = New System.Drawing.Size(214, 22)
+        Me.txt_password.TabIndex = 8
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(133, 83)
+        Me.TextBox3.Location = New System.Drawing.Point(141, 43)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(181, 22)
         Me.TextBox3.TabIndex = 7
@@ -103,7 +82,7 @@ Partial Class manageUsers
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(46, 49)
+        Me.Label5.Location = New System.Drawing.Point(54, 84)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(71, 16)
         Me.Label5.TabIndex = 5
@@ -112,7 +91,7 @@ Partial Class manageUsers
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(363, 49)
+        Me.Label4.Location = New System.Drawing.Point(363, 43)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(70, 16)
         Me.Label4.TabIndex = 4
@@ -121,7 +100,7 @@ Partial Class manageUsers
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(48, 86)
+        Me.Label3.Location = New System.Drawing.Point(46, 43)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(79, 16)
         Me.Label3.TabIndex = 3
@@ -136,12 +115,12 @@ Partial Class manageUsers
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "User ID:"
         '
-        'TextBox1
+        'txt_id
         '
-        Me.TextBox1.Location = New System.Drawing.Point(538, 12)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(121, 22)
-        Me.TextBox1.TabIndex = 0
+        Me.txt_id.Location = New System.Drawing.Point(538, 12)
+        Me.txt_id.Name = "txt_id"
+        Me.txt_id.Size = New System.Drawing.Size(121, 22)
+        Me.txt_id.TabIndex = 0
         '
         'DataGridView1
         '
@@ -153,14 +132,14 @@ Partial Class manageUsers
         Me.DataGridView1.Size = New System.Drawing.Size(705, 186)
         Me.DataGridView1.TabIndex = 1
         '
-        'Button1
+        'btn_new
         '
-        Me.Button1.Location = New System.Drawing.Point(45, 419)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "New User"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btn_new.Location = New System.Drawing.Point(45, 419)
+        Me.btn_new.Name = "btn_new"
+        Me.btn_new.Size = New System.Drawing.Size(75, 23)
+        Me.btn_new.TabIndex = 2
+        Me.btn_new.Text = "New User"
+        Me.btn_new.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -171,23 +150,14 @@ Partial Class manageUsers
         Me.Button2.Text = "Search"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btn_update
         '
-        Me.Button3.Location = New System.Drawing.Point(126, 419)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "Update"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(207, 419)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 5
-        Me.Button4.Text = "Delete"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btn_update.Location = New System.Drawing.Point(126, 419)
+        Me.btn_update.Name = "btn_update"
+        Me.btn_update.Size = New System.Drawing.Size(75, 23)
+        Me.btn_update.TabIndex = 4
+        Me.btn_update.Text = "Update"
+        Me.btn_update.UseVisualStyleBackColor = True
         '
         'Button5
         '
@@ -218,14 +188,13 @@ Partial Class manageUsers
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.testTimer)
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.btn_update)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btn_new)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txt_id)
         Me.Name = "manageUsers"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "manageUsers"
@@ -238,21 +207,18 @@ Partial Class manageUsers
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txt_role As TextBox
+    Friend WithEvents txt_password As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_id As TextBox
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_new As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btn_update As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents testTimer As Label
     Friend WithEvents Timer1 As Timer

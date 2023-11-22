@@ -3,7 +3,7 @@ Imports MySql.Data.MySqlClient
 Imports System.Security.Cryptography
 Imports System.Text
 
-Public Class Form1
+Public Class Login
 
     Public passwordHide As Boolean = True
     Private attempts As Integer = 0
@@ -24,7 +24,7 @@ Public Class Form1
             MessageBox.Show("You are now logged in!")
             Dim userId As Integer = GetUserId(Uaccount)
             InsertAuditRecord(userId, "Logged In")
-            Dim frm As New informationSystem
+            Dim frm As New patientDashboard
             frm.userName = Uaccount
             frm.Show()
             Me.Close()

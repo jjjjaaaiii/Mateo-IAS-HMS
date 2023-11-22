@@ -3,7 +3,7 @@ Imports Microsoft.VisualBasic.ApplicationServices
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports Org.BouncyCastle.Pqc.Crypto.Frodo
 
-Public Class informationSystem
+Public Class patientDashboard
     Public userName As String
     Public userRoleText As String
     Private userID As Integer
@@ -25,7 +25,7 @@ Public Class informationSystem
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         timerValue += 1
         If timerValue = 60 Then
-            Dim frm As New Form1()
+            Dim frm As New Login()
             frm.Show()
             Me.Close()
         End If
@@ -48,7 +48,7 @@ Public Class informationSystem
     End Sub
 
     Private Sub DoctorAppointmentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DoctorAppointmentToolStripMenuItem.Click
-        Dim frm As New doctorsAppointment
+        Dim frm As New manageAppointments
         frm.Show()
         Me.Close()
     End Sub
@@ -72,7 +72,7 @@ Public Class informationSystem
     End Sub
 
     Private Sub LogInToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogInToolStripMenuItem.Click
-        Dim frm As New Form1
+        Dim frm As New Login
         frm.Show()
         Me.Close()
     End Sub

@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub btnback_Click(sender As Object, e As EventArgs) Handles btnback.Click
-        Dim frm As New informationSystem
+        Dim frm As New patientDashboard
         frm.Show()
         Me.Close()
     End Sub

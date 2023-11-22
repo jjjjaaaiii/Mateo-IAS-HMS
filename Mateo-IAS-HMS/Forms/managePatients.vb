@@ -5,8 +5,8 @@ Public Class managePatients
     Private timerValue As Integer = 0
     Private PreviousMousePosition As Point
     Private SensitivityThreshold As Integer = 500
-    Private Sub btndelete_patient_Click(sender As Object, e As EventArgs) Handles btndelete_patient.Click
-        Dim patientID As String = txtpatient_id.Text
+    Private Sub btndelete_patient_Click(sender As Object, e As EventArgs)
+        Dim patientID As String = txtsearch_patient.Text
         Dim patientIDInt As Integer
 
         If Integer.TryParse(patientID, patientIDInt) = False Then
@@ -22,8 +22,8 @@ Public Class managePatients
         timerValue = 0
     End Sub
 
-    Private Sub btnUpdate_patient_Click(sender As Object, e As EventArgs) Handles btnUpdate_patient.Click
-        Dim patientId As String = txtpatient_id.Text
+    Private Sub btnUpdate_patient_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
+        Dim patientId As String = txtsearch_patient.Text
         Dim lastname As String = Txtlastname_patient.Text
         Dim firstname As String = txtfirstname_patient.Text
         Dim mi As String = txtmi_patient.Text
@@ -59,8 +59,8 @@ Public Class managePatients
         timerValue = 0
     End Sub
 
-    Private Sub btnAdd_patient_Click(sender As Object, e As EventArgs) Handles btnAdd_patient.Click
-        Dim userid As String = txtpatient_id.Text
+    Private Sub btnAdd_patient_Click(sender As Object, e As EventArgs) 
+        Dim userid As String = txtsearch_patient.Text
         Dim lastname As String = Txtlastname_patient.Text
         Dim firstname As String = txtfirstname_patient.Text
         Dim mi As String = txtmi_patient.Text
@@ -107,7 +107,7 @@ Public Class managePatients
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         timerValue += 1
         If timerValue = 60 Then
-            Dim frm As New Form1()
+            Dim frm As New Login()
             frm.Show()
             Me.Close()
         End If
@@ -115,7 +115,7 @@ Public Class managePatients
     End Sub
 
     Private Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_home.Click
-        Dim frm As New informationSystem
+        Dim frm As New patientDashboard
         frm.Show()
         Me.Close()
     End Sub
@@ -138,7 +138,7 @@ Public Class managePatients
             Dim birthday As Integer = selectedRow.Cells("birthday").Value.ToString()
 
             ' Populate the textboxes with data from the selected row
-            txtpatient_id.Text = selectedRow.Cells("id").Value.ToString()
+            txtsearch_patient.Text = selectedRow.Cells("id").Value.ToString()
             Txtlastname_patient.Text = selectedRow.Cells("lastname").Value.ToString()
             txtfirstname_patient.Text = selectedRow.Cells("firstname").Value.ToString()
             txtmi_patient.Text = selectedRow.Cells("mi").Value.ToString()
@@ -153,7 +153,7 @@ Public Class managePatients
     End Sub
 
     Private Sub enableTxtBoxes()
-        txtpatient_id.Text = True
+        txtsearch_patient.Text = True
         Txtlastname_patient.Text = True
         txtfirstname_patient.Text = True
         txtmi_patient.Text = True
@@ -166,7 +166,7 @@ Public Class managePatients
     End Sub
 
     Private Sub disableTxtBoxes()
-        txtpatient_id.Text = False
+        txtsearch_patient.Text = False
         Txtlastname_patient.Text = False
         txtfirstname_patient.Text = False
         txtmi_patient.Text = False
@@ -179,7 +179,7 @@ Public Class managePatients
     End Sub
 
     Private Sub clearTxtBoxes()
-        txtpatient_id.Text = String.Empty
+        txtsearch_patient.Text = String.Empty
         Txtlastname_patient.Text = String.Empty
         txtfirstname_patient.Text = String.Empty
         txtmi_patient.Text = String.Empty
@@ -191,7 +191,7 @@ Public Class managePatients
         dtpbirthday_patient.Text = String.Empty
     End Sub
 
-    Private Sub btnNew_patient_Click(sender As Object, e As EventArgs) Handles btnNew_patient.Click
+    Private Sub btnNew_patient_Click(sender As Object, e As EventArgs) 
         enableTxtBoxes()
         clearTxtBoxes()
     End Sub

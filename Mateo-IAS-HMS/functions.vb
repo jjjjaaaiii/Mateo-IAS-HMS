@@ -9,16 +9,6 @@ Module functions
     Dim connectionConfig As String = "server=localhost; user=root; password=root; database=db_hospitalproject;"
     Dim connection As New MySqlConnection(connectionConfig)
 
-    Public Sub connectDB()
-        connection.Open()
-        MessageBox.Show("Succesful Connection")
-    End Sub
-
-    Public Sub closeDB()
-        connection.Close()
-        MessageBox.Show("Closed Connection")
-    End Sub
-
     Public Function ValidateUser(username As String, password As String) As Boolean
 
         Dim query As String = "SELECT COUNT(*) FROM tbl_user WHERE username = @username AND password = @password"
@@ -321,100 +311,15 @@ Module functions
         End Try
     End Function
 
-    'crude to patient
-    'delete
-    Public Sub DeletePatient(tableName As String, PrimaryKeyColumnName As String, PrimaryKeyValue As Integer)
-        Try
-            Dim query As String = $"DELETE FROM {tableName} WHERE {PrimaryKeyColumnName} = @primaryKeyValue"
-            Dim command As New MySqlCommand(query, connection)
-            command.Parameters.AddWithValue("@primaryKeyValue", PrimaryKeyValue)
+    Public Sub AddPatient(user_id As Integer, name As String, address As String, contact As Integer)
 
-            command.ExecuteNonQuery()
-        Catch ex As Exception
-            MessageBox.Show("Failed to delete data: " & ex.Message)
-
-        End Try
-    End Sub
-
-    'update
-    Public Sub UpdatePatient(primaryKeyValue As Integer, lastname As String, firstname As String, mi As String, barangay As String, municipal As String, province As String, contact As String, age As String, birthday As String)
-        Dim query As String = "UPDATE tbl_patient SET firstname = @firstname, lastname = @lastname, mi = @mi, barangay = @barangay, municipal = @municipal, province = @province, contactnumber = @contact, @age = age, birthday = @birthday WHERE patient_id  = @PrimaryKeyValue"
+        Dim query As String = "INSERT INTO tbl_patient (user_id, patient_name, patient_address, patient_contact) VALUES (@user_id, @patient_name, @patient_address, @patient_contact)"
         Dim command As New MySqlCommand(query, connection)
 
-        command.Parameters.AddWithValue("@lastname", lastname)
-        command.Parameters.AddWithValue("@firstname", firstname)
-        command.Parameters.AddWithValue("@mi", mi)
-        command.Parameters.AddWithValue("@barangay", barangay)
-        command.Parameters.AddWithValue("@municipal", municipal)
-        command.Parameters.AddWithValue("@province", province)
+        command.Parameters.AddWithValue("@user_id", user_id)
+        command.Parameters.AddWithValue("@patient_name", name)
+        command.Parameters.AddWithValue("@patient_address", address)
         command.Parameters.AddWithValue("@contact", contact)
-        command.Parameters.AddWithValue("@age", age)
-        command.Parameters.AddWithValue("@birthday", birthday)
-        Dim rowAffected As Integer = command.ExecuteNonQuery()
-
-        If rowAffected > 0 Then
-            Console.WriteLine("Data Updated succesfully!")
-        Else
-            Console.WriteLine("No data found for the given primary key.")
-        End If
-    End Sub
-
-    'search
-    Public Function SearchPatient(primaryKeyValue As Integer)
-        Dim id As Integer
-        Dim lastname As String
-        Dim firstname As String
-        Dim mi As String
-        Dim barangay As String
-        Dim municipal As String
-        Dim province As String
-        Dim contact As String
-        Dim age As String
-        Dim birthday As String
-
-        Dim query As String = $"SELECT * FROM tbl_patient WHERE patient_id = @primaryKeyValue"
-        Dim command As New MySqlCommand(query, connection)
-        command.Parameters.AddWithValue("@primaryKeyValue", primaryKeyValue)
-
-        Dim reader As MySqlDataReader = command.ExecuteReader()
-
-        If reader.Read() Then
-            id = reader("patient_id")
-            lastname = reader("lastname").ToString
-            firstname = reader("firstname").ToString
-            mi = reader("mi").ToString
-            barangay = reader("barangay").ToString
-            municipal = reader("municipal").ToString
-            province = reader("province").ToString
-            contact = reader("contactnumber").ToString
-            age = reader("age").ToString
-            birthday = reader("birthday").ToString
-        Else
-            MessageBox.Show("No data fround for the given primary key")
-        End If
-
-        reader.Close()
-
-        Return Tuple.Create(id, firstname, lastname, mi, barangay)
-        Return Tuple.Create(municipal, province, contact, age, birthday)
-    End Function
-
-    'add
-    Public Sub AddPatient(user_id As Integer, lastname As String, firstname As String, mi As String, barangay As String, municipal As String, province As String, contact As String, age As String, birthday As String)
-
-        Dim query As String = "INSERT INTO tbl_patient (user_id, lastname, firstname, mi, barangay, municipal, province, contactnumber, age, birthday) VALUES (@id, @lastname, @firstname, @mi, @barangay, @municipal, @province, @contact, @age, @birthday)"
-        Dim command As New MySqlCommand(query, connection)
-
-        command.Parameters.AddWithValue("@id", user_id)
-        command.Parameters.AddWithValue("@lastname", lastname)
-        command.Parameters.AddWithValue("@firstname", firstname)
-        command.Parameters.AddWithValue("@mi", mi)
-        command.Parameters.AddWithValue("@barangay", barangay)
-        command.Parameters.AddWithValue("@municipal", municipal)
-        command.Parameters.AddWithValue("@province", province)
-        command.Parameters.AddWithValue("@contact", contact)
-        command.Parameters.AddWithValue("@age", age)
-        command.Parameters.AddWithValue("@birthday", birthday)
 
 
         Try
@@ -422,8 +327,6 @@ Module functions
             command.ExecuteNonQuery()
             MessageBox.Show("Patient Registered!")
 
-            'catch ex error catches error
-
         Catch ex As Exception
 
             MessageBox.Show("An error occurred: " & ex.Message)
@@ -433,23 +336,49 @@ Module functions
 
     End Sub
 
-    'retrieve
-    Public Function GetPatientRegistration() As DataTable
-        Dim query As String = "SELECT user_id, lastname, firstname, mi, barangay, municipal, province, contactnumber, age, birthday FROM tbl_patient"
+    Public Sub DeleteFromTable(tableName As String, PrimaryKeyColumnName As String, PrimaryKeyValue As Integer)
+
+        Dim query As String = $"DELETE FROM {tableName} WHERE {PrimaryKeyColumnName} = @primaryKeyValue"
         Dim cmd As New MySqlCommand(query, connection)
-        Dim dt As New DataTable()
+        cmd.Parameters.AddWithValue("@primaryKeyValue", PrimaryKeyValue)
 
         Try
             connection.Open()
-            Dim da As New MySqlDataAdapter(cmd)
-            da.Fill(dt)
-            Return dt
+            cmd.ExecuteNonQuery()
+
+            'catch ex error catches error
+
         Catch ex As Exception
-            MessageBox.Show("An error occurred: " & ex.Message)
-            Return Nothing ' Return Nothing to indicate an error.
+
+            MessageBox.Show("Failed to delete data: " & ex.Message)
         Finally
             connection.Close()
         End Try
-    End Function
+
+    End Sub
+
+    Public Sub UpdatePatient(patient_id As Integer, user_id As Integer, name As String, address As String, contact As Integer)
+
+        Dim query As String = "UPDATE tbl_patient SET user_id = @userid, patient_name = @patient_name, patient_address = @patient_address, patient_contact = @patient_contact WHERE patient_id  = @patient_id"
+        Dim command As New MySqlCommand(query, connection)
+
+        command.Parameters.AddWithValue("@patient_id", patient_id)
+        command.Parameters.AddWithValue("@user_id", user_id)
+        command.Parameters.AddWithValue("@patient_name", name)
+        command.Parameters.AddWithValue("@patient_address", address)
+        command.Parameters.AddWithValue("@patient_contact", contact)
+
+        Try
+            connection.Open()
+            command.ExecuteNonQuery()
+
+        Catch ex As Exception
+
+            MessageBox.Show("Failed to update data: " & ex.Message)
+        Finally
+            connection.Close()
+        End Try
+
+    End Sub
 
 End Module
