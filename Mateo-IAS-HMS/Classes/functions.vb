@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports Microsoft.VisualBasic.ApplicationServices
+Imports MySql.Data.MySqlClient
 Imports System.Data.SqlClient
 Imports System.Runtime.ConstrainedExecution
 Imports System.Security.Cryptography
@@ -380,5 +381,21 @@ Module functions
         End Try
 
     End Sub
+
+    Public Sub GoBackToDashboard()
+        Dim role As String = userData.role
+
+        If (role = "Admin") Then
+            Dim frm As New adminDashboard
+            frm.Show()
+        ElseIf (role = "Doctor") Then
+            Dim frm As New doctorDashboard
+            frm.Show()
+        Else
+            Dim frm As New patientDashboard
+            frm.Show()
+        End If
+    End Sub
+
 
 End Module

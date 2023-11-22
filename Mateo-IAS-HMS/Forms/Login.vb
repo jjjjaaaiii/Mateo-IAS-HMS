@@ -32,16 +32,8 @@ Public Class Login
 
             InsertAuditRecord(userId, "Logged In")
 
-            If (role = "Admin") Then
-                Dim frm As New adminDashboard
-                frm.Show()
-            ElseIf (role = "Doctor") Then
-                Dim frm As New doctorDashboard
-                frm.Show()
-            Else
-                Dim frm As New patientDashboard
-                frm.Show()
-            End If
+            GoBackToDashboard()
+            Me.Close()
 
             Me.Close()
         Else
