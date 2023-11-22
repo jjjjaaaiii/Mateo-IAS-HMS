@@ -63,7 +63,7 @@ Partial Class manageDoctors
         'testTimer
         '
         Me.testTimer.AutoSize = True
-        Me.testTimer.Location = New System.Drawing.Point(892, -1)
+        Me.testTimer.Location = New System.Drawing.Point(892, 9)
         Me.testTimer.Name = "testTimer"
         Me.testTimer.Size = New System.Drawing.Size(11, 16)
         Me.testTimer.TabIndex = 26

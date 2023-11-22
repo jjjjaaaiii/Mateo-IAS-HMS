@@ -29,4 +29,5 @@
     Private Sub manageDoctors_MouseHover(sender As Object, e As EventArgs) Handles MyBase.MouseHover
         timerValue = 0
     End Sub
+
 End Class

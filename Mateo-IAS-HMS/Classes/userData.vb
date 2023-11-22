@@ -3,4 +3,5 @@
     Public Shared username As String
     Public Shared role As String
 
+
 End Class
