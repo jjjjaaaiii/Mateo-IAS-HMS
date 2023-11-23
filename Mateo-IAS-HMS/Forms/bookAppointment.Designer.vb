@@ -22,16 +22,18 @@ Partial Class bookAppointment
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnsubmit = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.txtpatientid = New System.Windows.Forms.TextBox()
         Me.txtdoctorid = New System.Windows.Forms.TextBox()
         Me.txtreason = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -62,14 +64,14 @@ Partial Class bookAppointment
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Doctor ID"
         '
-        'Button1
+        'btnsubmit
         '
-        Me.Button1.Location = New System.Drawing.Point(474, 363)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(78, 24)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Submit"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnsubmit.Location = New System.Drawing.Point(474, 363)
+        Me.btnsubmit.Name = "btnsubmit"
+        Me.btnsubmit.Size = New System.Drawing.Size(78, 24)
+        Me.btnsubmit.TabIndex = 10
+        Me.btnsubmit.Text = "Submit"
+        Me.btnsubmit.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -82,6 +84,7 @@ Partial Class bookAppointment
         '
         'txtpatientid
         '
+        Me.txtpatientid.Enabled = False
         Me.txtpatientid.Location = New System.Drawing.Point(135, 86)
         Me.txtpatientid.Name = "txtpatientid"
         Me.txtpatientid.Size = New System.Drawing.Size(163, 22)
@@ -120,6 +123,10 @@ Partial Class bookAppointment
         Me.DataGridView1.Size = New System.Drawing.Size(624, 161)
         Me.DataGridView1.TabIndex = 16
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
         'bookAppointment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -131,7 +138,7 @@ Partial Class bookAppointment
         Me.Controls.Add(Me.txtdoctorid)
         Me.Controls.Add(Me.txtpatientid)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnsubmit)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -147,11 +154,12 @@ Partial Class bookAppointment
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnsubmit As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents txtpatientid As TextBox
     Friend WithEvents txtdoctorid As TextBox
     Friend WithEvents txtreason As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Timer1 As Timer
 End Class

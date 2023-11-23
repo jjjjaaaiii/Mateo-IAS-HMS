@@ -397,5 +397,394 @@ Module functions
         End If
     End Sub
 
+    Public Function GetIdByUserIdAndRole(userId As Integer, userRole As String) As Integer
+        Dim columnName As String = ""
+
+        ' Determine the column name based on user role and table name
+        Select Case userRole.ToLower()
+            Case "patient"
+                columnName = "patient_id"
+            Case "admin"
+                columnName = "admin_id"
+            Case "doctor"
+                columnName = "doctor_id"
+            Case Else
+                ' Handle the case where the user role is not recognized
+                MessageBox.Show("Invalid user role.")
+                Return -1 ' Return a value that indicates an error or not found
+        End Select
+
+        Dim tableName As String = $"tbl_{userRole.ToLower()}"
+        Dim query As String = $"SELECT {columnName} FROM {tableName} WHERE user_id = @userId"
+        Dim cmd As New MySqlCommand(query, connection)
+        cmd.Parameters.AddWithValue("@userId", userId)
+
+        Try
+            connection.Open()
+            Dim result As Object = cmd.ExecuteScalar()
+
+            If result IsNot Nothing AndAlso Not DBNull.Value.Equals(result) Then
+                ' If the result is not null, return the corresponding ID
+                Return Convert.ToInt32(result)
+            Else
+                ' Handle the case where the user ID is not found
+                'MessageBox.Show($"User ID {userId} with role {userRole} not found in {tableName}.")
+                Return -1 ' Return a value that indicates an error or not found
+            End If
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+            Return -1 ' Return a value that indicates an error
+        Finally
+            connection.Close()
+        End Try
+    End Function
+
+    Public Function GetNameByUserIdAndRole(userId As Integer, userRole As String) As String
+        Dim columnName As String = ""
+
+        ' Determine the column name based on user role and table name
+        Select Case userRole.ToLower()
+            Case "patient"
+                columnName = "patient_name"
+            Case "admin"
+                columnName = "admin_name"
+            Case "doctor"
+                columnName = "doctor_name"
+            Case Else
+                ' Handle the case where the user role is not recognized
+                MessageBox.Show("Invalid user role.")
+                Return "" ' Return an empty string to indicate an error or not found
+        End Select
+
+        Dim tableName As String = $"tbl_{userRole.ToLower()}"
+        Dim query As String = $"SELECT {columnName} FROM {tableName} WHERE user_id = @userId"
+        Dim cmd As New MySqlCommand(query, connection)
+        cmd.Parameters.AddWithValue("@userId", userId)
+
+        Try
+            connection.Open()
+            Dim result As Object = cmd.ExecuteScalar()
+
+            If result IsNot Nothing AndAlso Not DBNull.Value.Equals(result) Then
+                ' If the result is not null, return the corresponding name
+                Return Convert.ToString(result)
+            Else
+                ' Handle the case where the user ID is not found
+                'MessageBox.Show($"User ID {userId} with role {userRole} not found in {tableName}.")
+                Return "" ' Return an empty string to indicate an error or not found
+            End If
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+            Return "" ' Return an empty string to indicate an error
+        Finally
+            connection.Close()
+        End Try
+    End Function
+
+    Public Sub UpdateUserInfo(userId As Integer, userRole As String, newName As String, newAddress As String, newContact As Integer)
+        Dim columnName As String = ""
+        Dim addressColumnName As String = ""
+        Dim contactColumnName As String = ""
+
+        ' Determine the column names based on user role and table name
+        Select Case userRole.ToLower()
+            Case "patient"
+                columnName = "patient_name"
+                addressColumnName = "patient_address"
+                contactColumnName = "patient_contact"
+            Case "admin"
+                columnName = "admin_name"
+                addressColumnName = "admin_address"
+                contactColumnName = "admin_contact"
+            Case "doctor"
+                columnName = "doctor_name"
+                addressColumnName = "doctor_address"
+                contactColumnName = "doctor_contact"
+            Case Else
+                ' Handle the case where the user role is not recognized
+                MessageBox.Show("Invalid user role.")
+                Exit Sub ' Exit the function if the user role is not recognized
+        End Select
+
+        Dim tableName As String = $"tbl_{userRole.ToLower()}"
+        Dim query As String = $"UPDATE {tableName} SET {columnName} = @newName, {addressColumnName} = @newAddress, {contactColumnName} = @newContact WHERE user_id = @userId"
+        Dim cmd As New MySqlCommand(query, connection)
+        cmd.Parameters.AddWithValue("@userId", userId)
+        cmd.Parameters.AddWithValue("@newName", newName)
+        cmd.Parameters.AddWithValue("@newAddress", newAddress)
+        cmd.Parameters.AddWithValue("@newContact", newContact)
+
+        Try
+            connection.Open()
+            cmd.ExecuteNonQuery()
+            MessageBox.Show($"Information updated successfully for user ID {userId} and role {userRole}.")
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+        Finally
+            connection.Close()
+        End Try
+    End Sub
+
+    Public Sub UpdateUserCredentials(userId As Integer, newUsername As String, newUserpassword As String)
+        Dim query As String = "UPDATE tbl_user SET username = @newUsername, userpassword = @newUserpassword WHERE id = @userId"
+        Dim cmd As New MySqlCommand(query, connection)
+        cmd.Parameters.AddWithValue("@userId", userId)
+        cmd.Parameters.AddWithValue("@newUsername", newUsername)
+        cmd.Parameters.AddWithValue("@newUserpassword", newUserpassword)
+
+        Try
+            connection.Open()
+            cmd.ExecuteNonQuery()
+            MessageBox.Show($"Username and password updated successfully for user ID {userId}.")
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+        Finally
+            connection.Close()
+        End Try
+    End Sub
+
+    Public Sub UpdateUsername(userId As Integer, newUsername As String)
+        Dim query As String = "UPDATE tbl_user SET username = @newUsername WHERE id = @userId"
+        Dim cmd As New MySqlCommand(query, connection)
+        cmd.Parameters.AddWithValue("@userId", userId)
+        cmd.Parameters.AddWithValue("@newUsername", newUsername)
+
+        Try
+            connection.Open()
+            cmd.ExecuteNonQuery()
+            MessageBox.Show($"Username updated successfully for user ID {userId}.")
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+        Finally
+            connection.Close()
+        End Try
+    End Sub
+
+    Public Function GetUserContactAndAddressByRole(userId As Integer, userRole As String) As Tuple(Of String, String)
+        Dim columnName As String = ""
+        Dim addressColumnName As String = ""
+        Dim contactColumnName As String = ""
+
+        ' Determine the column names based on user role and table name
+        Select Case userRole.ToLower()
+            Case "patient"
+                columnName = "patient_name"
+                addressColumnName = "patient_address"
+                contactColumnName = "patient_contact"
+            Case "admin"
+                columnName = "admin_name"
+                addressColumnName = "admin_address"
+                contactColumnName = "admin_contact"
+            Case "doctor"
+                columnName = "doctor_name"
+                addressColumnName = "doctor_address"
+                contactColumnName = "doctor_contact"
+            Case Else
+                ' Handle the case where the user role is not recognized
+                MessageBox.Show("Invalid user role.")
+                Return Tuple.Create("", "") ' Return an empty tuple to indicate an error or not found
+        End Select
+
+        Dim tableName As String = $"tbl_{userRole.ToLower()}"
+        Dim query As String = $"SELECT {contactColumnName}, {addressColumnName} FROM {tableName} WHERE user_id = @userId"
+        Dim cmd As New MySqlCommand(query, connection)
+        cmd.Parameters.AddWithValue("@userId", userId)
+
+        Dim contact As String = ""
+        Dim address As String = ""
+
+        Try
+            connection.Open()
+            Using reader As MySqlDataReader = cmd.ExecuteReader()
+                If reader.Read() Then
+                    ' Retrieve the contact and address from the query result
+                    contact = If(Not reader.IsDBNull(reader.GetOrdinal(contactColumnName)), reader.GetString(contactColumnName), "")
+                    address = If(Not reader.IsDBNull(reader.GetOrdinal(addressColumnName)), reader.GetString(addressColumnName), "")
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+        Finally
+            connection.Close()
+        End Try
+
+        ' Return the contact and address as a Tuple
+        Return Tuple.Create(contact, address)
+    End Function
+
+    Public Sub UpdateDoctorInfo(doctorId As Integer, newDoctorName As String, newDoctorAddress As String, newDoctorContact As Integer)
+        Dim query As String = "UPDATE tbl_doctor SET doctor_name = @newDoctorName, doctor_address = @newDoctorAddress, doctor_contact = @newDoctorContact WHERE doctor_id = @doctorId"
+        Dim cmd As New MySqlCommand(query, connection)
+        cmd.Parameters.AddWithValue("@doctorId", doctorId)
+        cmd.Parameters.AddWithValue("@newDoctorName", newDoctorName)
+        cmd.Parameters.AddWithValue("@newDoctorAddress", newDoctorAddress)
+        cmd.Parameters.AddWithValue("@newDoctorContact", newDoctorContact)
+
+        Try
+            connection.Open()
+            cmd.ExecuteNonQuery()
+            MessageBox.Show($"Doctor information updated successfully for doctor ID {doctorId}.")
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+        Finally
+            connection.Close()
+        End Try
+    End Sub
+
+    Public Sub InsertAppointment(patientId As Integer, doctorId As Integer, appointmentReason As String)
+        Dim appointmentDate As String = DateTime.Now
+        Dim appointmentStatus As String = "inQueue"
+
+
+        Dim query As String = "INSERT INTO tbl_appointment(patient_id, doctor_id, appointment_reason, appointment_date, appointment_status) VALUES (@patientId, @doctorId, @appointmentReason, @appointmentDate, @appointmentStatus)"
+        Dim cmd As New MySqlCommand(query, connection)
+        cmd.Parameters.AddWithValue("@patientId", patientId)
+        cmd.Parameters.AddWithValue("@doctorId", doctorId)
+        cmd.Parameters.AddWithValue("@appointmentReason", appointmentReason)
+        cmd.Parameters.AddWithValue("@appointmentDate", appointmentDate)
+        cmd.Parameters.AddWithValue("@appointmentStatus", appointmentStatus)
+
+        Try
+            connection.Open()
+            cmd.ExecuteNonQuery()
+            MessageBox.Show("Appointment information inserted successfully!")
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+        Finally
+            connection.Close()
+        End Try
+    End Sub
+
+    Public Function GetAppointmentsByPatientId(patientId As Integer) As DataTable
+        Dim query As String = "SELECT * FROM tbl_appointment WHERE patient_id = @patientId"
+        Dim cmd As New MySqlCommand(query, connection)
+        cmd.Parameters.AddWithValue("@patientId", patientId)
+
+        Dim dataTable As New DataTable()
+
+        Try
+            connection.Open()
+            Using adapter As New MySqlDataAdapter(cmd)
+                adapter.Fill(dataTable)
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+        Finally
+            connection.Close()
+        End Try
+
+        Return dataTable
+    End Function
+
+    Public Function GetPaymentsForAcceptedAppointments(patientId As Integer) As DataTable
+        Dim query As String = "SELECT p.pay_id, p.appointment_id, p.pay_total, p.pay_status, a.patient_id " &
+                          "FROM tbl_pay p " &
+                          "INNER JOIN tbl_appointment a ON p.appointment_id = a.appointment_id " &
+                          "WHERE a.patient_id = @patientId AND a.appointment_status = 'accepted'"
+
+        Dim cmd As New MySqlCommand(query, connection)
+        cmd.Parameters.AddWithValue("@patientId", patientId)
+
+        Dim dataTable As New DataTable()
+
+        Try
+            connection.Open()
+            Using adapter As New MySqlDataAdapter(cmd)
+                adapter.Fill(dataTable)
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+        Finally
+            connection.Close()
+        End Try
+
+        Return dataTable
+    End Function
+
+    Public Sub UpdateAppointmentDetails(appointmentId As Integer, newPatientId As Integer, newDoctorId As Integer, newAppointmentReason As String, newAppointmentDate As Date)
+        Dim query As String = "UPDATE tbl_appointment SET patient_id = @newPatientId, doctor_id = @newDoctorId, appointment_reason = @newAppointmentReason, appointment_date = @newAppointmentDate WHERE appointment_id = @appointmentId"
+        Dim cmd As New MySqlCommand(query, connection)
+        cmd.Parameters.AddWithValue("@appointmentId", appointmentId)
+        cmd.Parameters.AddWithValue("@newPatientId", newPatientId)
+        cmd.Parameters.AddWithValue("@newDoctorId", newDoctorId)
+        cmd.Parameters.AddWithValue("@newAppointmentReason", newAppointmentReason)
+        cmd.Parameters.AddWithValue("@newAppointmentDate", newAppointmentDate)
+
+        Try
+            connection.Open()
+            cmd.ExecuteNonQuery()
+            MessageBox.Show($"Appointment details updated successfully for appointment ID {appointmentId}.")
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+        Finally
+            connection.Close()
+        End Try
+    End Sub
+
+    Public Sub AcceptAppointmentById(appointmentId As Integer)
+        Dim query As String = "UPDATE tbl_appointment SET appointment_status = 'accepted' WHERE appointment_id = @appointmentId"
+        Dim cmd As New MySqlCommand(query, connection)
+        cmd.Parameters.AddWithValue("@appointmentId", appointmentId)
+
+        Try
+            connection.Open()
+            cmd.ExecuteNonQuery()
+            MessageBox.Show($"Appointment status set to 'accepted' for appointment ID {appointmentId}.")
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+        Finally
+            connection.Close()
+        End Try
+    End Sub
+
+    Public Sub DeleteAppointmentById(appointmentId As Integer)
+        Dim query As String = "DELETE FROM tbl_appointment WHERE appointment_id = @appointmentId"
+        Dim cmd As New MySqlCommand(query, connection)
+        cmd.Parameters.AddWithValue("@appointmentId", appointmentId)
+
+        Try
+            connection.Open()
+            cmd.ExecuteNonQuery()
+            MessageBox.Show($"Appointment record deleted successfully for appointment ID {appointmentId}.")
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+        Finally
+            connection.Close()
+        End Try
+    End Sub
+
+    Public Sub AddPaymentData(appointmentId As Integer, payTotal As Integer, payStatus As String)
+        Dim query As String = "INSERT INTO tbl_pay(appointment_id, pay_total, pay_status) VALUES (@appointmentId, @payTotal, @payStatus)"
+        Dim cmd As New MySqlCommand(query, connection)
+        cmd.Parameters.AddWithValue("@appointmentId", appointmentId)
+        cmd.Parameters.AddWithValue("@payTotal", payTotal)
+        cmd.Parameters.AddWithValue("@payStatus", payStatus)
+
+        Try
+            connection.Open()
+            cmd.ExecuteNonQuery()
+            MessageBox.Show("Payment data added successfully!")
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+        Finally
+            connection.Close()
+        End Try
+    End Sub
+
+    Public Sub UpdatePaymentStatusToPaid(payId As Integer)
+        Dim query As String = "UPDATE tbl_pay SET pay_status = 'Paid' WHERE pay_id = @payId"
+        Dim cmd As New MySqlCommand(query, connection)
+        cmd.Parameters.AddWithValue("@payId", payId)
+
+        Try
+            connection.Open()
+            cmd.ExecuteNonQuery()
+            MessageBox.Show($"Payment status set to 'Paid' for payment ID {payId}.")
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+        Finally
+            connection.Close()
+        End Try
+    End Sub
 
 End Module

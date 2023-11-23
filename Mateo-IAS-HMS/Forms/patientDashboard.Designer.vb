@@ -23,6 +23,13 @@ Partial Class patientDashboard
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btn_pay = New System.Windows.Forms.Button()
+        Me.btn_book = New System.Windows.Forms.Button()
+        Me.btn_viewappoint = New System.Windows.Forms.Button()
+        Me.btn_viewdoctor = New System.Windows.Forms.Button()
+        Me.btn_change = New System.Windows.Forms.Button()
+        Me.btn_logout = New System.Windows.Forms.Button()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.currentUser = New System.Windows.Forms.ToolStripStatusLabel()
@@ -31,74 +38,12 @@ Partial Class patientDashboard
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.dateAndTime = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.btn_pay = New System.Windows.Forms.Button()
-        Me.btn_book = New System.Windows.Forms.Button()
-        Me.btn_viewappoint = New System.Windows.Forms.Button()
-        Me.btn_viewdoctor = New System.Windows.Forms.Button()
-        Me.btn_change = New System.Windows.Forms.Button()
-        Me.btn_logout = New System.Windows.Forms.Button()
+        Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.patientid = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.patientname = New System.Windows.Forms.ToolStripStatusLabel()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.currentUser, Me.ToolStripStatusLabel2, Me.userRole, Me.ToolStripStatusLabel3, Me.ToolStripStatusLabel4, Me.dateAndTime})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 424)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(800, 26)
-        Me.StatusStrip1.TabIndex = 1
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'ToolStripStatusLabel1
-        '
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(93, 20)
-        Me.ToolStripStatusLabel1.Text = "Current User:"
-        '
-        'currentUser
-        '
-        Me.currentUser.Name = "currentUser"
-        Me.currentUser.Size = New System.Drawing.Size(15, 20)
-        Me.currentUser.Text = "-"
-        '
-        'ToolStripStatusLabel2
-        '
-        Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
-        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(75, 20)
-        Me.ToolStripStatusLabel2.Text = "User Role:"
-        '
-        'userRole
-        '
-        Me.userRole.Name = "userRole"
-        Me.userRole.Size = New System.Drawing.Size(15, 20)
-        Me.userRole.Text = "-"
-        '
-        'ToolStripStatusLabel3
-        '
-        Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
-        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(0, 20)
-        '
-        'ToolStripStatusLabel4
-        '
-        Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(107, 20)
-        Me.ToolStripStatusLabel4.Text = "Date and Time"
-        Me.ToolStripStatusLabel4.TextAlign = System.Drawing.ContentAlignment.BottomRight
-        '
-        'dateAndTime
-        '
-        Me.dateAndTime.Name = "dateAndTime"
-        Me.dateAndTime.Size = New System.Drawing.Size(15, 20)
-        Me.dateAndTime.Text = "-"
-        '
-        'ImageList1
-        '
-        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
-        Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         '
         'Timer1
         '
@@ -158,18 +103,94 @@ Partial Class patientDashboard
         Me.btn_logout.Text = "Logout"
         Me.btn_logout.UseVisualStyleBackColor = True
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.currentUser, Me.ToolStripStatusLabel2, Me.userRole, Me.ToolStripStatusLabel3, Me.ToolStripStatusLabel4, Me.dateAndTime, Me.ToolStripStatusLabel5, Me.patientid, Me.ToolStripStatusLabel6, Me.patientname})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 424)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(800, 26)
+        Me.StatusStrip1.TabIndex = 9
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(93, 20)
+        Me.ToolStripStatusLabel1.Text = "Current User:"
+        '
+        'currentUser
+        '
+        Me.currentUser.Name = "currentUser"
+        Me.currentUser.Size = New System.Drawing.Size(15, 20)
+        Me.currentUser.Text = "-"
+        '
+        'ToolStripStatusLabel2
+        '
+        Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
+        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(75, 20)
+        Me.ToolStripStatusLabel2.Text = "User Role:"
+        '
+        'userRole
+        '
+        Me.userRole.Name = "userRole"
+        Me.userRole.Size = New System.Drawing.Size(15, 20)
+        Me.userRole.Text = "-"
+        '
+        'ToolStripStatusLabel3
+        '
+        Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(0, 20)
+        '
+        'ToolStripStatusLabel4
+        '
+        Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(107, 20)
+        Me.ToolStripStatusLabel4.Text = "Date and Time"
+        Me.ToolStripStatusLabel4.TextAlign = System.Drawing.ContentAlignment.BottomRight
+        '
+        'dateAndTime
+        '
+        Me.dateAndTime.Name = "dateAndTime"
+        Me.dateAndTime.Size = New System.Drawing.Size(15, 20)
+        Me.dateAndTime.Text = "-"
+        '
+        'ToolStripStatusLabel5
+        '
+        Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(73, 20)
+        Me.ToolStripStatusLabel5.Text = "Patient ID"
+        '
+        'patientid
+        '
+        Me.patientid.Name = "patientid"
+        Me.patientid.Size = New System.Drawing.Size(15, 20)
+        Me.patientid.Text = "-"
+        '
+        'ToolStripStatusLabel6
+        '
+        Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
+        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(98, 20)
+        Me.ToolStripStatusLabel6.Text = "Patient Name"
+        '
+        'patientname
+        '
+        Me.patientname.Name = "patientname"
+        Me.patientname.Size = New System.Drawing.Size(15, 20)
+        Me.patientname.Text = "-"
+        '
         'patientDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.btn_logout)
         Me.Controls.Add(Me.btn_change)
         Me.Controls.Add(Me.btn_viewdoctor)
         Me.Controls.Add(Me.btn_viewappoint)
         Me.Controls.Add(Me.btn_book)
         Me.Controls.Add(Me.btn_pay)
-        Me.Controls.Add(Me.StatusStrip1)
         Me.Name = "patientDashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "informationSystem"
@@ -179,15 +200,6 @@ Partial Class patientDashboard
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents StatusStrip1 As StatusStrip
-    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
-    Friend WithEvents ImageList1 As ImageList
-    Friend WithEvents currentUser As ToolStripStatusLabel
-    Friend WithEvents ToolStripStatusLabel2 As ToolStripStatusLabel
-    Friend WithEvents userRole As ToolStripStatusLabel
-    Friend WithEvents ToolStripStatusLabel3 As ToolStripStatusLabel
-    Friend WithEvents ToolStripStatusLabel4 As ToolStripStatusLabel
-    Friend WithEvents dateAndTime As ToolStripStatusLabel
     Friend WithEvents Timer1 As Timer
     Friend WithEvents btn_pay As Button
     Friend WithEvents btn_book As Button
@@ -195,4 +207,16 @@ Partial Class patientDashboard
     Friend WithEvents btn_viewdoctor As Button
     Friend WithEvents btn_change As Button
     Friend WithEvents btn_logout As Button
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
+    Friend WithEvents currentUser As ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel2 As ToolStripStatusLabel
+    Friend WithEvents userRole As ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel3 As ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel4 As ToolStripStatusLabel
+    Friend WithEvents dateAndTime As ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel5 As ToolStripStatusLabel
+    Friend WithEvents patientid As ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel6 As ToolStripStatusLabel
+    Friend WithEvents patientname As ToolStripStatusLabel
 End Class

@@ -20,11 +20,10 @@ Public Class patientDashboard
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         timerValue += 1
-        If timerValue = 60 Then
+        If timerValue > 60 Then
             Timer1.Stop()
             MessageBox.Show("Timed out")
-            Dim frm As New Login()
-            frm.Show()
+            SwitchToForm(Login)
             Me.Close()
         End If
         dateAndTime.Text = DateTime.Now.ToString()
@@ -51,7 +50,7 @@ Public Class patientDashboard
     End Sub
 
     Private Sub btn_change_Click(sender As Object, e As EventArgs) Handles btn_change.Click
-        SwitchToForm(manageUsers)
+        SwitchToForm(info)
     End Sub
 
     Private Sub btn_logout_Click(sender As Object, e As EventArgs) Handles btn_logout.Click

@@ -34,10 +34,11 @@ Partial Class manageDoctors
         Me.gb_patient_number = New System.Windows.Forms.GroupBox()
         Me.btnSearch_patient = New System.Windows.Forms.Button()
         Me.txtsearch_doctor = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.randomasslabel = New System.Windows.Forms.Label()
+        Me.txtuserid = New System.Windows.Forms.TextBox()
         Me.gb_patient_number.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -71,7 +72,7 @@ Partial Class manageDoctors
         '
         'txtcontact_doctor
         '
-        Me.txtcontact_doctor.Location = New System.Drawing.Point(20, 198)
+        Me.txtcontact_doctor.Location = New System.Drawing.Point(288, 198)
         Me.txtcontact_doctor.Name = "txtcontact_doctor"
         Me.txtcontact_doctor.Size = New System.Drawing.Size(247, 22)
         Me.txtcontact_doctor.TabIndex = 0
@@ -79,7 +80,7 @@ Partial Class manageDoctors
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(285, 103)
+        Me.Label7.Location = New System.Drawing.Point(17, 179)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(58, 16)
         Me.Label7.TabIndex = 3
@@ -87,7 +88,7 @@ Partial Class manageDoctors
         '
         'txtaddress_doctor
         '
-        Me.txtaddress_doctor.Location = New System.Drawing.Point(285, 124)
+        Me.txtaddress_doctor.Location = New System.Drawing.Point(17, 200)
         Me.txtaddress_doctor.Name = "txtaddress_doctor"
         Me.txtaddress_doctor.Size = New System.Drawing.Size(250, 22)
         Me.txtaddress_doctor.TabIndex = 0
@@ -95,7 +96,7 @@ Partial Class manageDoctors
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(17, 103)
+        Me.Label2.Location = New System.Drawing.Point(285, 104)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 16)
         Me.Label2.TabIndex = 3
@@ -103,7 +104,7 @@ Partial Class manageDoctors
         '
         'txtname_doctor
         '
-        Me.txtname_doctor.Location = New System.Drawing.Point(20, 123)
+        Me.txtname_doctor.Location = New System.Drawing.Point(288, 124)
         Me.txtname_doctor.Name = "txtname_doctor"
         Me.txtname_doctor.Size = New System.Drawing.Size(250, 22)
         Me.txtname_doctor.TabIndex = 0
@@ -135,15 +136,6 @@ Partial Class manageDoctors
         Me.txtsearch_doctor.Size = New System.Drawing.Size(121, 22)
         Me.txtsearch_doctor.TabIndex = 0
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(17, 37)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(101, 16)
-        Me.Label1.TabIndex = 18
-        Me.Label1.Text = "Register Doctor"
-        '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -156,21 +148,40 @@ Partial Class manageDoctors
         '
         'Timer1
         '
+        Me.Timer1.Interval = 1000
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(17, 179)
+        Me.Label3.Location = New System.Drawing.Point(285, 179)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(52, 16)
         Me.Label3.TabIndex = 28
         Me.Label3.Text = "Contact"
+        '
+        'randomasslabel
+        '
+        Me.randomasslabel.AutoSize = True
+        Me.randomasslabel.Location = New System.Drawing.Point(14, 104)
+        Me.randomasslabel.Name = "randomasslabel"
+        Me.randomasslabel.Size = New System.Drawing.Size(52, 16)
+        Me.randomasslabel.TabIndex = 38
+        Me.randomasslabel.Text = "User ID"
+        '
+        'txtuserid
+        '
+        Me.txtuserid.Location = New System.Drawing.Point(17, 124)
+        Me.txtuserid.Name = "txtuserid"
+        Me.txtuserid.Size = New System.Drawing.Size(250, 22)
+        Me.txtuserid.TabIndex = 37
         '
         'manageDoctors
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(920, 490)
+        Me.Controls.Add(Me.randomasslabel)
+        Me.Controls.Add(Me.txtuserid)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtcontact_doctor)
         Me.Controls.Add(Me.DataGridView1)
@@ -180,7 +191,6 @@ Partial Class manageDoctors
         Me.Controls.Add(Me.txtaddress_doctor)
         Me.Controls.Add(Me.txtname_doctor)
         Me.Controls.Add(Me.gb_patient_number)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btn_home)
         Me.Controls.Add(Me.btn_update)
         Me.Name = "manageDoctors"
@@ -203,8 +213,9 @@ Partial Class manageDoctors
     Friend WithEvents gb_patient_number As GroupBox
     Friend WithEvents btnSearch_patient As Button
     Friend WithEvents txtsearch_doctor As TextBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Label3 As Label
+    Friend WithEvents randomasslabel As Label
+    Friend WithEvents txtuserid As TextBox
 End Class

@@ -28,6 +28,9 @@ Partial Class doctorDashboard
         Me.btn_manageappointment = New System.Windows.Forms.Button()
         Me.btn_audit = New System.Windows.Forms.Button()
         Me.btn_managepayment = New System.Windows.Forms.Button()
+        Me.btn_managepatient = New System.Windows.Forms.Button()
+        Me.btn_logout = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.currentUser = New System.Windows.Forms.ToolStripStatusLabel()
@@ -36,9 +39,10 @@ Partial Class doctorDashboard
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.dateAndTime = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.btn_managepatient = New System.Windows.Forms.Button()
-        Me.btn_logout = New System.Windows.Forms.Button()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.doctorid = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.doctorname = New System.Windows.Forms.ToolStripStatusLabel()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -87,14 +91,36 @@ Partial Class doctorDashboard
         Me.btn_managepayment.Text = "Manage Payments"
         Me.btn_managepayment.UseVisualStyleBackColor = True
         '
+        'btn_managepatient
+        '
+        Me.btn_managepatient.Location = New System.Drawing.Point(520, 180)
+        Me.btn_managepatient.Name = "btn_managepatient"
+        Me.btn_managepatient.Size = New System.Drawing.Size(132, 56)
+        Me.btn_managepatient.TabIndex = 17
+        Me.btn_managepatient.Text = "Manage Patients"
+        Me.btn_managepatient.UseVisualStyleBackColor = True
+        '
+        'btn_logout
+        '
+        Me.btn_logout.Location = New System.Drawing.Point(322, 279)
+        Me.btn_logout.Name = "btn_logout"
+        Me.btn_logout.Size = New System.Drawing.Size(132, 55)
+        Me.btn_logout.TabIndex = 18
+        Me.btn_logout.Text = "Logout"
+        Me.btn_logout.UseVisualStyleBackColor = True
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
         'StatusStrip1
         '
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.currentUser, Me.ToolStripStatusLabel2, Me.userRole, Me.ToolStripStatusLabel3, Me.ToolStripStatusLabel4, Me.dateAndTime})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.currentUser, Me.ToolStripStatusLabel2, Me.userRole, Me.ToolStripStatusLabel3, Me.ToolStripStatusLabel4, Me.dateAndTime, Me.ToolStripStatusLabel5, Me.doctorid, Me.ToolStripStatusLabel6, Me.doctorname})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 424)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(800, 26)
-        Me.StatusStrip1.TabIndex = 8
+        Me.StatusStrip1.TabIndex = 19
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'ToolStripStatusLabel1
@@ -139,33 +165,36 @@ Partial Class doctorDashboard
         Me.dateAndTime.Size = New System.Drawing.Size(15, 20)
         Me.dateAndTime.Text = "-"
         '
-        'btn_managepatient
+        'ToolStripStatusLabel5
         '
-        Me.btn_managepatient.Location = New System.Drawing.Point(520, 180)
-        Me.btn_managepatient.Name = "btn_managepatient"
-        Me.btn_managepatient.Size = New System.Drawing.Size(132, 56)
-        Me.btn_managepatient.TabIndex = 17
-        Me.btn_managepatient.Text = "Manage Patients"
-        Me.btn_managepatient.UseVisualStyleBackColor = True
+        Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(74, 20)
+        Me.ToolStripStatusLabel5.Text = "Doctor ID"
         '
-        'btn_logout
+        'doctorid
         '
-        Me.btn_logout.Location = New System.Drawing.Point(322, 279)
-        Me.btn_logout.Name = "btn_logout"
-        Me.btn_logout.Size = New System.Drawing.Size(132, 55)
-        Me.btn_logout.TabIndex = 18
-        Me.btn_logout.Text = "Logout"
-        Me.btn_logout.UseVisualStyleBackColor = True
+        Me.doctorid.Name = "doctorid"
+        Me.doctorid.Size = New System.Drawing.Size(15, 20)
+        Me.doctorid.Text = "-"
         '
-        'Timer1
+        'ToolStripStatusLabel6
         '
-        Me.Timer1.Interval = 1000
+        Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
+        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(99, 20)
+        Me.ToolStripStatusLabel6.Text = "Doctor Name"
+        '
+        'doctorname
+        '
+        Me.doctorname.Name = "doctorname"
+        Me.doctorname.Size = New System.Drawing.Size(15, 20)
+        Me.doctorname.Text = "-"
         '
         'doctorDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.btn_logout)
         Me.Controls.Add(Me.btn_managepatient)
         Me.Controls.Add(Me.btn_change)
@@ -173,7 +202,6 @@ Partial Class doctorDashboard
         Me.Controls.Add(Me.btn_manageappointment)
         Me.Controls.Add(Me.btn_audit)
         Me.Controls.Add(Me.btn_managepayment)
-        Me.Controls.Add(Me.StatusStrip1)
         Me.Name = "doctorDashboard"
         Me.Text = "doctorDashboard"
         Me.StatusStrip1.ResumeLayout(False)
@@ -188,6 +216,9 @@ Partial Class doctorDashboard
     Friend WithEvents btn_manageappointment As Button
     Friend WithEvents btn_audit As Button
     Friend WithEvents btn_managepayment As Button
+    Friend WithEvents btn_managepatient As Button
+    Friend WithEvents btn_logout As Button
+    Friend WithEvents Timer1 As Timer
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
     Friend WithEvents currentUser As ToolStripStatusLabel
@@ -196,7 +227,8 @@ Partial Class doctorDashboard
     Friend WithEvents ToolStripStatusLabel3 As ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel4 As ToolStripStatusLabel
     Friend WithEvents dateAndTime As ToolStripStatusLabel
-    Friend WithEvents btn_managepatient As Button
-    Friend WithEvents btn_logout As Button
-    Friend WithEvents Timer1 As Timer
+    Friend WithEvents ToolStripStatusLabel5 As ToolStripStatusLabel
+    Friend WithEvents doctorid As ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel6 As ToolStripStatusLabel
+    Friend WithEvents doctorname As ToolStripStatusLabel
 End Class

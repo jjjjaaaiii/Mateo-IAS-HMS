@@ -26,7 +26,7 @@ Partial Class manageUsers
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txt_role = New System.Windows.Forms.TextBox()
         Me.txt_password = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtusername = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -39,15 +39,19 @@ Partial Class manageUsers
         Me.Button5 = New System.Windows.Forms.Button()
         Me.testTimer = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.txtactive = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtactive)
+        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txt_role)
         Me.GroupBox1.Controls.Add(Me.txt_password)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.txtusername)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -72,12 +76,12 @@ Partial Class manageUsers
         Me.txt_password.Size = New System.Drawing.Size(214, 22)
         Me.txt_password.TabIndex = 8
         '
-        'TextBox3
+        'txtusername
         '
-        Me.TextBox3.Location = New System.Drawing.Point(141, 43)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(181, 22)
-        Me.TextBox3.TabIndex = 7
+        Me.txtusername.Location = New System.Drawing.Point(141, 43)
+        Me.txtusername.Name = "txtusername"
+        Me.txtusername.Size = New System.Drawing.Size(181, 22)
+        Me.txtusername.TabIndex = 7
         '
         'Label5
         '
@@ -181,6 +185,23 @@ Partial Class manageUsers
         '
         Me.Timer1.Interval = 1000
         '
+        'txtactive
+        '
+        Me.txtactive.Enabled = False
+        Me.txtactive.Location = New System.Drawing.Point(448, 84)
+        Me.txtactive.Name = "txtactive"
+        Me.txtactive.Size = New System.Drawing.Size(214, 22)
+        Me.txtactive.TabIndex = 11
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(363, 87)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(70, 20)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "ISActive"
+        '
         'manageUsers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -209,7 +230,7 @@ Partial Class manageUsers
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txt_role As TextBox
     Friend WithEvents txt_password As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtusername As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
@@ -222,4 +243,6 @@ Partial Class manageUsers
     Friend WithEvents Button5 As Button
     Friend WithEvents testTimer As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents txtactive As TextBox
+    Friend WithEvents Label2 As Label
 End Class
