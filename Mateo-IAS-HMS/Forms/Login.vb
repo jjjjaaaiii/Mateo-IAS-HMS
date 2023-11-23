@@ -25,10 +25,14 @@ Public Class Login
 
             Dim userId As Integer = GetUserId(Uaccount)
             Dim role As String = GetUserRole(userId)
+            Dim roleId As Integer = GetIdByUserIdAndRole(userId, role)
+            Dim roleName As String = GetNameByUserIdAndRole(userId, role)
 
             userData.id = userId
             userData.username = Uaccount
             userData.role = role
+            userData.roleId = roleId
+            userData.roleName = roleName
 
             InsertAuditRecord(userId, "Logged In")
 

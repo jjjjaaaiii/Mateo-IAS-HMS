@@ -4,16 +4,22 @@
     Private PreviousMousePosition As Point
     Private SensitivityThreshold As Integer = 500
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        If e.RowIndex >= 0 Then
-            ' Get the selected row
-            Dim selectedRow As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
+        Try
+            timerValue = 0
+            If e.RowIndex >= 0 Then
+                ' Get the selected row
+                Dim selectedRow As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
 
-            ' Populate the textboxes with data from the selected row
-            txtuserid.Text = selectedRow.Cells("id").Value.ToString()
-            txtusername.Text = selectedRow.Cells("username").Value.ToString()
-            txtuserrole.Text = selectedRow.Cells("userrole").Value.ToString()
-            txtisactive.Text = selectedRow.Cells("isactive").Value.ToString()
-        End If
+                ' Populate the textboxes with data from the selected row
+                txtuserid.Text = selectedRow.Cells("id").Value.ToString()
+                txtusername.Text = selectedRow.Cells("username").Value.ToString()
+                txtuserrole.Text = selectedRow.Cells("userrole").Value.ToString()
+                txtisactive.Text = selectedRow.Cells("isactive").Value.ToString()
+            End If
+        Catch ex As Exception
+            MessageBox.Show($"Error blank cell")
+        End Try
+
     End Sub
 
     Private Sub activateUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -22,6 +28,7 @@
     End Sub
 
     Private Sub btn_clear_Click(sender As Object, e As EventArgs) Handles btn_clear.Click
+        timerValue = 0
         txtuserid.Text = ""
         txtusername.Text = ""
         txtuserrole.Text = ""
@@ -30,6 +37,7 @@
 
     Private Sub btn_activate_Click(sender As Object, e As EventArgs) Handles btn_activate.Click
         Try
+            timerValue = 0
             Dim userId As Integer = txtuserid.Text
             ActivateSelectedUser(userId)
             DataGridView1.DataSource = GetInactiveUserData()
@@ -49,8 +57,7 @@
     End Sub
 
     Private Sub btnback_Click(sender As Object, e As EventArgs) Handles btnback.Click
-        Dim frm As New patientDashboard
-        frm.Show()
+        GoBackToDashboard()
         Me.Close()
     End Sub
 

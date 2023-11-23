@@ -1,4 +1,29 @@
 ﻿Public Class adminDashboard
+
+    Dim timerValue As Integer = 0
+
+    Private Sub adminDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Timer1.Start()
+        currentUser.Text = userData.username
+        userRole.Text = userData.role
+        dateAndTime.Text = DateTime.Now
+        adminid.Text = userData.roleId
+        adminname.Text = userData.roleName
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        timerValue += 1
+        dateAndTime.Text = DateTime.Now
+
+        If (timerValue > 60) Then
+            Timer1.Stop()
+            MessageBox.Show("timed out")
+            SwitchToForm(Login)
+            Me.Close()
+        End If
+    End Sub
+
     Public Sub SwitchToForm(frm As Form)
         frm.Show()
         Me.Close()
@@ -37,7 +62,7 @@
     End Sub
 
     Private Sub btn_change_Click(sender As Object, e As EventArgs) Handles btn_change.Click
-        SwitchToForm(manageUsers)
+        SwitchToForm(info)
     End Sub
 
     Private Sub btn_backup_Click(sender As Object, e As EventArgs) Handles btn_backup.Click
@@ -48,7 +73,5 @@
         MessageBox.Show("WALAA PAAAA")
     End Sub
 
-    Private Sub adminDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
 End Class

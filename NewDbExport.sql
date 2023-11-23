@@ -27,10 +27,13 @@ DROP TABLE IF EXISTS `tbl_admin`;
 CREATE TABLE `tbl_admin` (
   `admin_id` int NOT NULL AUTO_INCREMENT,
   `user_id` int NOT NULL,
+  `admin_name` varchar(45) DEFAULT NULL,
+  `admin_address` varchar(45) DEFAULT NULL,
+  `admin_contact` int DEFAULT NULL,
   PRIMARY KEY (`admin_id`),
   KEY `fk_tbl_admin_tbl_user1_idx` (`user_id`),
   CONSTRAINT `fk_tbl_admin_tbl_user1` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,6 +42,7 @@ CREATE TABLE `tbl_admin` (
 
 LOCK TABLES `tbl_admin` WRITE;
 /*!40000 ALTER TABLE `tbl_admin` DISABLE KEYS */;
+INSERT INTO `tbl_admin` VALUES (2,22,'aaaaa','ccccc',3223);
 /*!40000 ALTER TABLE `tbl_admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -55,6 +59,7 @@ CREATE TABLE `tbl_appointment` (
   `doctor_id` int NOT NULL,
   `appointment_reason` varchar(45) DEFAULT NULL,
   `appointment_date` varchar(45) DEFAULT NULL,
+  `appointment_status` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`appointment_id`),
   KEY `fk_tbl_appointment_tbl_patient1_idx` (`patient_id`),
   KEY `fk_tbl_appointment_tbl_doctor1_idx` (`doctor_id`),
@@ -87,7 +92,7 @@ CREATE TABLE `tbl_audit` (
   PRIMARY KEY (`audit_id`),
   KEY `fk_tbl_audit_tbl_user_idx` (`user_id`),
   CONSTRAINT `fk_tbl_audit_tbl_user` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,7 +101,7 @@ CREATE TABLE `tbl_audit` (
 
 LOCK TABLES `tbl_audit` WRITE;
 /*!40000 ALTER TABLE `tbl_audit` DISABLE KEYS */;
-INSERT INTO `tbl_audit` VALUES (18,12,'Registered','2023-11-15 16:44:04'),(19,13,'Registered','2023-11-15 16:45:47'),(20,13,'Logged In','2023-11-15 16:46:30'),(21,14,'Registered','2023-11-15 17:43:22'),(22,13,'Logged In','2023-11-15 17:43:56'),(23,12,'Logged In','2023-11-15 17:45:42'),(24,15,'Registered','2023-11-15 18:01:21'),(25,13,'Logged In','2023-11-15 18:01:57'),(26,13,'Logged In','2023-11-15 19:16:03'),(27,13,'Logged In','2023-11-15 19:17:06'),(28,13,'Logged In','2023-11-15 22:13:11'),(29,13,'Logged In','2023-11-15 22:13:45'),(30,15,'Logged In','2023-11-15 22:14:12'),(31,15,'Logged In','2023-11-15 22:34:23'),(32,15,'Logged In','2023-11-15 22:48:34'),(33,16,'Registered','2023-11-17 15:28:15'),(34,13,'Logged In','2023-11-17 15:28:50'),(35,13,'Logged In','2023-11-17 15:31:44'),(36,13,'Logged In','2023-11-17 15:40:54'),(37,13,'Logged In','2023-11-17 15:51:39'),(38,13,'Logged In','2023-11-17 15:52:20'),(39,17,'Registered','2023-11-18 00:06:23'),(40,13,'Logged In','2023-11-18 00:07:06'),(41,13,'Logged In','2023-11-18 00:07:59'),(42,17,'Logged In','2023-11-18 00:08:36'),(43,17,'Logged In','2023-11-18 00:13:02'),(44,13,'Logged In','2023-11-19 22:17:44'),(45,15,'Logged In','2023-11-19 22:32:53'),(46,15,'Logged In','2023-11-19 22:34:54'),(47,15,'Logged In','2023-11-19 22:37:14'),(48,15,'Logged In','2023-11-19 22:40:01'),(49,15,'Logged In','2023-11-19 22:41:39'),(50,18,'Registered','2023-11-20 15:12:32'),(51,13,'Logged In','2023-11-20 15:13:00'),(52,18,'Logged In','2023-11-20 15:13:24');
+INSERT INTO `tbl_audit` VALUES (53,19,'Registered','2023-11-22 21:31:52'),(54,19,'Logged In','2023-11-22 21:33:02'),(55,20,'Registered','2023-11-22 21:35:57'),(56,21,'Registered','2023-11-22 21:36:06'),(57,19,'Logged In','2023-11-22 21:40:32'),(58,19,'Logged In','2023-11-22 22:01:07'),(59,19,'Logged In','2023-11-23 00:38:10'),(60,19,'Logged In','2023-11-23 00:38:35'),(61,20,'Logged In','2023-11-23 00:38:49'),(62,20,'Logged In','2023-11-23 00:39:16'),(63,20,'Logged In','2023-11-23 00:40:34'),(64,19,'Logged In','2023-11-23 15:56:05'),(65,19,'Logged In','2023-11-23 15:57:36'),(66,19,'Logged In','2023-11-23 16:34:08'),(67,19,'Logged In','2023-11-23 16:35:31'),(68,19,'Logged In','2023-11-23 16:37:53'),(69,19,'Logged In','2023-11-23 16:38:11'),(70,22,'Registered','2023-11-23 16:39:24'),(71,19,'Logged In','2023-11-23 16:39:32'),(72,22,'Logged In','2023-11-23 16:39:45'),(73,22,'Logged In','2023-11-23 16:41:30'),(74,22,'Logged In','2023-11-23 16:42:57');
 /*!40000 ALTER TABLE `tbl_audit` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -110,10 +115,13 @@ DROP TABLE IF EXISTS `tbl_doctor`;
 CREATE TABLE `tbl_doctor` (
   `doctor_id` int NOT NULL AUTO_INCREMENT,
   `user_id` int NOT NULL,
+  `doctor_name` varchar(45) DEFAULT NULL,
+  `doctor_address` varchar(45) DEFAULT NULL,
+  `doctor_contact` int DEFAULT NULL,
   PRIMARY KEY (`doctor_id`),
   KEY `fk_tbl_admin_tbl_user1_idx` (`user_id`),
   CONSTRAINT `fk_tbl_admin_tbl_user10` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,7 +130,7 @@ CREATE TABLE `tbl_doctor` (
 
 LOCK TABLES `tbl_doctor` WRITE;
 /*!40000 ALTER TABLE `tbl_doctor` DISABLE KEYS */;
-INSERT INTO `tbl_doctor` VALUES (1,12),(2,14),(3,18);
+INSERT INTO `tbl_doctor` VALUES (4,20,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `tbl_doctor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -136,15 +144,9 @@ DROP TABLE IF EXISTS `tbl_patient`;
 CREATE TABLE `tbl_patient` (
   `patient_id` int NOT NULL AUTO_INCREMENT,
   `user_id` int NOT NULL,
-  `firstname` varchar(45) DEFAULT NULL,
-  `lastname` varchar(45) DEFAULT NULL,
-  `mi` varchar(45) DEFAULT NULL,
-  `barangay` varchar(45) DEFAULT NULL,
-  `municipal` varchar(45) DEFAULT NULL,
-  `province` varchar(45) DEFAULT NULL,
-  `contactnumber` varchar(45) DEFAULT NULL,
-  `age` varchar(45) DEFAULT NULL,
-  `birthday` varchar(45) DEFAULT NULL,
+  `patient_name` varchar(45) DEFAULT NULL,
+  `patient_address` varchar(45) DEFAULT NULL,
+  `patient_contact` int DEFAULT NULL,
   PRIMARY KEY (`patient_id`),
   KEY `fk_tbl_admin_tbl_user1_idx` (`user_id`),
   CONSTRAINT `fk_tbl_admin_tbl_user100` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`)
@@ -157,8 +159,37 @@ CREATE TABLE `tbl_patient` (
 
 LOCK TABLES `tbl_patient` WRITE;
 /*!40000 ALTER TABLE `tbl_patient` DISABLE KEYS */;
-INSERT INTO `tbl_patient` VALUES (2,17,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `tbl_patient` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_pay`
+--
+
+DROP TABLE IF EXISTS `tbl_pay`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tbl_pay` (
+  `pay_id` int NOT NULL AUTO_INCREMENT,
+  `patient_id` int NOT NULL,
+  `doctor_id` int NOT NULL,
+  `pay_total` int DEFAULT NULL,
+  `pay_status` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`pay_id`),
+  KEY `fk_tbl_pay_tbl_patient1_idx` (`patient_id`),
+  KEY `fk_tbl_pay_tbl_doctor1_idx` (`doctor_id`),
+  CONSTRAINT `fk_tbl_pay_tbl_doctor1` FOREIGN KEY (`doctor_id`) REFERENCES `tbl_doctor` (`doctor_id`),
+  CONSTRAINT `fk_tbl_pay_tbl_patient1` FOREIGN KEY (`patient_id`) REFERENCES `tbl_patient` (`patient_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_pay`
+--
+
+LOCK TABLES `tbl_pay` WRITE;
+/*!40000 ALTER TABLE `tbl_pay` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_pay` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -175,7 +206,7 @@ CREATE TABLE `tbl_user` (
   `isactive` int DEFAULT NULL,
   `userrole` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -184,7 +215,7 @@ CREATE TABLE `tbl_user` (
 
 LOCK TABLES `tbl_user` WRITE;
 /*!40000 ALTER TABLE `tbl_user` DISABLE KEYS */;
-INSERT INTO `tbl_user` VALUES (12,'donna','6ce4be7607d13b0bf3119d47b62404c1',1,'Doctor'),(13,'admin','3225cb195fc2b6c5fd8d1fce48994e6c',1,'Admin'),(14,'sean','335894592eddcee58af8df0c7539ede8',1,'Doctor'),(15,'mad','f71b03b9710c39949ed6770bf601fa83',1,'Patient'),(16,'seanti','335894592eddcee58af8df0c7539ede8',0,'Admin'),(17,'shane','335894592eddcee58af8df0c7539ede8',1,'Patient'),(18,'camille','ce62bba6f67c4378b0b1e17b0aaf1355',1,'Doctor');
+INSERT INTO `tbl_user` VALUES (19,'adminn','3225cb195fc2b6c5fd8d1fce48994e6c',1,'Admin'),(20,'doctor','6ce4be7607d13b0bf3119d47b62404c1',1,'Doctor'),(21,'patient','f71b03b9710c39949ed6770bf601fa83',0,'Patient'),(22,'admin','3225cb195fc2b6c5fd8d1fce48994e6c',1,'Admin');
 /*!40000 ALTER TABLE `tbl_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -205,4 +236,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-21 20:44:16
+-- Dump completed on 2023-11-23 19:35:58

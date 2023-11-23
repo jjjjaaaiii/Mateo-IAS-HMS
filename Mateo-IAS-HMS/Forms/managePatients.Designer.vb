@@ -23,7 +23,6 @@ Partial Class managePatients
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.gb_patient_number = New System.Windows.Forms.GroupBox()
         Me.btnSearch_patient = New System.Windows.Forms.Button()
         Me.txtsearch_patient = New System.Windows.Forms.TextBox()
@@ -43,15 +42,6 @@ Partial Class managePatients
         Me.gb_patient_number.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(43, 33)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(102, 16)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Register Patient"
         '
         'gb_patient_number
         '
@@ -203,7 +193,6 @@ Partial Class managePatients
         Me.Controls.Add(Me.btnupdate)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.gb_patient_number)
-        Me.Controls.Add(Me.Label1)
         Me.Name = "managePatients"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "managePatients"
@@ -214,8 +203,6 @@ Partial Class managePatients
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents gb_patient_number As GroupBox
     Friend WithEvents btnSearch_patient As Button
     Friend WithEvents txtsearch_patient As TextBox

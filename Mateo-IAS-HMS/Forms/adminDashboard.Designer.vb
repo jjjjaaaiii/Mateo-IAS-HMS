@@ -43,6 +43,10 @@ Partial Class adminDashboard
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btn_activate = New System.Windows.Forms.Button()
         Me.btn_audit = New System.Windows.Forms.Button()
+        Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.adminid = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.adminname = New System.Windows.Forms.ToolStripStatusLabel()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -76,7 +80,7 @@ Partial Class adminDashboard
         'StatusStrip1
         '
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.currentUser, Me.ToolStripStatusLabel2, Me.userRole, Me.ToolStripStatusLabel3, Me.ToolStripStatusLabel4, Me.dateAndTime})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.currentUser, Me.ToolStripStatusLabel2, Me.userRole, Me.ToolStripStatusLabel3, Me.ToolStripStatusLabel4, Me.dateAndTime, Me.ToolStripStatusLabel5, Me.adminid, Me.ToolStripStatusLabel6, Me.adminname})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 424)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(800, 26)
@@ -201,6 +205,30 @@ Partial Class adminDashboard
         Me.btn_audit.Text = "Audit Log"
         Me.btn_audit.UseVisualStyleBackColor = True
         '
+        'ToolStripStatusLabel5
+        '
+        Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(70, 20)
+        Me.ToolStripStatusLabel5.Text = "admin ID"
+        '
+        'adminid
+        '
+        Me.adminid.Name = "adminid"
+        Me.adminid.Size = New System.Drawing.Size(15, 20)
+        Me.adminid.Text = "-"
+        '
+        'ToolStripStatusLabel6
+        '
+        Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
+        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(97, 20)
+        Me.ToolStripStatusLabel6.Text = "Admin Name"
+        '
+        'adminname
+        '
+        Me.adminname.Name = "adminname"
+        Me.adminname.Size = New System.Drawing.Size(15, 20)
+        Me.adminname.Text = "-"
+        '
         'adminDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -247,4 +275,8 @@ Partial Class adminDashboard
     Friend WithEvents Timer1 As Timer
     Friend WithEvents btn_activate As Button
     Friend WithEvents btn_audit As Button
+    Friend WithEvents ToolStripStatusLabel5 As ToolStripStatusLabel
+    Friend WithEvents adminid As ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel6 As ToolStripStatusLabel
+    Friend WithEvents adminname As ToolStripStatusLabel
 End Class

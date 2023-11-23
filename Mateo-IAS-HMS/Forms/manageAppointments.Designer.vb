@@ -22,6 +22,7 @@ Partial Class manageAppointments
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -42,6 +43,7 @@ Partial Class manageAppointments
         Me.btnappoint = New System.Windows.Forms.Button()
         Me.btnapprove = New System.Windows.Forms.Button()
         Me.dtpdate = New System.Windows.Forms.DateTimePicker()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -214,6 +216,10 @@ Partial Class manageAppointments
         Me.dtpdate.Size = New System.Drawing.Size(223, 22)
         Me.dtpdate.TabIndex = 21
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
         'manageAppointments
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -268,4 +274,5 @@ Partial Class manageAppointments
     Friend WithEvents btnappoint As Button
     Friend WithEvents btnapprove As Button
     Friend WithEvents dtpdate As DateTimePicker
+    Friend WithEvents Timer1 As Timer
 End Class
