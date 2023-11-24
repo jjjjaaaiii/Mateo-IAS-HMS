@@ -5,6 +5,10 @@
     Private Sub manageDoctors_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
         DataGridView1.DataSource = GetAllDataFromTable("tbl_doctor")
+
+        If userData.role = "patient" Then
+            btn_update.Visible = False
+        End If
     End Sub
 
     Private Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_home.Click

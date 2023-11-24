@@ -10,6 +10,9 @@ Public Class patientDashboard
     Private Sub informationSystem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         currentUser.Text = userData.username
         userRole.Text = userData.role
+        dateAndTime.Text = DateTime.Now.ToString()
+        patientid.Text = userData.roleId
+        patientname.Text = userData.roleName
         Timer1.Start()
     End Sub
 

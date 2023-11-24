@@ -5,6 +5,7 @@
     End Sub
 
     Private Sub bookAppointment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtpatientid.Text = userData.roleId
         DataGridView1.DataSource = GetAppointmentsByPatientId(userData.roleId)
     End Sub
 

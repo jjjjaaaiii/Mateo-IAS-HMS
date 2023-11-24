@@ -7,13 +7,23 @@
     Private Sub manageAppointments_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
 
+        If userData.role = "Patient" Then
+            btnappoint.Visible = False
+            btnupdate.Visible = False
+            btndelete.Visible = False
+            btnapprove.Visible = False
+            DataGridView1.DataSource = GetAppointmentsByPatientId(userData.roleId)
+        Else
+            DataGridView1.DataSource = GetAllDataFromTable("tbl_appointment")
+        End If
+
     End Sub
 
     Dim timervalue As Integer = 0
     Private Sub btnappoint_Click(sender As Object, e As EventArgs) Handles btnappoint.Click
         timervalue = 0
         InsertAppointment(txtpatientid.Text, txtdoctorid.Text, txtreason.Text)
-        DataGridView1.DataSource = GetAppointmentsByPatientId(userData.roleId)
+        DataGridView1.DataSource = GetAllDataFromTable("tbl_appointment")
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
@@ -52,6 +62,7 @@
         Try
             timervalue = 0
             UpdateAppointmentDetails(txt_id.Text, txtpatientid.Text, txtdoctorid.Text, txtreason.Text, dtpdate.Text)
+            DataGridView1.DataSource = GetAllDataFromTable("tbl_appointment")
         Catch ex As Exception
             MessageBox.Show($"Error: {ex}")
         End Try
@@ -63,6 +74,8 @@
 
             AcceptAppointmentById(txt_id.Text)
             AddPaymentData(txt_id.Text, 500, "accepted")
+            DataGridView1.DataSource = GetAllDataFromTable("tbl_appointment")
+
         Catch ex As Exception
             MessageBox.Show($"Error: {ex}")
         End Try
@@ -74,6 +87,8 @@
             timervalue = 0
 
             DeleteAppointmentById(txt_id.Text)
+            DataGridView1.DataSource = GetAllDataFromTable("tbl_appointment")
+
         Catch ex As Exception
             MessageBox.Show($"Error: {ex}")
         End Try
