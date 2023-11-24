@@ -262,6 +262,7 @@ Partial Class adminDashboard
         Me.Controls.Add(Me.StatusStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "adminDashboard"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "adminDashboard"
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()

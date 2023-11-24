@@ -75,4 +75,16 @@ Public Class Login
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         capslockindicator()
     End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+        Me.Close()
+    End Sub
+
+    Private Sub Login_MouseEnter(sender As Object, e As EventArgs) Handles MyBase.MouseEnter
+        Label5.ForeColor = Color.Blue
+    End Sub
+
+    Private Sub Login_MouseLeave(sender As Object, e As EventArgs) Handles MyBase.MouseLeave
+        Label5.ForeColor = SystemColors.ControlText
+    End Sub
 End Class

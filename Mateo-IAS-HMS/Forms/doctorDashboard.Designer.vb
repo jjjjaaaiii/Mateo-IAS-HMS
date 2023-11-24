@@ -214,6 +214,7 @@ Partial Class doctorDashboard
         Me.Controls.Add(Me.btn_managepayment)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "doctorDashboard"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "doctorDashboard"
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()

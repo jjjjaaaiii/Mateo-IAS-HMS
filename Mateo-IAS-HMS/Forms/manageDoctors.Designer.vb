@@ -204,6 +204,7 @@ Partial Class manageDoctors
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(920, 490)
@@ -221,6 +222,7 @@ Partial Class manageDoctors
         Me.Controls.Add(Me.btn_home)
         Me.Controls.Add(Me.btn_update)
         Me.Name = "manageDoctors"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "manageDoctors"
         Me.gb_patient_number.ResumeLayout(False)
         Me.gb_patient_number.PerformLayout()

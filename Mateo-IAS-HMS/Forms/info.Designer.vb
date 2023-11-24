@@ -292,6 +292,7 @@ Partial Class info
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Name = "info"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "info"
         Me.ResumeLayout(False)
         Me.PerformLayout()

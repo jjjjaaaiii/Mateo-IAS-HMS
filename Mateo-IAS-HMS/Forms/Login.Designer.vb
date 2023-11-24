@@ -36,6 +36,7 @@ Partial Class Login
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.lblcapslockIndicator = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.passwordEye, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -151,11 +152,23 @@ Partial Class Login
         Me.PictureBox1.TabIndex = 10
         Me.PictureBox1.TabStop = False
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(762, 9)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(26, 27)
+        Me.Label5.TabIndex = 11
+        Me.Label5.Text = "X"
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 506)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lblcapslockIndicator)
         Me.Controls.Add(Me.passwordEye)
@@ -191,4 +204,5 @@ Partial Class Login
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents lblcapslockIndicator As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label5 As Label
 End Class
