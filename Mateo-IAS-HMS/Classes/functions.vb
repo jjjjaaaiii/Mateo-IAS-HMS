@@ -1,4 +1,5 @@
-﻿Imports Microsoft.VisualBasic.ApplicationServices
+﻿Imports Microsoft.SqlServer
+Imports Microsoft.VisualBasic.ApplicationServices
 Imports MySql.Data.MySqlClient
 Imports System.Data.SqlClient
 Imports System.Runtime.ConstrainedExecution
@@ -787,6 +788,99 @@ Module functions
         End Try
     End Sub
 
+    Public Sub BackupDatabase()
+        Try
+            Dim Server As String = "localhost"
+            Dim Database As String = "db_hospitalproject"
+            Dim User As String = "root"
+            Dim Password As String = "root"
 
+            ' File dialog for selecting backup and restore files
+            Dim openFileDialog As New OpenFileDialog()
+            Dim saveFileDialog As New SaveFileDialog()
+
+            ' Path for the MySQL tools (mysqldump, mysql)
+            Dim mysqlDumpPath As String = "C:\Program Files\MySQL\MySQL Server 5.5\bin\mysqldump.exe"
+            Dim mysqlPath As String = "C:\Program Files\MySQL\MySQL Server 5.5\bin\mysql.exe"
+            ' Show the save file dialog to get the backup file path
+            saveFileDialog.Filter = "SQL Files (*.sql)|*.sql|All Files (*.*)|*.*"
+            saveFileDialog.FileName = "backup.sql"
+
+            If saveFileDialog.ShowDialog() = DialogResult.OK Then
+                Dim backupFilePath As String = saveFileDialog.FileName
+
+                ' Build the mysqldump command
+                Dim command As String = $"--host={Server} --user={User} --password={Password} --databases {Database} --result-file={backupFilePath}"
+
+                ' Execute the mysqldump command
+                Dim processStartInfo As New ProcessStartInfo(mysqlDumpPath, command)
+                processStartInfo.CreateNoWindow = True
+                processStartInfo.UseShellExecute = False
+                processStartInfo.RedirectStandardOutput = True
+
+                Dim process As Process = New Process With {
+                    .StartInfo = processStartInfo
+                }
+
+                process.Start()
+                Dim output As String = process.StandardOutput.ReadToEnd() ' Read standard output
+                process.WaitForExit()
+
+                MessageBox.Show("Backup completed successfully.")
+            End If
+        Catch ex As Exception
+            MessageBox.Show($"Error during backup: {ex.Message}")
+        End Try
+    End Sub
+
+    Public Sub RestoreDatabase()
+        Try
+            Dim Server As String = "localhost"
+            Dim Database As String = "db_hospitalproject"
+            Dim User As String = "root"
+            Dim Password As String = "root"
+
+            ' File dialog for selecting backup and restore files
+            Dim openFileDialog As New OpenFileDialog()
+            Dim saveFileDialog As New SaveFileDialog()
+
+            ' Path for the MySQL tools (mysqldump, mysql)
+            Dim mysqlDumpPath As String = "C:\Program Files\MySQL\MySQL Server 5.5\bin\mysqldump.exe"
+            Dim mysqlPath As String = "C:\Program Files\MySQL\MySQL Server 5.5\bin\mysql.exe"
+
+            ' Show the open file dialog to get the restore file path
+            openFileDialog.Filter = "SQL Files (*.sql)|*.sql|All Files (*.*)|*.*"
+
+            If openFileDialog.ShowDialog() = DialogResult.OK Then
+                Dim restoreFilePath As String = openFileDialog.FileName
+
+                ' Build the mysql command
+                Dim command As String = $"--host={Server} --user={User} --password={Password} --database {Database}"
+
+                ' Execute the mysql command
+                Dim processStartInfo As New ProcessStartInfo(mysqlPath, command)
+                processStartInfo.CreateNoWindow = True
+                processStartInfo.UseShellExecute = False
+                processStartInfo.RedirectStandardInput = True
+
+                Dim process As Process = New Process With {
+                    .StartInfo = processStartInfo
+                }
+
+                process.Start()
+
+                ' Read the SQL file and write it to the process input stream
+                Dim sqlFileContent As String = System.IO.File.ReadAllText(restoreFilePath)
+                process.StandardInput.WriteLine(sqlFileContent)
+
+                process.StandardInput.Close()
+                process.WaitForExit()
+
+                MessageBox.Show("Restore completed successfully.")
+            End If
+        Catch ex As Exception
+            MessageBox.Show($"Error during restore: {ex.Message}")
+        End Try
+    End Sub
 
 End Module

@@ -66,11 +66,11 @@
     End Sub
 
     Private Sub btn_backup_Click(sender As Object, e As EventArgs) Handles btn_backup.Click
-        MessageBox.Show("WALAA PAAAA")
+        BackupDatabase()
     End Sub
 
     Private Sub btn_restore_Click(sender As Object, e As EventArgs) Handles btn_restore.Click
-        MessageBox.Show("WALAA PAAAA")
+        RestoreDatabase()
     End Sub
 
 
