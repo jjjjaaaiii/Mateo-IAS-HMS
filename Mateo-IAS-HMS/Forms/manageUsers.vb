@@ -30,7 +30,7 @@
         Try
             timerValue = 0
 
-            If txtusername.Text <> userData.username And IsUserAlreadyExists(txtusername.Text) = False Then
+            If IsUserAlreadyExists(txtusername.Text) = False Then
                 MessageBox.Show("Username already taken!")
             ElseIf VerifyPassword(txt_password.Text) = False And txt_password.Text.Length > 0 Then
                 MessageBox.Show("Password must at least have one capital letter, one small letter, one number and either of these special characters ?!_")
@@ -46,7 +46,7 @@
     Private Sub btn_update_Click(sender As Object, e As EventArgs) Handles btn_update.Click
         Try
             timerValue = 0
-            If txtusername.Text <> userData.username And IsUserAlreadyExists(txtusername.Text) = False Then
+            If IsUserAlreadyExists(txtusername.Text) Then
                 MessageBox.Show("Username already taken!")
             ElseIf txt_password.Text = "" Then
                 UpdateUsername(txt_id.Text, txtusername.Text)

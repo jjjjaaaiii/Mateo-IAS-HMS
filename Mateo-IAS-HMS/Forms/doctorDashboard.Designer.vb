@@ -23,6 +23,7 @@ Partial Class doctorDashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(doctorDashboard))
         Me.btn_change = New System.Windows.Forms.Button()
         Me.btn_viewdoctor = New System.Windows.Forms.Button()
         Me.btn_manageappointment = New System.Windows.Forms.Button()
@@ -48,63 +49,70 @@ Partial Class doctorDashboard
         '
         'btn_change
         '
-        Me.btn_change.Location = New System.Drawing.Point(322, 140)
+        Me.btn_change.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_change.Location = New System.Drawing.Point(284, 157)
         Me.btn_change.Name = "btn_change"
-        Me.btn_change.Size = New System.Drawing.Size(132, 34)
+        Me.btn_change.Size = New System.Drawing.Size(210, 38)
         Me.btn_change.TabIndex = 14
         Me.btn_change.Text = "Change Info"
         Me.btn_change.UseVisualStyleBackColor = True
         '
         'btn_viewdoctor
         '
-        Me.btn_viewdoctor.Location = New System.Drawing.Point(520, 140)
+        Me.btn_viewdoctor.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_viewdoctor.Location = New System.Drawing.Point(500, 159)
         Me.btn_viewdoctor.Name = "btn_viewdoctor"
-        Me.btn_viewdoctor.Size = New System.Drawing.Size(132, 34)
+        Me.btn_viewdoctor.Size = New System.Drawing.Size(235, 36)
         Me.btn_viewdoctor.TabIndex = 13
         Me.btn_viewdoctor.Text = "View Doctors"
         Me.btn_viewdoctor.UseVisualStyleBackColor = True
         '
         'btn_manageappointment
         '
-        Me.btn_manageappointment.Location = New System.Drawing.Point(113, 180)
+        Me.btn_manageappointment.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_manageappointment.Location = New System.Drawing.Point(56, 197)
         Me.btn_manageappointment.Name = "btn_manageappointment"
-        Me.btn_manageappointment.Size = New System.Drawing.Size(132, 55)
+        Me.btn_manageappointment.Size = New System.Drawing.Size(268, 41)
         Me.btn_manageappointment.TabIndex = 12
         Me.btn_manageappointment.Text = "Manage Appointments"
         Me.btn_manageappointment.UseVisualStyleBackColor = True
         '
         'btn_audit
         '
-        Me.btn_audit.Location = New System.Drawing.Point(322, 180)
+        Me.btn_audit.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_audit.Location = New System.Drawing.Point(330, 201)
         Me.btn_audit.Name = "btn_audit"
-        Me.btn_audit.Size = New System.Drawing.Size(132, 55)
+        Me.btn_audit.Size = New System.Drawing.Size(164, 37)
         Me.btn_audit.TabIndex = 11
         Me.btn_audit.Text = "Audit"
         Me.btn_audit.UseVisualStyleBackColor = True
         '
         'btn_managepayment
         '
-        Me.btn_managepayment.Location = New System.Drawing.Point(113, 140)
+        Me.btn_managepayment.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_managepayment.Location = New System.Drawing.Point(56, 154)
         Me.btn_managepayment.Name = "btn_managepayment"
-        Me.btn_managepayment.Size = New System.Drawing.Size(132, 34)
+        Me.btn_managepayment.Size = New System.Drawing.Size(222, 41)
         Me.btn_managepayment.TabIndex = 10
         Me.btn_managepayment.Text = "Manage Payments"
         Me.btn_managepayment.UseVisualStyleBackColor = True
         '
         'btn_managepatient
         '
-        Me.btn_managepatient.Location = New System.Drawing.Point(520, 180)
+        Me.btn_managepatient.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_managepatient.Location = New System.Drawing.Point(500, 201)
         Me.btn_managepatient.Name = "btn_managepatient"
-        Me.btn_managepatient.Size = New System.Drawing.Size(132, 56)
+        Me.btn_managepatient.Size = New System.Drawing.Size(235, 37)
         Me.btn_managepatient.TabIndex = 17
         Me.btn_managepatient.Text = "Manage Patients"
         Me.btn_managepatient.UseVisualStyleBackColor = True
         '
         'btn_logout
         '
-        Me.btn_logout.Location = New System.Drawing.Point(322, 279)
+        Me.btn_logout.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_logout.Location = New System.Drawing.Point(692, 386)
         Me.btn_logout.Name = "btn_logout"
-        Me.btn_logout.Size = New System.Drawing.Size(132, 55)
+        Me.btn_logout.Size = New System.Drawing.Size(96, 35)
         Me.btn_logout.TabIndex = 18
         Me.btn_logout.Text = "Logout"
         Me.btn_logout.UseVisualStyleBackColor = True
@@ -193,6 +201,8 @@ Partial Class doctorDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.btn_logout)
@@ -202,6 +212,7 @@ Partial Class doctorDashboard
         Me.Controls.Add(Me.btn_manageappointment)
         Me.Controls.Add(Me.btn_audit)
         Me.Controls.Add(Me.btn_managepayment)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "doctorDashboard"
         Me.Text = "doctorDashboard"
         Me.StatusStrip1.ResumeLayout(False)

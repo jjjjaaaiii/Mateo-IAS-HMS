@@ -23,6 +23,7 @@ Partial Class patientDashboard
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(patientDashboard))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btn_pay = New System.Windows.Forms.Button()
         Me.btn_book = New System.Windows.Forms.Button()
@@ -51,54 +52,60 @@ Partial Class patientDashboard
         '
         'btn_pay
         '
-        Me.btn_pay.Location = New System.Drawing.Point(113, 217)
+        Me.btn_pay.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_pay.Location = New System.Drawing.Point(554, 224)
         Me.btn_pay.Name = "btn_pay"
-        Me.btn_pay.Size = New System.Drawing.Size(132, 23)
+        Me.btn_pay.Size = New System.Drawing.Size(228, 46)
         Me.btn_pay.TabIndex = 3
         Me.btn_pay.Text = "Pay"
         Me.btn_pay.UseVisualStyleBackColor = True
         '
         'btn_book
         '
-        Me.btn_book.Location = New System.Drawing.Point(113, 154)
+        Me.btn_book.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_book.Location = New System.Drawing.Point(86, 224)
         Me.btn_book.Name = "btn_book"
-        Me.btn_book.Size = New System.Drawing.Size(132, 23)
+        Me.btn_book.Size = New System.Drawing.Size(228, 46)
         Me.btn_book.TabIndex = 4
         Me.btn_book.Text = "Book Appointment"
         Me.btn_book.UseVisualStyleBackColor = True
         '
         'btn_viewappoint
         '
-        Me.btn_viewappoint.Location = New System.Drawing.Point(322, 154)
+        Me.btn_viewappoint.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_viewappoint.Location = New System.Drawing.Point(320, 224)
         Me.btn_viewappoint.Name = "btn_viewappoint"
-        Me.btn_viewappoint.Size = New System.Drawing.Size(132, 23)
+        Me.btn_viewappoint.Size = New System.Drawing.Size(228, 46)
         Me.btn_viewappoint.TabIndex = 5
         Me.btn_viewappoint.Text = "View Appointments"
         Me.btn_viewappoint.UseVisualStyleBackColor = True
         '
         'btn_viewdoctor
         '
-        Me.btn_viewdoctor.Location = New System.Drawing.Point(520, 154)
+        Me.btn_viewdoctor.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_viewdoctor.Location = New System.Drawing.Point(204, 142)
         Me.btn_viewdoctor.Name = "btn_viewdoctor"
-        Me.btn_viewdoctor.Size = New System.Drawing.Size(132, 23)
+        Me.btn_viewdoctor.Size = New System.Drawing.Size(228, 46)
         Me.btn_viewdoctor.TabIndex = 6
         Me.btn_viewdoctor.Text = "View Doctors"
         Me.btn_viewdoctor.UseVisualStyleBackColor = True
         '
         'btn_change
         '
-        Me.btn_change.Location = New System.Drawing.Point(322, 217)
+        Me.btn_change.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_change.Location = New System.Drawing.Point(438, 142)
         Me.btn_change.Name = "btn_change"
-        Me.btn_change.Size = New System.Drawing.Size(132, 23)
+        Me.btn_change.Size = New System.Drawing.Size(228, 46)
         Me.btn_change.TabIndex = 7
         Me.btn_change.Text = "Change Info"
         Me.btn_change.UseVisualStyleBackColor = True
         '
         'btn_logout
         '
-        Me.btn_logout.Location = New System.Drawing.Point(322, 299)
+        Me.btn_logout.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_logout.Location = New System.Drawing.Point(725, 381)
         Me.btn_logout.Name = "btn_logout"
-        Me.btn_logout.Size = New System.Drawing.Size(132, 23)
+        Me.btn_logout.Size = New System.Drawing.Size(121, 40)
         Me.btn_logout.TabIndex = 8
         Me.btn_logout.Text = "Logout"
         Me.btn_logout.UseVisualStyleBackColor = True
@@ -109,7 +116,7 @@ Partial Class patientDashboard
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.currentUser, Me.ToolStripStatusLabel2, Me.userRole, Me.ToolStripStatusLabel3, Me.ToolStripStatusLabel4, Me.dateAndTime, Me.ToolStripStatusLabel5, Me.patientid, Me.ToolStripStatusLabel6, Me.patientname})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 424)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(800, 26)
+        Me.StatusStrip1.Size = New System.Drawing.Size(858, 26)
         Me.StatusStrip1.TabIndex = 9
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -183,7 +190,9 @@ Partial Class patientDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(858, 450)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.btn_logout)
         Me.Controls.Add(Me.btn_change)
@@ -191,6 +200,7 @@ Partial Class patientDashboard
         Me.Controls.Add(Me.btn_viewappoint)
         Me.Controls.Add(Me.btn_book)
         Me.Controls.Add(Me.btn_pay)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "patientDashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "informationSystem"

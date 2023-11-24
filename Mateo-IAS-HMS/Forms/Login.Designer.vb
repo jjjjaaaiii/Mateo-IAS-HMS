@@ -35,56 +35,64 @@ Partial Class Login
         Me.passwordEye = New System.Windows.Forms.PictureBox()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.lblcapslockIndicator = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.passwordEye, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(369, 56)
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(485, 57)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(40, 16)
+        Me.Label1.Size = New System.Drawing.Size(254, 44)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "LogIn"
+        Me.Label1.Text = "Please Login!"
         '
         'txtuseraccount
         '
-        Me.txtuseraccount.Location = New System.Drawing.Point(304, 167)
+        Me.txtuseraccount.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtuseraccount.Location = New System.Drawing.Point(508, 212)
         Me.txtuseraccount.Name = "txtuseraccount"
-        Me.txtuseraccount.Size = New System.Drawing.Size(200, 22)
+        Me.txtuseraccount.Size = New System.Drawing.Size(219, 32)
         Me.txtuseraccount.TabIndex = 1
         '
         'txtpassword
         '
-        Me.txtpassword.Location = New System.Drawing.Point(304, 245)
+        Me.txtpassword.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtpassword.Location = New System.Drawing.Point(508, 288)
         Me.txtpassword.Name = "txtpassword"
         Me.txtpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtpassword.Size = New System.Drawing.Size(200, 22)
+        Me.txtpassword.Size = New System.Drawing.Size(219, 32)
         Me.txtpassword.TabIndex = 2
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(233, 142)
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(425, 186)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(70, 16)
+        Me.Label2.Size = New System.Drawing.Size(108, 23)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Username"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(233, 232)
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(430, 262)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 16)
+        Me.Label3.Size = New System.Drawing.Size(103, 23)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Password"
         '
         'btnLogIn
         '
-        Me.btnLogIn.Location = New System.Drawing.Point(347, 318)
+        Me.btnLogIn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogIn.Location = New System.Drawing.Point(545, 357)
         Me.btnLogIn.Name = "btnLogIn"
-        Me.btnLogIn.Size = New System.Drawing.Size(104, 30)
+        Me.btnLogIn.Size = New System.Drawing.Size(121, 33)
         Me.btnLogIn.TabIndex = 5
         Me.btnLogIn.Text = "Login"
         Me.btnLogIn.UseVisualStyleBackColor = True
@@ -92,7 +100,7 @@ Partial Class Login
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(301, 412)
+        Me.Label4.Location = New System.Drawing.Point(490, 463)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(161, 16)
         Me.Label4.TabIndex = 6
@@ -102,7 +110,7 @@ Partial Class Login
         '
         Me.lblsignUp.AutoSize = True
         Me.lblsignUp.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsignUp.Location = New System.Drawing.Point(468, 412)
+        Me.lblsignUp.Location = New System.Drawing.Point(657, 463)
         Me.lblsignUp.Name = "lblsignUp"
         Me.lblsignUp.Size = New System.Drawing.Size(55, 16)
         Me.lblsignUp.TabIndex = 7
@@ -110,9 +118,9 @@ Partial Class Login
         '
         'passwordEye
         '
-        Me.passwordEye.Location = New System.Drawing.Point(471, 245)
+        Me.passwordEye.Location = New System.Drawing.Point(694, 288)
         Me.passwordEye.Name = "passwordEye"
-        Me.passwordEye.Size = New System.Drawing.Size(33, 22)
+        Me.passwordEye.Size = New System.Drawing.Size(33, 32)
         Me.passwordEye.TabIndex = 8
         Me.passwordEye.TabStop = False
         '
@@ -126,17 +134,29 @@ Partial Class Login
         'lblcapslockIndicator
         '
         Me.lblcapslockIndicator.AutoSize = True
-        Me.lblcapslockIndicator.Location = New System.Drawing.Point(341, 270)
+        Me.lblcapslockIndicator.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblcapslockIndicator.Location = New System.Drawing.Point(530, 323)
         Me.lblcapslockIndicator.Name = "lblcapslockIndicator"
-        Me.lblcapslockIndicator.Size = New System.Drawing.Size(110, 16)
+        Me.lblcapslockIndicator.Size = New System.Drawing.Size(153, 21)
         Me.lblcapslockIndicator.TabIndex = 9
         Me.lblcapslockIndicator.Text = "Caps Lock Is ON!"
         '
-        'Form1
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(-2, -1)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(394, 508)
+        Me.PictureBox1.TabIndex = 10
+        Me.PictureBox1.TabStop = False
+        '
+        'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 506)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lblcapslockIndicator)
         Me.Controls.Add(Me.passwordEye)
         Me.Controls.Add(Me.lblsignUp)
@@ -147,11 +167,13 @@ Partial Class Login
         Me.Controls.Add(Me.txtpassword)
         Me.Controls.Add(Me.txtuseraccount)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.KeyPreview = True
-        Me.Name = "Form1"
+        Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         CType(Me.passwordEye, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -168,4 +190,5 @@ Partial Class Login
     Friend WithEvents passwordEye As PictureBox
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents lblcapslockIndicator As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

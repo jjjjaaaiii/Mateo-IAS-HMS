@@ -23,6 +23,7 @@ Partial Class manageDoctors
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(manageDoctors))
         Me.btn_update = New System.Windows.Forms.Button()
         Me.btn_home = New System.Windows.Forms.Button()
         Me.testTimer = New System.Windows.Forms.Label()
@@ -45,18 +46,20 @@ Partial Class manageDoctors
         '
         'btn_update
         '
+        Me.btn_update.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_update.Location = New System.Drawing.Point(20, 446)
         Me.btn_update.Name = "btn_update"
-        Me.btn_update.Size = New System.Drawing.Size(90, 23)
+        Me.btn_update.Size = New System.Drawing.Size(123, 32)
         Me.btn_update.TabIndex = 1
         Me.btn_update.Text = "Update"
         Me.btn_update.UseVisualStyleBackColor = True
         '
         'btn_home
         '
-        Me.btn_home.Location = New System.Drawing.Point(803, 446)
+        Me.btn_home.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_home.Location = New System.Drawing.Point(797, 446)
         Me.btn_home.Name = "btn_home"
-        Me.btn_home.Size = New System.Drawing.Size(100, 23)
+        Me.btn_home.Size = New System.Drawing.Size(106, 32)
         Me.btn_home.TabIndex = 3
         Me.btn_home.Text = "Home"
         Me.btn_home.UseVisualStyleBackColor = True
@@ -64,58 +67,73 @@ Partial Class manageDoctors
         'testTimer
         '
         Me.testTimer.AutoSize = True
+        Me.testTimer.BackColor = System.Drawing.Color.Transparent
+        Me.testTimer.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.testTimer.ForeColor = System.Drawing.Color.White
         Me.testTimer.Location = New System.Drawing.Point(892, 9)
         Me.testTimer.Name = "testTimer"
-        Me.testTimer.Size = New System.Drawing.Size(11, 16)
+        Me.testTimer.Size = New System.Drawing.Size(17, 23)
         Me.testTimer.TabIndex = 26
         Me.testTimer.Text = "-"
         '
         'txtcontact_doctor
         '
-        Me.txtcontact_doctor.Location = New System.Drawing.Point(288, 198)
+        Me.txtcontact_doctor.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtcontact_doctor.Location = New System.Drawing.Point(512, 198)
         Me.txtcontact_doctor.Name = "txtcontact_doctor"
-        Me.txtcontact_doctor.Size = New System.Drawing.Size(247, 22)
+        Me.txtcontact_doctor.Size = New System.Drawing.Size(247, 32)
         Me.txtcontact_doctor.TabIndex = 0
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(17, 179)
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label7.Location = New System.Drawing.Point(16, 174)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(58, 16)
+        Me.Label7.Size = New System.Drawing.Size(88, 23)
         Me.Label7.TabIndex = 3
         Me.Label7.Text = "Address"
         '
         'txtaddress_doctor
         '
+        Me.txtaddress_doctor.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtaddress_doctor.Location = New System.Drawing.Point(17, 200)
         Me.txtaddress_doctor.Name = "txtaddress_doctor"
-        Me.txtaddress_doctor.Size = New System.Drawing.Size(250, 22)
+        Me.txtaddress_doctor.Size = New System.Drawing.Size(471, 32)
         Me.txtaddress_doctor.TabIndex = 0
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(285, 104)
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Location = New System.Drawing.Point(284, 98)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 16)
+        Me.Label2.Size = New System.Drawing.Size(71, 23)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Name"
         '
         'txtname_doctor
         '
+        Me.txtname_doctor.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtname_doctor.Location = New System.Drawing.Point(288, 124)
         Me.txtname_doctor.Name = "txtname_doctor"
-        Me.txtname_doctor.Size = New System.Drawing.Size(250, 22)
+        Me.txtname_doctor.Size = New System.Drawing.Size(467, 32)
         Me.txtname_doctor.TabIndex = 0
         '
         'gb_patient_number
         '
+        Me.gb_patient_number.BackColor = System.Drawing.Color.Transparent
         Me.gb_patient_number.Controls.Add(Me.btnSearch_patient)
         Me.gb_patient_number.Controls.Add(Me.txtsearch_doctor)
-        Me.gb_patient_number.Location = New System.Drawing.Point(647, 37)
+        Me.gb_patient_number.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gb_patient_number.ForeColor = System.Drawing.SystemColors.Control
+        Me.gb_patient_number.Location = New System.Drawing.Point(604, 37)
         Me.gb_patient_number.Name = "gb_patient_number"
-        Me.gb_patient_number.Size = New System.Drawing.Size(256, 65)
+        Me.gb_patient_number.Size = New System.Drawing.Size(299, 65)
         Me.gb_patient_number.TabIndex = 19
         Me.gb_patient_number.TabStop = False
         Me.gb_patient_number.Text = "Doctor ID"
@@ -124,7 +142,7 @@ Partial Class manageDoctors
         '
         Me.btnSearch_patient.Location = New System.Drawing.Point(152, 20)
         Me.btnSearch_patient.Name = "btnSearch_patient"
-        Me.btnSearch_patient.Size = New System.Drawing.Size(75, 23)
+        Me.btnSearch_patient.Size = New System.Drawing.Size(119, 33)
         Me.btnSearch_patient.TabIndex = 1
         Me.btnSearch_patient.Text = "Search"
         Me.btnSearch_patient.UseVisualStyleBackColor = True
@@ -133,7 +151,7 @@ Partial Class manageDoctors
         '
         Me.txtsearch_doctor.Location = New System.Drawing.Point(16, 21)
         Me.txtsearch_doctor.Name = "txtsearch_doctor"
-        Me.txtsearch_doctor.Size = New System.Drawing.Size(121, 22)
+        Me.txtsearch_doctor.Size = New System.Drawing.Size(121, 32)
         Me.txtsearch_doctor.TabIndex = 0
         '
         'DataGridView1
@@ -143,7 +161,7 @@ Partial Class manageDoctors
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(883, 183)
+        Me.DataGridView1.Size = New System.Drawing.Size(883, 199)
         Me.DataGridView1.TabIndex = 27
         '
         'Timer1
@@ -153,32 +171,41 @@ Partial Class manageDoctors
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(285, 179)
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label3.Location = New System.Drawing.Point(508, 172)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(52, 16)
+        Me.Label3.Size = New System.Drawing.Size(92, 23)
         Me.Label3.TabIndex = 28
         Me.Label3.Text = "Contact"
         '
         'randomasslabel
         '
         Me.randomasslabel.AutoSize = True
-        Me.randomasslabel.Location = New System.Drawing.Point(14, 104)
+        Me.randomasslabel.BackColor = System.Drawing.Color.Transparent
+        Me.randomasslabel.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.randomasslabel.ForeColor = System.Drawing.SystemColors.Control
+        Me.randomasslabel.Location = New System.Drawing.Point(16, 98)
         Me.randomasslabel.Name = "randomasslabel"
-        Me.randomasslabel.Size = New System.Drawing.Size(52, 16)
+        Me.randomasslabel.Size = New System.Drawing.Size(76, 23)
         Me.randomasslabel.TabIndex = 38
         Me.randomasslabel.Text = "User ID"
         '
         'txtuserid
         '
+        Me.txtuserid.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtuserid.Location = New System.Drawing.Point(17, 124)
         Me.txtuserid.Name = "txtuserid"
-        Me.txtuserid.Size = New System.Drawing.Size(250, 22)
+        Me.txtuserid.Size = New System.Drawing.Size(250, 32)
         Me.txtuserid.TabIndex = 37
         '
         'manageDoctors
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(920, 490)
         Me.Controls.Add(Me.randomasslabel)
         Me.Controls.Add(Me.txtuserid)

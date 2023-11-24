@@ -23,6 +23,7 @@ Partial Class pay
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(pay))
         Me.btnpay = New System.Windows.Forms.Button()
         Me.txtstatus = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -36,69 +37,79 @@ Partial Class pay
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnpay
         '
-        Me.btnpay.Location = New System.Drawing.Point(39, 317)
+        Me.btnpay.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnpay.Location = New System.Drawing.Point(136, 461)
         Me.btnpay.Name = "btnpay"
-        Me.btnpay.Size = New System.Drawing.Size(75, 23)
+        Me.btnpay.Size = New System.Drawing.Size(110, 30)
         Me.btnpay.TabIndex = 39
         Me.btnpay.Text = "Pay"
         Me.btnpay.UseVisualStyleBackColor = True
         '
         'txtstatus
         '
-        Me.txtstatus.Location = New System.Drawing.Point(452, 109)
+        Me.txtstatus.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtstatus.Location = New System.Drawing.Point(154, 187)
         Me.txtstatus.Name = "txtstatus"
-        Me.txtstatus.Size = New System.Drawing.Size(223, 22)
+        Me.txtstatus.Size = New System.Drawing.Size(438, 30)
         Me.txtstatus.TabIndex = 37
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(449, 90)
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(151, 163)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(44, 16)
+        Me.Label7.Size = New System.Drawing.Size(68, 23)
         Me.Label7.TabIndex = 36
         Me.Label7.Text = "Status"
         '
         'txtappointmentid
         '
-        Me.txtappointmentid.Location = New System.Drawing.Point(39, 110)
+        Me.txtappointmentid.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtappointmentid.Location = New System.Drawing.Point(155, 119)
         Me.txtappointmentid.Name = "txtappointmentid"
-        Me.txtappointmentid.Size = New System.Drawing.Size(156, 22)
+        Me.txtappointmentid.Size = New System.Drawing.Size(307, 30)
         Me.txtappointmentid.TabIndex = 33
         '
         'txttotal
         '
-        Me.txttotal.Location = New System.Drawing.Point(212, 110)
+        Me.txttotal.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txttotal.Location = New System.Drawing.Point(517, 118)
         Me.txttotal.Name = "txttotal"
-        Me.txttotal.Size = New System.Drawing.Size(223, 22)
+        Me.txttotal.Size = New System.Drawing.Size(303, 30)
         Me.txttotal.TabIndex = 32
         '
         'btnsearch
         '
-        Me.btnsearch.Location = New System.Drawing.Point(629, 39)
+        Me.btnsearch.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnsearch.Location = New System.Drawing.Point(716, 43)
         Me.btnsearch.Name = "btnsearch"
-        Me.btnsearch.Size = New System.Drawing.Size(75, 23)
+        Me.btnsearch.Size = New System.Drawing.Size(104, 31)
         Me.btnsearch.TabIndex = 30
         Me.btnsearch.Text = "Search"
         Me.btnsearch.UseVisualStyleBackColor = True
         '
         'txt_id
         '
-        Me.txt_id.Location = New System.Drawing.Point(523, 40)
+        Me.txt_id.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_id.Location = New System.Drawing.Point(610, 44)
         Me.txt_id.Name = "txt_id"
-        Me.txt_id.Size = New System.Drawing.Size(100, 22)
+        Me.txt_id.Size = New System.Drawing.Size(100, 30)
         Me.txt_id.TabIndex = 29
         '
         'btnhome
         '
-        Me.btnhome.Location = New System.Drawing.Point(629, 317)
+        Me.btnhome.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnhome.Location = New System.Drawing.Point(710, 461)
         Me.btnhome.Name = "btnhome"
-        Me.btnhome.Size = New System.Drawing.Size(75, 23)
+        Me.btnhome.Size = New System.Drawing.Size(110, 30)
         Me.btnhome.TabIndex = 28
         Me.btnhome.Text = "Home"
         Me.btnhome.UseVisualStyleBackColor = True
@@ -106,37 +117,43 @@ Partial Class pay
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(39, 152)
+        Me.DataGridView1.Location = New System.Drawing.Point(155, 232)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(665, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(665, 223)
         Me.DataGridView1.TabIndex = 25
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(209, 91)
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(513, 92)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(63, 16)
+        Me.Label4.Size = New System.Drawing.Size(103, 23)
         Me.Label4.TabIndex = 23
         Me.Label4.Text = "Pay_total"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(520, 21)
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(618, 18)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(51, 16)
+        Me.Label3.Size = New System.Drawing.Size(77, 23)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "Pay_ID"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(36, 90)
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(151, 92)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 16)
+        Me.Label2.Size = New System.Drawing.Size(177, 23)
         Me.Label2.TabIndex = 21
         Me.Label2.Text = "Appointment's ID"
         '
@@ -144,11 +161,24 @@ Partial Class pay
         '
         Me.Timer1.Interval = 1000
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(11, 16)
+        Me.Label1.TabIndex = 40
+        Me.Label1.Text = "-"
+        '
         'pay
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(753, 382)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(940, 543)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnpay)
         Me.Controls.Add(Me.txtstatus)
         Me.Controls.Add(Me.Label7)
@@ -161,6 +191,7 @@ Partial Class pay
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "pay"
         Me.Text = "pay"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -182,4 +213,5 @@ Partial Class pay
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Label1 As Label
 End Class

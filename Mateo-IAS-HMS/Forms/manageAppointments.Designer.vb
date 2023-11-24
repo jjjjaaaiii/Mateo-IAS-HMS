@@ -23,6 +23,7 @@ Partial Class manageAppointments
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(manageAppointments))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -50,170 +51,203 @@ Partial Class manageAppointments
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(33, 34)
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.Location = New System.Drawing.Point(35, 35)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(132, 16)
+        Me.Label1.Size = New System.Drawing.Size(368, 40)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Doctor Appointments"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(545, 34)
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Location = New System.Drawing.Point(577, 52)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 16)
+        Me.Label2.Size = New System.Drawing.Size(177, 23)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Appointment's ID"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(61, 104)
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label3.Location = New System.Drawing.Point(82, 125)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 16)
+        Me.Label3.Size = New System.Drawing.Size(104, 23)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Patient ID"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(234, 105)
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label4.Location = New System.Drawing.Point(339, 125)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(55, 16)
+        Me.Label4.Size = New System.Drawing.Size(82, 23)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Reason"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(61, 163)
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label5.Location = New System.Drawing.Point(82, 199)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(73, 16)
+        Me.Label5.Size = New System.Drawing.Size(115, 23)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Doctor's ID"
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(64, 235)
+        Me.DataGridView1.Location = New System.Drawing.Point(86, 280)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(665, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(745, 154)
         Me.DataGridView1.TabIndex = 5
         '
         'btnupdate
         '
-        Me.btnupdate.Location = New System.Drawing.Point(145, 404)
+        Me.btnupdate.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnupdate.Location = New System.Drawing.Point(249, 458)
         Me.btnupdate.Name = "btnupdate"
-        Me.btnupdate.Size = New System.Drawing.Size(75, 23)
+        Me.btnupdate.Size = New System.Drawing.Size(121, 35)
         Me.btnupdate.TabIndex = 6
         Me.btnupdate.Text = "Update"
         Me.btnupdate.UseVisualStyleBackColor = True
         '
         'btndelete
         '
-        Me.btndelete.Location = New System.Drawing.Point(226, 404)
+        Me.btndelete.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btndelete.Location = New System.Drawing.Point(374, 458)
         Me.btndelete.Name = "btndelete"
-        Me.btndelete.Size = New System.Drawing.Size(75, 23)
+        Me.btndelete.Size = New System.Drawing.Size(105, 35)
         Me.btndelete.TabIndex = 7
         Me.btndelete.Text = "Delete"
         Me.btndelete.UseVisualStyleBackColor = True
         '
         'btnhome
         '
-        Me.btnhome.Location = New System.Drawing.Point(654, 404)
+        Me.btnhome.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnhome.Location = New System.Drawing.Point(718, 460)
         Me.btnhome.Name = "btnhome"
-        Me.btnhome.Size = New System.Drawing.Size(75, 23)
+        Me.btnhome.Size = New System.Drawing.Size(113, 33)
         Me.btnhome.TabIndex = 8
         Me.btnhome.Text = "Home"
         Me.btnhome.UseVisualStyleBackColor = True
         '
         'txt_id
         '
-        Me.txt_id.Location = New System.Drawing.Point(548, 54)
+        Me.txt_id.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_id.Location = New System.Drawing.Point(581, 78)
         Me.txt_id.Name = "txt_id"
-        Me.txt_id.Size = New System.Drawing.Size(100, 22)
+        Me.txt_id.Size = New System.Drawing.Size(143, 32)
         Me.txt_id.TabIndex = 9
         '
         'btnsearch
         '
-        Me.btnsearch.Location = New System.Drawing.Point(654, 53)
+        Me.btnsearch.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnsearch.Location = New System.Drawing.Point(730, 78)
         Me.btnsearch.Name = "btnsearch"
-        Me.btnsearch.Size = New System.Drawing.Size(75, 23)
+        Me.btnsearch.Size = New System.Drawing.Size(97, 33)
         Me.btnsearch.TabIndex = 10
         Me.btnsearch.Text = "Search"
         Me.btnsearch.UseVisualStyleBackColor = True
         '
         'txtdoctorid
         '
-        Me.txtdoctorid.Location = New System.Drawing.Point(64, 182)
+        Me.txtdoctorid.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtdoctorid.Location = New System.Drawing.Point(86, 225)
         Me.txtdoctorid.Name = "txtdoctorid"
-        Me.txtdoctorid.Size = New System.Drawing.Size(156, 22)
+        Me.txtdoctorid.Size = New System.Drawing.Size(251, 32)
         Me.txtdoctorid.TabIndex = 11
         '
         'txtreason
         '
-        Me.txtreason.Location = New System.Drawing.Point(237, 124)
+        Me.txtreason.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtreason.Location = New System.Drawing.Point(343, 151)
         Me.txtreason.Name = "txtreason"
-        Me.txtreason.Size = New System.Drawing.Size(223, 22)
+        Me.txtreason.Size = New System.Drawing.Size(223, 32)
         Me.txtreason.TabIndex = 12
         '
         'txtpatientid
         '
-        Me.txtpatientid.Location = New System.Drawing.Point(64, 124)
+        Me.txtpatientid.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtpatientid.Location = New System.Drawing.Point(86, 151)
         Me.txtpatientid.Name = "txtpatientid"
-        Me.txtpatientid.Size = New System.Drawing.Size(156, 22)
+        Me.txtpatientid.Size = New System.Drawing.Size(251, 32)
         Me.txtpatientid.TabIndex = 13
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(234, 163)
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label6.Location = New System.Drawing.Point(344, 199)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(36, 16)
+        Me.Label6.Size = New System.Drawing.Size(59, 23)
         Me.Label6.TabIndex = 14
         Me.Label6.Text = "Date"
         '
         'txtstatus
         '
-        Me.txtstatus.Location = New System.Drawing.Point(477, 123)
+        Me.txtstatus.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtstatus.Location = New System.Drawing.Point(572, 151)
         Me.txtstatus.Name = "txtstatus"
-        Me.txtstatus.Size = New System.Drawing.Size(223, 22)
+        Me.txtstatus.Size = New System.Drawing.Size(256, 32)
         Me.txtstatus.TabIndex = 17
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(474, 104)
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label7.Location = New System.Drawing.Point(601, 125)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(44, 16)
+        Me.Label7.Size = New System.Drawing.Size(68, 23)
         Me.Label7.TabIndex = 16
         Me.Label7.Text = "Status"
         '
         'btnappoint
         '
-        Me.btnappoint.Location = New System.Drawing.Point(64, 404)
+        Me.btnappoint.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnappoint.Location = New System.Drawing.Point(87, 458)
         Me.btnappoint.Name = "btnappoint"
-        Me.btnappoint.Size = New System.Drawing.Size(75, 23)
+        Me.btnappoint.Size = New System.Drawing.Size(156, 35)
         Me.btnappoint.TabIndex = 18
         Me.btnappoint.Text = "Appoint"
         Me.btnappoint.UseVisualStyleBackColor = True
         '
         'btnapprove
         '
-        Me.btnapprove.Location = New System.Drawing.Point(307, 404)
+        Me.btnapprove.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnapprove.Location = New System.Drawing.Point(485, 458)
         Me.btnapprove.Name = "btnapprove"
-        Me.btnapprove.Size = New System.Drawing.Size(75, 23)
+        Me.btnapprove.Size = New System.Drawing.Size(141, 35)
         Me.btnapprove.TabIndex = 19
         Me.btnapprove.Text = "Approve"
         Me.btnapprove.UseVisualStyleBackColor = True
         '
         'dtpdate
         '
-        Me.dtpdate.Location = New System.Drawing.Point(237, 182)
+        Me.dtpdate.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpdate.Location = New System.Drawing.Point(343, 225)
         Me.dtpdate.Name = "dtpdate"
-        Me.dtpdate.Size = New System.Drawing.Size(223, 22)
+        Me.dtpdate.Size = New System.Drawing.Size(393, 32)
         Me.dtpdate.TabIndex = 21
         '
         'Timer1
@@ -224,7 +258,9 @@ Partial Class manageAppointments
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(881, 519)
         Me.Controls.Add(Me.dtpdate)
         Me.Controls.Add(Me.btnapprove)
         Me.Controls.Add(Me.btnappoint)
@@ -245,6 +281,7 @@ Partial Class manageAppointments
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "manageAppointments"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "doctorsAppointment"

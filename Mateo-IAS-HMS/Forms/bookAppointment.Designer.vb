@@ -23,6 +23,7 @@ Partial Class bookAppointment
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(bookAppointment))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -40,44 +41,55 @@ Partial Class bookAppointment
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(40, 29)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(105, 16)
+        Me.Label1.Size = New System.Drawing.Size(223, 37)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "APPOINTMENT"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(40, 93)
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Location = New System.Drawing.Point(40, 135)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 16)
+        Me.Label2.Size = New System.Drawing.Size(104, 23)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Patient ID"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(352, 87)
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label3.Location = New System.Drawing.Point(364, 135)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 16)
+        Me.Label3.Size = New System.Drawing.Size(103, 23)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Doctor ID"
         '
         'btnsubmit
         '
-        Me.btnsubmit.Location = New System.Drawing.Point(474, 363)
+        Me.btnsubmit.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnsubmit.Location = New System.Drawing.Point(411, 544)
         Me.btnsubmit.Name = "btnsubmit"
-        Me.btnsubmit.Size = New System.Drawing.Size(78, 24)
+        Me.btnsubmit.Size = New System.Drawing.Size(101, 39)
         Me.btnsubmit.TabIndex = 10
         Me.btnsubmit.Text = "Submit"
         Me.btnsubmit.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(558, 363)
+        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(518, 544)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(78, 24)
+        Me.Button2.Size = New System.Drawing.Size(118, 39)
         Me.Button2.TabIndex = 11
         Me.Button2.Text = "Home"
         Me.Button2.UseVisualStyleBackColor = True
@@ -85,42 +97,48 @@ Partial Class bookAppointment
         'txtpatientid
         '
         Me.txtpatientid.Enabled = False
-        Me.txtpatientid.Location = New System.Drawing.Point(135, 86)
+        Me.txtpatientid.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtpatientid.Location = New System.Drawing.Point(150, 132)
         Me.txtpatientid.Name = "txtpatientid"
-        Me.txtpatientid.Size = New System.Drawing.Size(163, 22)
+        Me.txtpatientid.Size = New System.Drawing.Size(163, 32)
         Me.txtpatientid.TabIndex = 12
         '
         'txtdoctorid
         '
-        Me.txtdoctorid.Location = New System.Drawing.Point(446, 87)
+        Me.txtdoctorid.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtdoctorid.Location = New System.Drawing.Point(473, 134)
         Me.txtdoctorid.Name = "txtdoctorid"
-        Me.txtdoctorid.Size = New System.Drawing.Size(163, 22)
+        Me.txtdoctorid.Size = New System.Drawing.Size(163, 32)
         Me.txtdoctorid.TabIndex = 13
         '
         'txtreason
         '
-        Me.txtreason.Location = New System.Drawing.Point(135, 130)
+        Me.txtreason.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtreason.Location = New System.Drawing.Point(150, 172)
         Me.txtreason.Name = "txtreason"
-        Me.txtreason.Size = New System.Drawing.Size(163, 22)
+        Me.txtreason.Size = New System.Drawing.Size(486, 32)
         Me.txtreason.TabIndex = 15
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(41, 130)
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label5.Location = New System.Drawing.Point(41, 172)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(55, 16)
+        Me.Label5.Size = New System.Drawing.Size(82, 23)
         Me.Label5.TabIndex = 14
         Me.Label5.Text = "Reason"
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 196)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 223)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(624, 161)
+        Me.DataGridView1.Size = New System.Drawing.Size(624, 306)
         Me.DataGridView1.TabIndex = 16
         '
         'Timer1
@@ -131,7 +149,9 @@ Partial Class bookAppointment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(648, 416)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(648, 595)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.txtreason)
         Me.Controls.Add(Me.Label5)
@@ -142,6 +162,7 @@ Partial Class bookAppointment
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "bookAppointment"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "bookAppointment"

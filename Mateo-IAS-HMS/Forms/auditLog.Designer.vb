@@ -23,6 +23,7 @@ Partial Class auditLog
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(auditLog))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnback = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
@@ -32,18 +33,19 @@ Partial Class auditLog
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
+        Me.DataGridView1.Location = New System.Drawing.Point(156, 62)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(581, 379)
+        Me.DataGridView1.Size = New System.Drawing.Size(534, 518)
         Me.DataGridView1.TabIndex = 0
         '
         'btnback
         '
-        Me.btnback.Location = New System.Drawing.Point(518, 397)
+        Me.btnback.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnback.Location = New System.Drawing.Point(537, 586)
         Me.btnback.Name = "btnback"
-        Me.btnback.Size = New System.Drawing.Size(75, 23)
+        Me.btnback.Size = New System.Drawing.Size(153, 32)
         Me.btnback.TabIndex = 1
         Me.btnback.Text = "Go Back"
         Me.btnback.UseVisualStyleBackColor = True
@@ -56,9 +58,12 @@ Partial Class auditLog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(602, 445)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(851, 643)
         Me.Controls.Add(Me.btnback)
         Me.Controls.Add(Me.DataGridView1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "auditLog"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "auditLog"

@@ -27,7 +27,7 @@ Public Class info
     Private Sub btnupdateuser_Click(sender As Object, e As EventArgs) Handles btnupdateuser.Click
         Try
 
-            If txtusername.Text <> userData.username And IsUserAlreadyExists(txtusername.Text) = False Then
+            If txtusername.Text <> userData.username And IsUserAlreadyExists(txtusername.Text) Then
                 MessageBox.Show("Username already taken!")
             ElseIf txtpassword.Text = "" Then
                 UpdateUsername(txtuserid.Text, txtusername.Text)
