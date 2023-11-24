@@ -37,7 +37,7 @@ Public Class info
                 Dim md5Hash As String = CalculateMD5Hash(txtpassword.Text)
                 UpdateUserCredentials(txtuserid.Text, txtusername.Text, md5Hash)
                 userData.username = txtusername.Text
-                InsertAuditRecord(txtuserid.Text, "Updated their account")
+                InsertAuditRecord(txtuserid.Text, "Updated their account credentials")
 
             End If
         Catch ex As Exception
