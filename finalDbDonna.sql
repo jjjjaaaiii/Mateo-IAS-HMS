@@ -65,7 +65,7 @@ CREATE TABLE `tbl_appointment` (
   KEY `fk_tbl_appointment_tbl_doctor1_idx` (`doctor_id`),
   CONSTRAINT `fk_tbl_appointment_tbl_doctor1` FOREIGN KEY (`doctor_id`) REFERENCES `tbl_doctor` (`doctor_id`),
   CONSTRAINT `fk_tbl_appointment_tbl_patient1` FOREIGN KEY (`patient_id`) REFERENCES `tbl_patient` (`patient_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -74,6 +74,7 @@ CREATE TABLE `tbl_appointment` (
 
 LOCK TABLES `tbl_appointment` WRITE;
 /*!40000 ALTER TABLE `tbl_appointment` DISABLE KEYS */;
+INSERT INTO `tbl_appointment` VALUES (1,5,4,'yakult','27/11/2023 11:52:24 pm','accepted');
 /*!40000 ALTER TABLE `tbl_appointment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -92,7 +93,7 @@ CREATE TABLE `tbl_audit` (
   PRIMARY KEY (`audit_id`),
   KEY `fk_tbl_audit_tbl_user_idx` (`user_id`),
   CONSTRAINT `fk_tbl_audit_tbl_user` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=92 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -101,7 +102,7 @@ CREATE TABLE `tbl_audit` (
 
 LOCK TABLES `tbl_audit` WRITE;
 /*!40000 ALTER TABLE `tbl_audit` DISABLE KEYS */;
-INSERT INTO `tbl_audit` VALUES (53,19,'Registered','2023-11-22 21:31:52'),(54,19,'Logged In','2023-11-22 21:33:02'),(55,20,'Registered','2023-11-22 21:35:57'),(56,21,'Registered','2023-11-22 21:36:06'),(57,19,'Logged In','2023-11-22 21:40:32'),(58,19,'Logged In','2023-11-22 22:01:07'),(59,19,'Logged In','2023-11-23 00:38:10'),(60,19,'Logged In','2023-11-23 00:38:35'),(61,20,'Logged In','2023-11-23 00:38:49'),(62,20,'Logged In','2023-11-23 00:39:16'),(63,20,'Logged In','2023-11-23 00:40:34'),(64,19,'Logged In','2023-11-23 15:56:05'),(65,19,'Logged In','2023-11-23 15:57:36'),(66,19,'Logged In','2023-11-23 16:34:08'),(67,19,'Logged In','2023-11-23 16:35:31'),(68,19,'Logged In','2023-11-23 16:37:53'),(69,19,'Logged In','2023-11-23 16:38:11'),(70,22,'Registered','2023-11-23 16:39:24'),(71,19,'Logged In','2023-11-23 16:39:32'),(72,22,'Logged In','2023-11-23 16:39:45'),(73,22,'Logged In','2023-11-23 16:41:30'),(74,22,'Logged In','2023-11-23 16:42:57');
+INSERT INTO `tbl_audit` VALUES (75,22,'Logged In','2023-11-27 22:18:06'),(76,22,'Logged In','2023-11-27 22:19:09'),(77,22,'Logged In','2023-11-27 22:22:49'),(78,22,'Logged In','2023-11-27 22:27:39'),(79,22,'Logged In','2023-11-27 22:37:08'),(80,22,'Logged In','2023-11-27 22:47:02'),(81,22,'Logged In','2023-11-27 22:47:42'),(82,22,'Logged In','2023-11-27 23:15:19'),(83,22,'Logged In','2023-11-27 23:48:15'),(84,22,'Logged In','2023-11-27 23:52:01'),(85,20,'Logged In','2023-11-27 23:53:56'),(86,22,'Logged In','2023-11-27 23:57:50'),(87,22,'Logged In','2023-11-28 00:00:35'),(88,21,'Logged In','2023-11-28 00:05:03'),(89,21,'Logged In','2023-11-28 00:07:43'),(90,21,'Logged In','2023-11-28 00:15:02'),(91,22,'Logged In','2023-11-28 00:16:07');
 /*!40000 ALTER TABLE `tbl_audit` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -150,7 +151,7 @@ CREATE TABLE `tbl_patient` (
   PRIMARY KEY (`patient_id`),
   KEY `fk_tbl_admin_tbl_user1_idx` (`user_id`),
   CONSTRAINT `fk_tbl_admin_tbl_user100` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -159,6 +160,7 @@ CREATE TABLE `tbl_patient` (
 
 LOCK TABLES `tbl_patient` WRITE;
 /*!40000 ALTER TABLE `tbl_patient` DISABLE KEYS */;
+INSERT INTO `tbl_patient` VALUES (5,21,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `tbl_patient` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -171,16 +173,13 @@ DROP TABLE IF EXISTS `tbl_pay`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tbl_pay` (
   `pay_id` int NOT NULL AUTO_INCREMENT,
-  `patient_id` int NOT NULL,
-  `doctor_id` int NOT NULL,
+  `appointment_id` int NOT NULL,
   `pay_total` int DEFAULT NULL,
   `pay_status` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`pay_id`),
-  KEY `fk_tbl_pay_tbl_patient1_idx` (`patient_id`),
-  KEY `fk_tbl_pay_tbl_doctor1_idx` (`doctor_id`),
-  CONSTRAINT `fk_tbl_pay_tbl_doctor1` FOREIGN KEY (`doctor_id`) REFERENCES `tbl_doctor` (`doctor_id`),
-  CONSTRAINT `fk_tbl_pay_tbl_patient1` FOREIGN KEY (`patient_id`) REFERENCES `tbl_patient` (`patient_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `fk_tbl_pay_tbl_appointment1_idx` (`appointment_id`),
+  CONSTRAINT `fk_tbl_pay_tbl_appointment1` FOREIGN KEY (`appointment_id`) REFERENCES `tbl_appointment` (`appointment_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -189,6 +188,7 @@ CREATE TABLE `tbl_pay` (
 
 LOCK TABLES `tbl_pay` WRITE;
 /*!40000 ALTER TABLE `tbl_pay` DISABLE KEYS */;
+INSERT INTO `tbl_pay` VALUES (1,1,500,'Paid');
 /*!40000 ALTER TABLE `tbl_pay` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -215,7 +215,7 @@ CREATE TABLE `tbl_user` (
 
 LOCK TABLES `tbl_user` WRITE;
 /*!40000 ALTER TABLE `tbl_user` DISABLE KEYS */;
-INSERT INTO `tbl_user` VALUES (19,'adminn','3225cb195fc2b6c5fd8d1fce48994e6c',1,'Admin'),(20,'doctor','6ce4be7607d13b0bf3119d47b62404c1',1,'Doctor'),(21,'patient','f71b03b9710c39949ed6770bf601fa83',0,'Patient'),(22,'admin','3225cb195fc2b6c5fd8d1fce48994e6c',1,'Admin');
+INSERT INTO `tbl_user` VALUES (19,'adminn','3225cb195fc2b6c5fd8d1fce48994e6c',1,'Admin'),(20,'doctor','6ce4be7607d13b0bf3119d47b62404c1',1,'Doctor'),(21,'patient','f71b03b9710c39949ed6770bf601fa83',1,'Patient'),(22,'admin','3225cb195fc2b6c5fd8d1fce48994e6c',1,'Admin');
 /*!40000 ALTER TABLE `tbl_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -226,6 +226,28 @@ UNLOCK TABLES;
 --
 -- Dumping routines for database 'db_hospitalproject'
 --
+/*!50003 DROP PROCEDURE IF EXISTS `GetDataFromUserId` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetDataFromUserId`(IN tableName VARCHAR(255), IN primaryKeyColumnName VARCHAR(255), IN primaryKeyId INT)
+BEGIN
+    SET @sql_query = CONCAT('SELECT * FROM ', tableName, ' WHERE ', primaryKeyColumnName, ' = ', primaryKeyId);
+    PREPARE stmt FROM @sql_query;
+    EXECUTE stmt;
+    DEALLOCATE PREPARE stmt;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -236,4 +258,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-23 19:35:58
+-- Dump completed on 2023-11-28  0:18:06
