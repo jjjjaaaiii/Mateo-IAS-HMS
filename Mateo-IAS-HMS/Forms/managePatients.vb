@@ -47,7 +47,15 @@ Public Class managePatients
         Me.Close()
     End Sub
 
-    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub managePatients_MouseHover(sender As Object, e As EventArgs) Handles MyBase.MouseHover
+        timerValue = 0
+    End Sub
+
+    Private Sub btnSearch_patient_Click(sender As Object, e As EventArgs) Handles btnSearch_patient.Click
+        timerValue = 0
+    End Sub
+
+    Private Sub DataGridView1_CellClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Try
             timerValue = 0
             If e.RowIndex >= 0 Then
@@ -65,13 +73,5 @@ Public Class managePatients
         Catch ex As Exception
             MessageBox.Show("Blank cell not allowed")
         End Try
-    End Sub
-
-    Private Sub managePatients_MouseHover(sender As Object, e As EventArgs) Handles MyBase.MouseHover
-        timerValue = 0
-    End Sub
-
-    Private Sub btnSearch_patient_Click(sender As Object, e As EventArgs) Handles btnSearch_patient.Click
-        timerValue = 0
     End Sub
 End Class
