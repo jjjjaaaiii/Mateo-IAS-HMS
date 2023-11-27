@@ -73,7 +73,7 @@
             timervalue = 0
 
             AcceptAppointmentById(txt_id.Text)
-            AddPaymentData(txt_id.Text, 500, "accepted")
+            AddPaymentData(txt_id.Text, 500, "Unpaid")
             DataGridView1.DataSource = GetAllDataFromTable("tbl_appointment")
 
         Catch ex As Exception

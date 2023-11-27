@@ -678,11 +678,11 @@ Module functions
         Return dataTable
     End Function
 
-    Public Function GetPaymentsForAcceptedAppointments(patientId As Integer) As DataTable
+    Public Function GetUnpaidPaymentsForSpecificPatient(patientId As Integer) As DataTable
         Dim query As String = "SELECT p.pay_id, p.appointment_id, p.pay_total, p.pay_status, a.patient_id " &
                           "FROM tbl_pay p " &
                           "INNER JOIN tbl_appointment a ON p.appointment_id = a.appointment_id " &
-                          "WHERE a.patient_id = @patientId AND a.appointment_status = 'accepted'"
+                          "WHERE a.patient_id = @patientId AND a.appointment_status = 'accepted' AND p.pay_status = 'Unpaid'"
 
         Dim cmd As New MySqlCommand(query, connection)
         cmd.Parameters.AddWithValue("@patientId", patientId)
