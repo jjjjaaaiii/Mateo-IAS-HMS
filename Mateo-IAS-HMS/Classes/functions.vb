@@ -872,5 +872,67 @@ Module functions
         End Try
     End Sub
 
+    Public Function GetPrimaryKeyColumnName(tableName As String) As String
+        Dim primaryKeyColumnName As String = Nothing
+
+        Try
+            Dim query As String = "SELECT COLUMN_NAME " &
+                              "FROM INFORMATION_SCHEMA.COLUMNS " &
+                              "WHERE TABLE_SCHEMA = 'db_hospitalproject' " &
+                              "AND TABLE_NAME = @tableName " &
+                              "AND COLUMN_KEY = 'PRI'"
+
+            Using command As New MySqlCommand(query, connection)
+                command.Parameters.AddWithValue("@tableName", tableName)
+
+                Dim result As Object = command.ExecuteScalar()
+
+                If result IsNot Nothing Then
+                    primaryKeyColumnName = result.ToString()
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+
+        Return primaryKeyColumnName
+    End Function
+
+    Public Function GetDataByPrimaryKey(tableName As String, primaryKeyId As Integer) As DataTable
+        Dim dataTable As New DataTable()
+
+        Try
+            connection.Open()
+
+            ' Get the primary key column name
+            Dim primaryKeyColumnName As String = GetPrimaryKeyColumnName(tableName)
+
+            If String.IsNullOrEmpty(primaryKeyColumnName) Then
+                MessageBox.Show($"Table '{tableName}' doesn't have a primary key column.")
+                Return dataTable
+            End If
+
+            ' Use the primary key column name to fetch data
+            ' Dim query As String = $"SELECT * FROM {tableName} WHERE {primaryKeyColumnName} = @primaryKeyId"
+            Dim query As String = $"CALL GetDataFromUserId('{tableName}', '{primaryKeyColumnName}', {primaryKeyId})"
+            Using command As New MySqlCommand(query, connection)
+                ' command.Parameters.AddWithValue("@primaryKeyId", primaryKeyId)
+
+                Using adapter As New MySqlDataAdapter(command)
+                    adapter.Fill(dataTable)
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        Finally
+            If connection.State = ConnectionState.Open Then
+                connection.Close()
+            End If
+
+            connection.Dispose()
+        End Try
+
+        Return dataTable
+    End Function
 
 End Module

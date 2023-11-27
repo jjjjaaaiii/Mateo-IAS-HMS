@@ -107,7 +107,7 @@ Partial Class pay
         'btnhome
         '
         Me.btnhome.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnhome.Location = New System.Drawing.Point(613, 462)
+        Me.btnhome.Location = New System.Drawing.Point(652, 462)
         Me.btnhome.Name = "btnhome"
         Me.btnhome.Size = New System.Drawing.Size(144, 44)
         Me.btnhome.TabIndex = 28
