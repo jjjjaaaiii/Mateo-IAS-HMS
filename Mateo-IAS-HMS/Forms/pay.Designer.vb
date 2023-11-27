@@ -44,9 +44,9 @@ Partial Class pay
         'btnpay
         '
         Me.btnpay.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnpay.Location = New System.Drawing.Point(136, 461)
+        Me.btnpay.Location = New System.Drawing.Point(92, 462)
         Me.btnpay.Name = "btnpay"
-        Me.btnpay.Size = New System.Drawing.Size(110, 30)
+        Me.btnpay.Size = New System.Drawing.Size(135, 44)
         Me.btnpay.TabIndex = 39
         Me.btnpay.Text = "Pay"
         Me.btnpay.UseVisualStyleBackColor = True
@@ -54,7 +54,7 @@ Partial Class pay
         'txtstatus
         '
         Me.txtstatus.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtstatus.Location = New System.Drawing.Point(154, 187)
+        Me.txtstatus.Location = New System.Drawing.Point(91, 188)
         Me.txtstatus.Name = "txtstatus"
         Me.txtstatus.Size = New System.Drawing.Size(438, 30)
         Me.txtstatus.TabIndex = 37
@@ -64,7 +64,7 @@ Partial Class pay
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(151, 163)
+        Me.Label7.Location = New System.Drawing.Point(88, 164)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(68, 23)
         Me.Label7.TabIndex = 36
@@ -73,7 +73,7 @@ Partial Class pay
         'txtappointmentid
         '
         Me.txtappointmentid.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtappointmentid.Location = New System.Drawing.Point(155, 119)
+        Me.txtappointmentid.Location = New System.Drawing.Point(92, 120)
         Me.txtappointmentid.Name = "txtappointmentid"
         Me.txtappointmentid.Size = New System.Drawing.Size(307, 30)
         Me.txtappointmentid.TabIndex = 33
@@ -81,17 +81,17 @@ Partial Class pay
         'txttotal
         '
         Me.txttotal.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txttotal.Location = New System.Drawing.Point(517, 118)
+        Me.txttotal.Location = New System.Drawing.Point(454, 119)
         Me.txttotal.Name = "txttotal"
-        Me.txttotal.Size = New System.Drawing.Size(303, 30)
+        Me.txttotal.Size = New System.Drawing.Size(342, 30)
         Me.txttotal.TabIndex = 32
         '
         'btnsearch
         '
         Me.btnsearch.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnsearch.Location = New System.Drawing.Point(716, 43)
+        Me.btnsearch.Location = New System.Drawing.Point(652, 45)
         Me.btnsearch.Name = "btnsearch"
-        Me.btnsearch.Size = New System.Drawing.Size(104, 31)
+        Me.btnsearch.Size = New System.Drawing.Size(143, 31)
         Me.btnsearch.TabIndex = 30
         Me.btnsearch.Text = "Search"
         Me.btnsearch.UseVisualStyleBackColor = True
@@ -99,7 +99,7 @@ Partial Class pay
         'txt_id
         '
         Me.txt_id.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_id.Location = New System.Drawing.Point(610, 44)
+        Me.txt_id.Location = New System.Drawing.Point(546, 46)
         Me.txt_id.Name = "txt_id"
         Me.txt_id.Size = New System.Drawing.Size(100, 30)
         Me.txt_id.TabIndex = 29
@@ -107,9 +107,9 @@ Partial Class pay
         'btnhome
         '
         Me.btnhome.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnhome.Location = New System.Drawing.Point(710, 461)
+        Me.btnhome.Location = New System.Drawing.Point(613, 462)
         Me.btnhome.Name = "btnhome"
-        Me.btnhome.Size = New System.Drawing.Size(110, 30)
+        Me.btnhome.Size = New System.Drawing.Size(144, 44)
         Me.btnhome.TabIndex = 28
         Me.btnhome.Text = "Home"
         Me.btnhome.UseVisualStyleBackColor = True
@@ -117,11 +117,11 @@ Partial Class pay
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(155, 232)
+        Me.DataGridView1.Location = New System.Drawing.Point(92, 233)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(665, 223)
+        Me.DataGridView1.Size = New System.Drawing.Size(704, 223)
         Me.DataGridView1.TabIndex = 25
         '
         'Label4
@@ -129,7 +129,7 @@ Partial Class pay
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(513, 92)
+        Me.Label4.Location = New System.Drawing.Point(450, 93)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(103, 23)
         Me.Label4.TabIndex = 23
@@ -140,7 +140,7 @@ Partial Class pay
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(618, 18)
+        Me.Label3.Location = New System.Drawing.Point(554, 20)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(77, 23)
         Me.Label3.TabIndex = 22
@@ -151,7 +151,7 @@ Partial Class pay
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(151, 92)
+        Me.Label2.Location = New System.Drawing.Point(88, 93)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(177, 23)
         Me.Label2.TabIndex = 21

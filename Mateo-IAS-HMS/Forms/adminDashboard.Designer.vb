@@ -48,15 +48,16 @@ Partial Class adminDashboard
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btn_activate = New System.Windows.Forms.Button()
         Me.btn_audit = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btn_change
         '
         Me.btn_change.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_change.Location = New System.Drawing.Point(144, 322)
+        Me.btn_change.Location = New System.Drawing.Point(164, 384)
         Me.btn_change.Name = "btn_change"
-        Me.btn_change.Size = New System.Drawing.Size(661, 45)
+        Me.btn_change.Size = New System.Drawing.Size(661, 52)
         Me.btn_change.TabIndex = 13
         Me.btn_change.Text = "Change Info"
         Me.btn_change.UseVisualStyleBackColor = True
@@ -64,9 +65,9 @@ Partial Class adminDashboard
         'btn_managedoctor
         '
         Me.btn_managedoctor.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_managedoctor.Location = New System.Drawing.Point(591, 170)
+        Me.btn_managedoctor.Location = New System.Drawing.Point(611, 153)
         Me.btn_managedoctor.Name = "btn_managedoctor"
-        Me.btn_managedoctor.Size = New System.Drawing.Size(214, 33)
+        Me.btn_managedoctor.Size = New System.Drawing.Size(214, 52)
         Me.btn_managedoctor.TabIndex = 12
         Me.btn_managedoctor.Text = "Manage Doctors"
         Me.btn_managedoctor.UseVisualStyleBackColor = True
@@ -74,9 +75,9 @@ Partial Class adminDashboard
         'btn_manageappointment
         '
         Me.btn_manageappointment.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_manageappointment.Location = New System.Drawing.Point(354, 209)
+        Me.btn_manageappointment.Location = New System.Drawing.Point(374, 210)
         Me.btn_manageappointment.Name = "btn_manageappointment"
-        Me.btn_manageappointment.Size = New System.Drawing.Size(451, 32)
+        Me.btn_manageappointment.Size = New System.Drawing.Size(451, 52)
         Me.btn_manageappointment.TabIndex = 11
         Me.btn_manageappointment.Text = "Manage Appointments"
         Me.btn_manageappointment.UseVisualStyleBackColor = True
@@ -160,9 +161,9 @@ Partial Class adminDashboard
         'btn_managepayment
         '
         Me.btn_managepayment.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_managepayment.Location = New System.Drawing.Point(354, 170)
+        Me.btn_managepayment.Location = New System.Drawing.Point(374, 153)
         Me.btn_managepayment.Name = "btn_managepayment"
-        Me.btn_managepayment.Size = New System.Drawing.Size(231, 33)
+        Me.btn_managepayment.Size = New System.Drawing.Size(231, 52)
         Me.btn_managepayment.TabIndex = 15
         Me.btn_managepayment.Text = "Manage Payments"
         Me.btn_managepayment.UseVisualStyleBackColor = True
@@ -170,9 +171,9 @@ Partial Class adminDashboard
         'btn_manageuser
         '
         Me.btn_manageuser.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_manageuser.Location = New System.Drawing.Point(354, 247)
+        Me.btn_manageuser.Location = New System.Drawing.Point(374, 268)
         Me.btn_manageuser.Name = "btn_manageuser"
-        Me.btn_manageuser.Size = New System.Drawing.Size(451, 31)
+        Me.btn_manageuser.Size = New System.Drawing.Size(451, 52)
         Me.btn_manageuser.TabIndex = 16
         Me.btn_manageuser.Text = "Manage Users"
         Me.btn_manageuser.UseVisualStyleBackColor = True
@@ -180,9 +181,9 @@ Partial Class adminDashboard
         'btn_managepatient
         '
         Me.btn_managepatient.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_managepatient.Location = New System.Drawing.Point(354, 284)
+        Me.btn_managepatient.Location = New System.Drawing.Point(374, 326)
         Me.btn_managepatient.Name = "btn_managepatient"
-        Me.btn_managepatient.Size = New System.Drawing.Size(451, 32)
+        Me.btn_managepatient.Size = New System.Drawing.Size(451, 52)
         Me.btn_managepatient.TabIndex = 17
         Me.btn_managepatient.Text = "Manage Patients"
         Me.btn_managepatient.UseVisualStyleBackColor = True
@@ -190,9 +191,9 @@ Partial Class adminDashboard
         'btn_backup
         '
         Me.btn_backup.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_backup.Location = New System.Drawing.Point(329, 383)
+        Me.btn_backup.Location = New System.Drawing.Point(164, 442)
         Me.btn_backup.Name = "btn_backup"
-        Me.btn_backup.Size = New System.Drawing.Size(132, 38)
+        Me.btn_backup.Size = New System.Drawing.Size(343, 52)
         Me.btn_backup.TabIndex = 18
         Me.btn_backup.Text = "Backup"
         Me.btn_backup.UseVisualStyleBackColor = True
@@ -200,9 +201,9 @@ Partial Class adminDashboard
         'btn_restore
         '
         Me.btn_restore.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_restore.Location = New System.Drawing.Point(467, 383)
+        Me.btn_restore.Location = New System.Drawing.Point(513, 442)
         Me.btn_restore.Name = "btn_restore"
-        Me.btn_restore.Size = New System.Drawing.Size(132, 38)
+        Me.btn_restore.Size = New System.Drawing.Size(312, 52)
         Me.btn_restore.TabIndex = 19
         Me.btn_restore.Text = "Restore"
         Me.btn_restore.UseVisualStyleBackColor = True
@@ -224,9 +225,9 @@ Partial Class adminDashboard
         'btn_activate
         '
         Me.btn_activate.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_activate.Location = New System.Drawing.Point(144, 170)
+        Me.btn_activate.Location = New System.Drawing.Point(164, 153)
         Me.btn_activate.Name = "btn_activate"
-        Me.btn_activate.Size = New System.Drawing.Size(204, 71)
+        Me.btn_activate.Size = New System.Drawing.Size(204, 109)
         Me.btn_activate.TabIndex = 21
         Me.btn_activate.Text = "Activate User"
         Me.btn_activate.UseVisualStyleBackColor = True
@@ -234,12 +235,24 @@ Partial Class adminDashboard
         'btn_audit
         '
         Me.btn_audit.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_audit.Location = New System.Drawing.Point(144, 247)
+        Me.btn_audit.Location = New System.Drawing.Point(164, 268)
         Me.btn_audit.Name = "btn_audit"
-        Me.btn_audit.Size = New System.Drawing.Size(204, 69)
+        Me.btn_audit.Size = New System.Drawing.Size(204, 110)
         Me.btn_audit.TabIndex = 22
         Me.btn_audit.Text = "Audit Log"
         Me.btn_audit.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.Location = New System.Drawing.Point(76, 52)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(310, 49)
+        Me.Label1.TabIndex = 23
+        Me.Label1.Text = "HELLO ADMIN! "
         '
         'adminDashboard
         '
@@ -248,6 +261,7 @@ Partial Class adminDashboard
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(998, 584)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btn_audit)
         Me.Controls.Add(Me.btn_activate)
         Me.Controls.Add(Me.btn_logout)
@@ -295,4 +309,5 @@ Partial Class adminDashboard
     Friend WithEvents adminid As ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel6 As ToolStripStatusLabel
     Friend WithEvents adminname As ToolStripStatusLabel
+    Friend WithEvents Label1 As Label
 End Class

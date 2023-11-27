@@ -149,7 +149,7 @@ Partial Class registrationForm
         '
         Me.lblsignIN.AutoSize = True
         Me.lblsignIN.Font = New System.Drawing.Font("Century Gothic", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsignIN.Location = New System.Drawing.Point(640, 410)
+        Me.lblsignIN.Location = New System.Drawing.Point(659, 410)
         Me.lblsignIN.Name = "lblsignIN"
         Me.lblsignIN.Size = New System.Drawing.Size(49, 17)
         Me.lblsignIN.TabIndex = 14

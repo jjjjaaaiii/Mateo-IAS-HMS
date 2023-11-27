@@ -56,7 +56,7 @@ Partial Class manageAppointments
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(35, 35)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(368, 40)
+        Me.Label1.Size = New System.Drawing.Size(358, 40)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Doctor Appointments"
         '
@@ -111,19 +111,19 @@ Partial Class manageAppointments
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(86, 280)
+        Me.DataGridView1.Location = New System.Drawing.Point(86, 263)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(745, 154)
+        Me.DataGridView1.Size = New System.Drawing.Size(768, 154)
         Me.DataGridView1.TabIndex = 5
         '
         'btnupdate
         '
         Me.btnupdate.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnupdate.Location = New System.Drawing.Point(249, 458)
+        Me.btnupdate.Location = New System.Drawing.Point(245, 451)
         Me.btnupdate.Name = "btnupdate"
-        Me.btnupdate.Size = New System.Drawing.Size(121, 35)
+        Me.btnupdate.Size = New System.Drawing.Size(121, 42)
         Me.btnupdate.TabIndex = 6
         Me.btnupdate.Text = "Update"
         Me.btnupdate.UseVisualStyleBackColor = True
@@ -131,9 +131,9 @@ Partial Class manageAppointments
         'btndelete
         '
         Me.btndelete.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btndelete.Location = New System.Drawing.Point(374, 458)
+        Me.btndelete.Location = New System.Drawing.Point(369, 451)
         Me.btndelete.Name = "btndelete"
-        Me.btndelete.Size = New System.Drawing.Size(105, 35)
+        Me.btndelete.Size = New System.Drawing.Size(105, 42)
         Me.btndelete.TabIndex = 7
         Me.btndelete.Text = "Delete"
         Me.btndelete.UseVisualStyleBackColor = True
@@ -141,9 +141,9 @@ Partial Class manageAppointments
         'btnhome
         '
         Me.btnhome.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnhome.Location = New System.Drawing.Point(718, 460)
+        Me.btnhome.Location = New System.Drawing.Point(718, 451)
         Me.btnhome.Name = "btnhome"
-        Me.btnhome.Size = New System.Drawing.Size(113, 33)
+        Me.btnhome.Size = New System.Drawing.Size(136, 42)
         Me.btnhome.TabIndex = 8
         Me.btnhome.Text = "Home"
         Me.btnhome.UseVisualStyleBackColor = True
@@ -161,7 +161,7 @@ Partial Class manageAppointments
         Me.btnsearch.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnsearch.Location = New System.Drawing.Point(730, 78)
         Me.btnsearch.Name = "btnsearch"
-        Me.btnsearch.Size = New System.Drawing.Size(97, 33)
+        Me.btnsearch.Size = New System.Drawing.Size(124, 33)
         Me.btnsearch.TabIndex = 10
         Me.btnsearch.Text = "Search"
         Me.btnsearch.UseVisualStyleBackColor = True
@@ -207,7 +207,7 @@ Partial Class manageAppointments
         Me.txtstatus.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtstatus.Location = New System.Drawing.Point(572, 151)
         Me.txtstatus.Name = "txtstatus"
-        Me.txtstatus.Size = New System.Drawing.Size(256, 32)
+        Me.txtstatus.Size = New System.Drawing.Size(282, 32)
         Me.txtstatus.TabIndex = 17
         '
         'Label7
@@ -216,7 +216,7 @@ Partial Class manageAppointments
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label7.Location = New System.Drawing.Point(601, 125)
+        Me.Label7.Location = New System.Drawing.Point(577, 125)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(68, 23)
         Me.Label7.TabIndex = 16
@@ -225,9 +225,9 @@ Partial Class manageAppointments
         'btnappoint
         '
         Me.btnappoint.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnappoint.Location = New System.Drawing.Point(87, 458)
+        Me.btnappoint.Location = New System.Drawing.Point(83, 451)
         Me.btnappoint.Name = "btnappoint"
-        Me.btnappoint.Size = New System.Drawing.Size(156, 35)
+        Me.btnappoint.Size = New System.Drawing.Size(156, 43)
         Me.btnappoint.TabIndex = 18
         Me.btnappoint.Text = "Appoint"
         Me.btnappoint.UseVisualStyleBackColor = True
@@ -235,9 +235,9 @@ Partial Class manageAppointments
         'btnapprove
         '
         Me.btnapprove.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnapprove.Location = New System.Drawing.Point(485, 458)
+        Me.btnapprove.Location = New System.Drawing.Point(478, 451)
         Me.btnapprove.Name = "btnapprove"
-        Me.btnapprove.Size = New System.Drawing.Size(141, 35)
+        Me.btnapprove.Size = New System.Drawing.Size(141, 42)
         Me.btnapprove.TabIndex = 19
         Me.btnapprove.Text = "Approve"
         Me.btnapprove.UseVisualStyleBackColor = True

@@ -140,9 +140,10 @@ Partial Class manageDoctors
         '
         'btnSearch_patient
         '
-        Me.btnSearch_patient.Location = New System.Drawing.Point(152, 20)
+        Me.btnSearch_patient.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnSearch_patient.Location = New System.Drawing.Point(152, 21)
         Me.btnSearch_patient.Name = "btnSearch_patient"
-        Me.btnSearch_patient.Size = New System.Drawing.Size(119, 33)
+        Me.btnSearch_patient.Size = New System.Drawing.Size(141, 32)
         Me.btnSearch_patient.TabIndex = 1
         Me.btnSearch_patient.Text = "Search"
         Me.btnSearch_patient.UseVisualStyleBackColor = True
@@ -221,6 +222,7 @@ Partial Class manageDoctors
         Me.Controls.Add(Me.gb_patient_number)
         Me.Controls.Add(Me.btn_home)
         Me.Controls.Add(Me.btn_update)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "manageDoctors"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "manageDoctors"

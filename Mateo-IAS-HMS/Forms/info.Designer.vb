@@ -138,10 +138,10 @@ Partial Class info
         'btn_home
         '
         Me.btn_home.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_home.Location = New System.Drawing.Point(798, 424)
+        Me.btn_home.Location = New System.Drawing.Point(777, 424)
         Me.btn_home.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btn_home.Name = "btn_home"
-        Me.btn_home.Size = New System.Drawing.Size(98, 39)
+        Me.btn_home.Size = New System.Drawing.Size(119, 39)
         Me.btn_home.TabIndex = 39
         Me.btn_home.Text = "Home"
         Me.btn_home.UseVisualStyleBackColor = True
@@ -152,7 +152,7 @@ Partial Class info
         Me.btnupdaterole.Location = New System.Drawing.Point(34, 424)
         Me.btnupdaterole.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnupdaterole.Name = "btnupdaterole"
-        Me.btnupdaterole.Size = New System.Drawing.Size(118, 39)
+        Me.btnupdaterole.Size = New System.Drawing.Size(152, 39)
         Me.btnupdaterole.TabIndex = 38
         Me.btnupdaterole.Text = "Update"
         Me.btnupdaterole.UseVisualStyleBackColor = True

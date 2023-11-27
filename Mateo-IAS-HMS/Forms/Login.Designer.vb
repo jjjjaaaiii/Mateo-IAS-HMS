@@ -93,7 +93,7 @@ Partial Class Login
         Me.btnLogIn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogIn.Location = New System.Drawing.Point(545, 357)
         Me.btnLogIn.Name = "btnLogIn"
-        Me.btnLogIn.Size = New System.Drawing.Size(121, 33)
+        Me.btnLogIn.Size = New System.Drawing.Size(121, 42)
         Me.btnLogIn.TabIndex = 5
         Me.btnLogIn.Text = "Login"
         Me.btnLogIn.UseVisualStyleBackColor = True
@@ -111,7 +111,7 @@ Partial Class Login
         '
         Me.lblsignUp.AutoSize = True
         Me.lblsignUp.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsignUp.Location = New System.Drawing.Point(657, 463)
+        Me.lblsignUp.Location = New System.Drawing.Point(672, 463)
         Me.lblsignUp.Name = "lblsignUp"
         Me.lblsignUp.Size = New System.Drawing.Size(55, 16)
         Me.lblsignUp.TabIndex = 7
@@ -119,9 +119,12 @@ Partial Class Login
         '
         'passwordEye
         '
+        Me.passwordEye.BackColor = System.Drawing.Color.Transparent
+        Me.passwordEye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.passwordEye.Location = New System.Drawing.Point(694, 288)
         Me.passwordEye.Name = "passwordEye"
         Me.passwordEye.Size = New System.Drawing.Size(33, 32)
+        Me.passwordEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.passwordEye.TabIndex = 8
         Me.passwordEye.TabStop = False
         '
