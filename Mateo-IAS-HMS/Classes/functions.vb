@@ -832,7 +832,6 @@ Module functions
         End Try
     End Sub
 
-
     Public Sub RestoreDatabase()
         Dim Server As String = "localhost"
         Dim Database As String = "db_hospitalproject"
