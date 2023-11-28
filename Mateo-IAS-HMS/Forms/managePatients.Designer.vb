@@ -60,6 +60,7 @@ Partial Class managePatients
         '
         'btnSearch_patient
         '
+        Me.btnSearch_patient.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnSearch_patient.Location = New System.Drawing.Point(152, 20)
         Me.btnSearch_patient.Name = "btnSearch_patient"
         Me.btnSearch_patient.Size = New System.Drawing.Size(98, 33)

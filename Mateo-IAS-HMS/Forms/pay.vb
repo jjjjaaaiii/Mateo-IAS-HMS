@@ -18,7 +18,11 @@
     End Sub
 
     Private Sub btnsearch_Click(sender As Object, e As EventArgs) Handles btnsearch.Click
-
+        Try
+            DataGridView1.DataSource = GetDataByPrimaryKey("tbl_pay", txt_id.Text)
+        Catch ex As Exception
+            MessageBox.Show($"Error: {ex}")
+        End Try
     End Sub
 
     Private Sub btnpay_Click(sender As Object, e As EventArgs) Handles btnpay.Click

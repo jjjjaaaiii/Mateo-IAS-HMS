@@ -80,4 +80,12 @@
             MessageBox.Show("Blank cell not allowed")
         End Try
     End Sub
+
+    Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
+        Try
+            DataGridView1.DataSource = GetDataByPrimaryKey("tbl_user", txt_id.Text)
+        Catch ex As Exception
+            MessageBox.Show($"Error: {ex}")
+        End Try
+    End Sub
 End Class

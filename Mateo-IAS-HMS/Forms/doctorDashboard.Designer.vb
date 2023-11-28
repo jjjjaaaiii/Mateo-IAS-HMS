@@ -50,7 +50,7 @@ Partial Class doctorDashboard
         'btn_change
         '
         Me.btn_change.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_change.Location = New System.Drawing.Point(284, 154)
+        Me.btn_change.Location = New System.Drawing.Point(385, 162)
         Me.btn_change.Name = "btn_change"
         Me.btn_change.Size = New System.Drawing.Size(210, 41)
         Me.btn_change.TabIndex = 14
@@ -60,7 +60,7 @@ Partial Class doctorDashboard
         'btn_viewdoctor
         '
         Me.btn_viewdoctor.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_viewdoctor.Location = New System.Drawing.Point(500, 154)
+        Me.btn_viewdoctor.Location = New System.Drawing.Point(601, 162)
         Me.btn_viewdoctor.Name = "btn_viewdoctor"
         Me.btn_viewdoctor.Size = New System.Drawing.Size(235, 41)
         Me.btn_viewdoctor.TabIndex = 13
@@ -70,7 +70,7 @@ Partial Class doctorDashboard
         'btn_manageappointment
         '
         Me.btn_manageappointment.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_manageappointment.Location = New System.Drawing.Point(56, 199)
+        Me.btn_manageappointment.Location = New System.Drawing.Point(157, 207)
         Me.btn_manageappointment.Name = "btn_manageappointment"
         Me.btn_manageappointment.Size = New System.Drawing.Size(268, 46)
         Me.btn_manageappointment.TabIndex = 12
@@ -80,7 +80,7 @@ Partial Class doctorDashboard
         'btn_audit
         '
         Me.btn_audit.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_audit.Location = New System.Drawing.Point(330, 201)
+        Me.btn_audit.Location = New System.Drawing.Point(431, 209)
         Me.btn_audit.Name = "btn_audit"
         Me.btn_audit.Size = New System.Drawing.Size(164, 44)
         Me.btn_audit.TabIndex = 11
@@ -90,7 +90,7 @@ Partial Class doctorDashboard
         'btn_managepayment
         '
         Me.btn_managepayment.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_managepayment.Location = New System.Drawing.Point(56, 154)
+        Me.btn_managepayment.Location = New System.Drawing.Point(157, 162)
         Me.btn_managepayment.Name = "btn_managepayment"
         Me.btn_managepayment.Size = New System.Drawing.Size(222, 41)
         Me.btn_managepayment.TabIndex = 10
@@ -100,7 +100,7 @@ Partial Class doctorDashboard
         'btn_managepatient
         '
         Me.btn_managepatient.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_managepatient.Location = New System.Drawing.Point(500, 201)
+        Me.btn_managepatient.Location = New System.Drawing.Point(601, 209)
         Me.btn_managepatient.Name = "btn_managepatient"
         Me.btn_managepatient.Size = New System.Drawing.Size(235, 44)
         Me.btn_managepatient.TabIndex = 17
@@ -110,7 +110,7 @@ Partial Class doctorDashboard
         'btn_logout
         '
         Me.btn_logout.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_logout.Location = New System.Drawing.Point(676, 377)
+        Me.btn_logout.Location = New System.Drawing.Point(861, 358)
         Me.btn_logout.Name = "btn_logout"
         Me.btn_logout.Size = New System.Drawing.Size(112, 44)
         Me.btn_logout.TabIndex = 18
@@ -127,7 +127,7 @@ Partial Class doctorDashboard
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.currentUser, Me.ToolStripStatusLabel2, Me.userRole, Me.ToolStripStatusLabel3, Me.ToolStripStatusLabel4, Me.dateAndTime, Me.ToolStripStatusLabel5, Me.doctorid, Me.ToolStripStatusLabel6, Me.doctorname})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 424)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(800, 26)
+        Me.StatusStrip1.Size = New System.Drawing.Size(999, 26)
         Me.StatusStrip1.TabIndex = 19
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -203,7 +203,7 @@ Partial Class doctorDashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(999, 450)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.btn_logout)
         Me.Controls.Add(Me.btn_managepatient)

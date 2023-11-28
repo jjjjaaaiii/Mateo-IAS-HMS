@@ -21,4 +21,13 @@
             Me.Close()
         End If
     End Sub
+
+    Private Sub btnsearch_audit_Click(sender As Object, e As EventArgs) Handles btnsearch_audit.Click
+        timerValue = 0
+        Try
+            DataGridView1.DataSource = GetDataByPrimaryKey("tbl_audit", txtaudit_id.Text)
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

@@ -37,7 +37,7 @@ Partial Class manageUsers
         Me.txt_id = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btn_new = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btn_search = New System.Windows.Forms.Button()
         Me.btn_update = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.testTimer = New System.Windows.Forms.Label()
@@ -182,15 +182,15 @@ Partial Class manageUsers
         Me.btn_new.Text = "New User"
         Me.btn_new.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btn_search
         '
-        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(760, 87)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(93, 33)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Search"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btn_search.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_search.Location = New System.Drawing.Point(760, 87)
+        Me.btn_search.Name = "btn_search"
+        Me.btn_search.Size = New System.Drawing.Size(93, 33)
+        Me.btn_search.TabIndex = 3
+        Me.btn_search.Text = "r"
+        Me.btn_search.UseVisualStyleBackColor = True
         '
         'btn_update
         '
@@ -237,7 +237,7 @@ Partial Class manageUsers
         Me.Controls.Add(Me.testTimer)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.btn_update)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btn_search)
         Me.Controls.Add(Me.btn_new)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
@@ -266,7 +266,7 @@ Partial Class manageUsers
     Friend WithEvents txt_id As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btn_new As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btn_search As Button
     Friend WithEvents btn_update As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents testTimer As Label
