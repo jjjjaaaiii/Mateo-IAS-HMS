@@ -89,9 +89,9 @@ Partial Class pay
         'btnsearch
         '
         Me.btnsearch.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnsearch.Location = New System.Drawing.Point(652, 45)
+        Me.btnsearch.Location = New System.Drawing.Point(652, 35)
         Me.btnsearch.Name = "btnsearch"
-        Me.btnsearch.Size = New System.Drawing.Size(143, 31)
+        Me.btnsearch.Size = New System.Drawing.Size(143, 41)
         Me.btnsearch.TabIndex = 30
         Me.btnsearch.Text = "Search"
         Me.btnsearch.UseVisualStyleBackColor = True

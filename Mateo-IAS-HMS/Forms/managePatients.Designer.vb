@@ -86,7 +86,7 @@ Partial Class managePatients
         '
         'btnupdate
         '
-        Me.btnupdate.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnupdate.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnupdate.Location = New System.Drawing.Point(47, 412)
         Me.btnupdate.Name = "btnupdate"
         Me.btnupdate.Size = New System.Drawing.Size(104, 35)
@@ -96,7 +96,7 @@ Partial Class managePatients
         '
         'btn_home
         '
-        Me.btn_home.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_home.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_home.Location = New System.Drawing.Point(706, 412)
         Me.btn_home.Name = "btn_home"
         Me.btn_home.Size = New System.Drawing.Size(104, 35)

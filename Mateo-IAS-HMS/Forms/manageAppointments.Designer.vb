@@ -120,7 +120,7 @@ Partial Class manageAppointments
         '
         'btnupdate
         '
-        Me.btnupdate.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnupdate.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnupdate.Location = New System.Drawing.Point(245, 451)
         Me.btnupdate.Name = "btnupdate"
         Me.btnupdate.Size = New System.Drawing.Size(121, 42)
@@ -130,7 +130,7 @@ Partial Class manageAppointments
         '
         'btndelete
         '
-        Me.btndelete.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btndelete.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btndelete.Location = New System.Drawing.Point(369, 451)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(105, 42)
@@ -140,7 +140,7 @@ Partial Class manageAppointments
         '
         'btnhome
         '
-        Me.btnhome.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnhome.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnhome.Location = New System.Drawing.Point(718, 451)
         Me.btnhome.Name = "btnhome"
         Me.btnhome.Size = New System.Drawing.Size(136, 42)
@@ -224,7 +224,7 @@ Partial Class manageAppointments
         '
         'btnappoint
         '
-        Me.btnappoint.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnappoint.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnappoint.Location = New System.Drawing.Point(83, 451)
         Me.btnappoint.Name = "btnappoint"
         Me.btnappoint.Size = New System.Drawing.Size(156, 43)
@@ -234,7 +234,7 @@ Partial Class manageAppointments
         '
         'btnapprove
         '
-        Me.btnapprove.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnapprove.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnapprove.Location = New System.Drawing.Point(478, 451)
         Me.btnapprove.Name = "btnapprove"
         Me.btnapprove.Size = New System.Drawing.Size(141, 42)

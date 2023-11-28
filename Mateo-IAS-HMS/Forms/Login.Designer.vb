@@ -90,7 +90,7 @@ Partial Class Login
         '
         'btnLogIn
         '
-        Me.btnLogIn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogIn.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogIn.Location = New System.Drawing.Point(545, 357)
         Me.btnLogIn.Name = "btnLogIn"
         Me.btnLogIn.Size = New System.Drawing.Size(121, 42)

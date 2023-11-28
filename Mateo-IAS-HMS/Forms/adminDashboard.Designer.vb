@@ -54,7 +54,7 @@ Partial Class adminDashboard
         '
         'btn_change
         '
-        Me.btn_change.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_change.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_change.Location = New System.Drawing.Point(164, 384)
         Me.btn_change.Name = "btn_change"
         Me.btn_change.Size = New System.Drawing.Size(661, 52)
@@ -64,7 +64,7 @@ Partial Class adminDashboard
         '
         'btn_managedoctor
         '
-        Me.btn_managedoctor.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_managedoctor.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_managedoctor.Location = New System.Drawing.Point(611, 153)
         Me.btn_managedoctor.Name = "btn_managedoctor"
         Me.btn_managedoctor.Size = New System.Drawing.Size(214, 52)
@@ -74,7 +74,7 @@ Partial Class adminDashboard
         '
         'btn_manageappointment
         '
-        Me.btn_manageappointment.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_manageappointment.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_manageappointment.Location = New System.Drawing.Point(374, 210)
         Me.btn_manageappointment.Name = "btn_manageappointment"
         Me.btn_manageappointment.Size = New System.Drawing.Size(451, 52)
@@ -160,7 +160,7 @@ Partial Class adminDashboard
         '
         'btn_managepayment
         '
-        Me.btn_managepayment.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_managepayment.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_managepayment.Location = New System.Drawing.Point(374, 153)
         Me.btn_managepayment.Name = "btn_managepayment"
         Me.btn_managepayment.Size = New System.Drawing.Size(231, 52)
@@ -170,7 +170,7 @@ Partial Class adminDashboard
         '
         'btn_manageuser
         '
-        Me.btn_manageuser.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_manageuser.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_manageuser.Location = New System.Drawing.Point(374, 268)
         Me.btn_manageuser.Name = "btn_manageuser"
         Me.btn_manageuser.Size = New System.Drawing.Size(451, 52)
@@ -180,7 +180,7 @@ Partial Class adminDashboard
         '
         'btn_managepatient
         '
-        Me.btn_managepatient.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_managepatient.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_managepatient.Location = New System.Drawing.Point(374, 326)
         Me.btn_managepatient.Name = "btn_managepatient"
         Me.btn_managepatient.Size = New System.Drawing.Size(451, 52)
@@ -190,7 +190,7 @@ Partial Class adminDashboard
         '
         'btn_backup
         '
-        Me.btn_backup.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_backup.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_backup.Location = New System.Drawing.Point(164, 442)
         Me.btn_backup.Name = "btn_backup"
         Me.btn_backup.Size = New System.Drawing.Size(343, 52)
@@ -200,7 +200,7 @@ Partial Class adminDashboard
         '
         'btn_restore
         '
-        Me.btn_restore.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_restore.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_restore.Location = New System.Drawing.Point(513, 442)
         Me.btn_restore.Name = "btn_restore"
         Me.btn_restore.Size = New System.Drawing.Size(312, 52)
@@ -210,7 +210,7 @@ Partial Class adminDashboard
         '
         'btn_logout
         '
-        Me.btn_logout.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_logout.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_logout.Location = New System.Drawing.Point(854, 505)
         Me.btn_logout.Name = "btn_logout"
         Me.btn_logout.Size = New System.Drawing.Size(132, 41)
@@ -224,7 +224,7 @@ Partial Class adminDashboard
         '
         'btn_activate
         '
-        Me.btn_activate.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_activate.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_activate.Location = New System.Drawing.Point(164, 153)
         Me.btn_activate.Name = "btn_activate"
         Me.btn_activate.Size = New System.Drawing.Size(204, 109)
@@ -234,7 +234,7 @@ Partial Class adminDashboard
         '
         'btn_audit
         '
-        Me.btn_audit.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_audit.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_audit.Location = New System.Drawing.Point(164, 268)
         Me.btn_audit.Name = "btn_audit"
         Me.btn_audit.Size = New System.Drawing.Size(204, 110)

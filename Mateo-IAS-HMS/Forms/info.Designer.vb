@@ -137,7 +137,7 @@ Partial Class info
         '
         'btn_home
         '
-        Me.btn_home.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_home.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_home.Location = New System.Drawing.Point(777, 424)
         Me.btn_home.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btn_home.Name = "btn_home"
@@ -148,7 +148,7 @@ Partial Class info
         '
         'btnupdaterole
         '
-        Me.btnupdaterole.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnupdaterole.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnupdaterole.Location = New System.Drawing.Point(34, 424)
         Me.btnupdaterole.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnupdaterole.Name = "btnupdaterole"

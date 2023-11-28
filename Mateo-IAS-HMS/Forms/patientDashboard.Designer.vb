@@ -52,7 +52,7 @@ Partial Class patientDashboard
         '
         'btn_pay
         '
-        Me.btn_pay.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_pay.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_pay.Location = New System.Drawing.Point(554, 224)
         Me.btn_pay.Name = "btn_pay"
         Me.btn_pay.Size = New System.Drawing.Size(228, 46)
@@ -62,7 +62,7 @@ Partial Class patientDashboard
         '
         'btn_book
         '
-        Me.btn_book.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_book.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_book.Location = New System.Drawing.Point(86, 224)
         Me.btn_book.Name = "btn_book"
         Me.btn_book.Size = New System.Drawing.Size(228, 46)
@@ -72,7 +72,7 @@ Partial Class patientDashboard
         '
         'btn_viewappoint
         '
-        Me.btn_viewappoint.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_viewappoint.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_viewappoint.Location = New System.Drawing.Point(320, 224)
         Me.btn_viewappoint.Name = "btn_viewappoint"
         Me.btn_viewappoint.Size = New System.Drawing.Size(228, 46)
@@ -82,7 +82,7 @@ Partial Class patientDashboard
         '
         'btn_viewdoctor
         '
-        Me.btn_viewdoctor.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_viewdoctor.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_viewdoctor.Location = New System.Drawing.Point(204, 142)
         Me.btn_viewdoctor.Name = "btn_viewdoctor"
         Me.btn_viewdoctor.Size = New System.Drawing.Size(228, 46)
@@ -92,7 +92,7 @@ Partial Class patientDashboard
         '
         'btn_change
         '
-        Me.btn_change.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_change.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_change.Location = New System.Drawing.Point(438, 142)
         Me.btn_change.Name = "btn_change"
         Me.btn_change.Size = New System.Drawing.Size(228, 46)
@@ -102,7 +102,7 @@ Partial Class patientDashboard
         '
         'btn_logout
         '
-        Me.btn_logout.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_logout.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_logout.Location = New System.Drawing.Point(725, 381)
         Me.btn_logout.Name = "btn_logout"
         Me.btn_logout.Size = New System.Drawing.Size(121, 40)

@@ -42,7 +42,7 @@ Partial Class auditLog
         '
         'btnback
         '
-        Me.btnback.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnback.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnback.Location = New System.Drawing.Point(537, 586)
         Me.btnback.Name = "btnback"
         Me.btnback.Size = New System.Drawing.Size(153, 32)
