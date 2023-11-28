@@ -17,7 +17,6 @@ Public Class info
 
         txtcontact.Text = contact
         txtaddress.Text = address
-        capslockindicator()
     End Sub
 
     Private Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_home.Click
