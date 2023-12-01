@@ -189,7 +189,7 @@ Partial Class manageUsers
         Me.btn_search.Name = "btn_search"
         Me.btn_search.Size = New System.Drawing.Size(93, 33)
         Me.btn_search.TabIndex = 3
-        Me.btn_search.Text = "r"
+        Me.btn_search.Text = "search"
         Me.btn_search.UseVisualStyleBackColor = True
         '
         'btn_update
