@@ -6,7 +6,7 @@
         Timer1.Start()
         DataGridView1.DataSource = GetAllDataFromTable("tbl_doctor")
 
-        If userData.role = "patient" Then
+        If userData.role = "Patient" Then
             btn_update.Visible = False
         End If
     End Sub
