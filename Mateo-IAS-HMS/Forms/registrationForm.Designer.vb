@@ -112,7 +112,7 @@ Partial Class registrationForm
         '
         'btnsignUp
         '
-        Me.btnsignUp.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnsignUp.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnsignUp.Location = New System.Drawing.Point(535, 334)
         Me.btnsignUp.Name = "btnsignUp"
         Me.btnsignUp.Size = New System.Drawing.Size(144, 34)

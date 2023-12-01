@@ -76,7 +76,7 @@ Partial Class bookAppointment
         '
         'btnsubmit
         '
-        Me.btnsubmit.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnsubmit.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnsubmit.Location = New System.Drawing.Point(411, 544)
         Me.btnsubmit.Name = "btnsubmit"
         Me.btnsubmit.Size = New System.Drawing.Size(101, 39)
@@ -86,7 +86,7 @@ Partial Class bookAppointment
         '
         'Button2
         '
-        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(518, 544)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(118, 39)

@@ -65,4 +65,12 @@
         End Try
     End Sub
 
+    Private Sub btnSearch_doctor_Click(sender As Object, e As EventArgs) Handles btnSearch_doctor.Click
+        timerValue = 0
+        Try
+            DataGridView1.DataSource = GetDataByPrimaryKey("tbl_doctor", txtsearch_doctor.Text)
+        Catch ex As Exception
+            MessageBox.Show("Error")
+        End Try
+    End Sub
 End Class

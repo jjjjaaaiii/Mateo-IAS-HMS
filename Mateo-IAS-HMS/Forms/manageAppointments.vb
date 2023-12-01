@@ -94,4 +94,12 @@
         End Try
 
     End Sub
+
+    Private Sub btnsearch_Click(sender As Object, e As EventArgs) Handles btnsearch.Click
+        Try
+            DataGridView1.DataSource = GetDataByPrimaryKey("tbl_appointment", txt_id.Text)
+        Catch ex As Exception
+            MessageBox.Show("Error")
+        End Try
+    End Sub
 End Class

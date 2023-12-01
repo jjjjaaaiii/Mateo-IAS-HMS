@@ -53,6 +53,11 @@ Public Class managePatients
 
     Private Sub btnSearch_patient_Click(sender As Object, e As EventArgs) Handles btnSearch_patient.Click
         timerValue = 0
+        Try
+            DataGridView1.DataSource = GetDataByPrimaryKey("tbl_patient", txtsearch_patient.Text)
+        Catch ex As Exception
+            MessageBox.Show("Error")
+        End Try
     End Sub
 
     Private Sub DataGridView1_CellClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick

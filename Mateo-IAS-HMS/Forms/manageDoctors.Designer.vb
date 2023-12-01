@@ -33,7 +33,7 @@ Partial Class manageDoctors
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtname_doctor = New System.Windows.Forms.TextBox()
         Me.gb_patient_number = New System.Windows.Forms.GroupBox()
-        Me.btnSearch_patient = New System.Windows.Forms.Button()
+        Me.btnSearch_doctor = New System.Windows.Forms.Button()
         Me.txtsearch_doctor = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
@@ -46,7 +46,7 @@ Partial Class manageDoctors
         '
         'btn_update
         '
-        Me.btn_update.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_update.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_update.Location = New System.Drawing.Point(20, 446)
         Me.btn_update.Name = "btn_update"
         Me.btn_update.Size = New System.Drawing.Size(123, 32)
@@ -56,7 +56,7 @@ Partial Class manageDoctors
         '
         'btn_home
         '
-        Me.btn_home.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_home.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_home.Location = New System.Drawing.Point(797, 446)
         Me.btn_home.Name = "btn_home"
         Me.btn_home.Size = New System.Drawing.Size(106, 32)
@@ -127,7 +127,7 @@ Partial Class manageDoctors
         'gb_patient_number
         '
         Me.gb_patient_number.BackColor = System.Drawing.Color.Transparent
-        Me.gb_patient_number.Controls.Add(Me.btnSearch_patient)
+        Me.gb_patient_number.Controls.Add(Me.btnSearch_doctor)
         Me.gb_patient_number.Controls.Add(Me.txtsearch_doctor)
         Me.gb_patient_number.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gb_patient_number.ForeColor = System.Drawing.SystemColors.Control
@@ -138,15 +138,15 @@ Partial Class manageDoctors
         Me.gb_patient_number.TabStop = False
         Me.gb_patient_number.Text = "Doctor ID"
         '
-        'btnSearch_patient
+        'btnSearch_doctor
         '
-        Me.btnSearch_patient.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnSearch_patient.Location = New System.Drawing.Point(152, 21)
-        Me.btnSearch_patient.Name = "btnSearch_patient"
-        Me.btnSearch_patient.Size = New System.Drawing.Size(141, 32)
-        Me.btnSearch_patient.TabIndex = 1
-        Me.btnSearch_patient.Text = "Search"
-        Me.btnSearch_patient.UseVisualStyleBackColor = True
+        Me.btnSearch_doctor.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnSearch_doctor.Location = New System.Drawing.Point(152, 21)
+        Me.btnSearch_doctor.Name = "btnSearch_doctor"
+        Me.btnSearch_doctor.Size = New System.Drawing.Size(141, 32)
+        Me.btnSearch_doctor.TabIndex = 1
+        Me.btnSearch_doctor.Text = "Search"
+        Me.btnSearch_doctor.UseVisualStyleBackColor = True
         '
         'txtsearch_doctor
         '
@@ -242,7 +242,7 @@ Partial Class manageDoctors
     Friend WithEvents Label2 As Label
     Friend WithEvents txtname_doctor As TextBox
     Friend WithEvents gb_patient_number As GroupBox
-    Friend WithEvents btnSearch_patient As Button
+    Friend WithEvents btnSearch_doctor As Button
     Friend WithEvents txtsearch_doctor As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Timer1 As Timer
