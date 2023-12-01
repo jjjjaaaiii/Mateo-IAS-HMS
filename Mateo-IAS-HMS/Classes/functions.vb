@@ -528,7 +528,7 @@ Module functions
     End Sub
 
     Public Sub UpdateUserCredentials(userId As Integer, newUsername As String, newUserpassword As String)
-        Dim query As String = "UPDATE tbl_user SET username = @newUsername, userpassword = @newUserpassword WHERE id = @userId"
+        Dim query As String = "UPDATE tbl_user SET username = @newUsername, password = @newUserpassword WHERE id = @userId"
         Dim cmd As New MySqlCommand(query, connection)
         cmd.Parameters.AddWithValue("@userId", userId)
         cmd.Parameters.AddWithValue("@newUsername", newUsername)
