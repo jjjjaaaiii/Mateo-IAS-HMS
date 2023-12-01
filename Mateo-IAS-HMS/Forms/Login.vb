@@ -41,7 +41,7 @@ Public Class Login
 
             Me.Close()
         Else
-            attempts = attempts + 1
+            attempts += 1
             Dim attemptMessage = String.Format("Wrong password! You have {0} attempt/s left.", (3 - attempts))
             MessageBox.Show(attemptMessage)
         End If
